@@ -1,0 +1,438 @@
+{
+  "method": "paired nonparametric percentile bootstrap over duplicate groups; the same group resample is used for both models; 2000 replicates; seed 42",
+  "note": "The same resample is used for both predictions, so intervals are for the paired difference. No model was retrained.",
+  "pairs": [
+    {
+      "n_rows": 299,
+      "n_groups": 299,
+      "metrics": {
+        "macro_f1": {
+          "a": 0.9556445631211987,
+          "b": 0.9650046816479401,
+          "difference": -0.009360118526741346,
+          "ci_low": -0.03214315072560611,
+          "ci_high": 0.0,
+          "boot_sd": 0.009502267456035777,
+          "share_positive": 0.0,
+          "share_negative": 0.6315,
+          "share_tie": 0.3685
+        },
+        "spam_recall": {
+          "a": 0.8529411764705882,
+          "b": 0.8823529411764706,
+          "difference": -0.02941176470588236,
+          "ci_low": -0.09756097560975607,
+          "ci_high": 0.0,
+          "boot_sd": 0.029198193970797804,
+          "share_positive": 0.0,
+          "share_negative": 0.6315,
+          "share_tie": 0.3685
+        },
+        "accuracy": {
+          "a": 0.9832775919732442,
+          "b": 0.9866220735785953,
+          "difference": -0.0033444816053511683,
+          "ci_low": -0.010033444816053505,
+          "ci_high": 0.0,
+          "boot_sd": 0.0032980424911102438,
+          "share_positive": 0.0,
+          "share_negative": 0.6315,
+          "share_tie": 0.3685
+        },
+        "spam_precision": {
+          "a": 1.0,
+          "b": 1.0,
+          "difference": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "boot_sd": 0.0,
+          "share_positive": 0.0,
+          "share_negative": 0.0,
+          "share_tie": 1.0
+        }
+      },
+      "dataset": "D1",
+      "a_model": "Logistic Regression",
+      "b_model": "Linear SVM",
+      "subset": "random test"
+    },
+    {
+      "n_rows": 299,
+      "n_groups": 299,
+      "metrics": {
+        "macro_f1": {
+          "a": 0.9556445631211987,
+          "b": 0.9650046816479401,
+          "difference": -0.009360118526741346,
+          "ci_low": -0.03214315072560611,
+          "ci_high": 0.0,
+          "boot_sd": 0.009502267456035777,
+          "share_positive": 0.0,
+          "share_negative": 0.6315,
+          "share_tie": 0.3685
+        },
+        "spam_recall": {
+          "a": 0.8529411764705882,
+          "b": 0.8823529411764706,
+          "difference": -0.02941176470588236,
+          "ci_low": -0.09756097560975607,
+          "ci_high": 0.0,
+          "boot_sd": 0.029198193970797804,
+          "share_positive": 0.0,
+          "share_negative": 0.6315,
+          "share_tie": 0.3685
+        },
+        "accuracy": {
+          "a": 0.9832775919732442,
+          "b": 0.9866220735785953,
+          "difference": -0.0033444816053511683,
+          "ci_low": -0.010033444816053505,
+          "ci_high": 0.0,
+          "boot_sd": 0.0032980424911102438,
+          "share_positive": 0.0,
+          "share_negative": 0.6315,
+          "share_tie": 0.3685
+        },
+        "spam_precision": {
+          "a": 1.0,
+          "b": 1.0,
+          "difference": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "boot_sd": 0.0,
+          "share_positive": 0.0,
+          "share_negative": 0.0,
+          "share_tie": 1.0
+        }
+      },
+      "dataset": "D1",
+      "a_model": "Logistic Regression",
+      "b_model": "MuRIL seed 42",
+      "subset": "random test"
+    },
+    {
+      "n_rows": 299,
+      "n_groups": 299,
+      "metrics": {
+        "macro_f1": {
+          "a": 0.9650046816479401,
+          "b": 0.9650046816479401,
+          "difference": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "boot_sd": 0.0,
+          "share_positive": 0.0,
+          "share_negative": 0.0,
+          "share_tie": 1.0
+        },
+        "spam_recall": {
+          "a": 0.8823529411764706,
+          "b": 0.8823529411764706,
+          "difference": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "boot_sd": 0.0,
+          "share_positive": 0.0,
+          "share_negative": 0.0,
+          "share_tie": 1.0
+        },
+        "accuracy": {
+          "a": 0.9866220735785953,
+          "b": 0.9866220735785953,
+          "difference": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "boot_sd": 0.0,
+          "share_positive": 0.0,
+          "share_negative": 0.0,
+          "share_tie": 1.0
+        },
+        "spam_precision": {
+          "a": 1.0,
+          "b": 1.0,
+          "difference": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "boot_sd": 0.0,
+          "share_positive": 0.0,
+          "share_negative": 0.0,
+          "share_tie": 1.0
+        }
+      },
+      "dataset": "D1",
+      "a_model": "Linear SVM",
+      "b_model": "MuRIL seed 42",
+      "subset": "random test"
+    },
+    {
+      "n_rows": 299,
+      "n_groups": 299,
+      "metrics": {
+        "macro_f1": {
+          "a": 0.9556445631211987,
+          "b": 0.9556445631211987,
+          "difference": 0.0,
+          "ci_low": -0.027628661357826205,
+          "ci_high": 0.02641697952813078,
+          "boot_sd": 0.013431849819997368,
+          "share_positive": 0.3375,
+          "share_negative": 0.3525,
+          "share_tie": 0.31
+        },
+        "spam_recall": {
+          "a": 0.8529411764705882,
+          "b": 0.8529411764705882,
+          "difference": 0.0,
+          "ci_low": -0.08333333333333337,
+          "ci_high": 0.08002702702702695,
+          "boot_sd": 0.04120640466189185,
+          "share_positive": 0.3375,
+          "share_negative": 0.3525,
+          "share_tie": 0.31
+        },
+        "accuracy": {
+          "a": 0.9832775919732442,
+          "b": 0.9832775919732442,
+          "difference": 0.0,
+          "ci_low": -0.010033444816053505,
+          "ci_high": 0.010033444816053505,
+          "boot_sd": 0.004638012619320614,
+          "share_positive": 0.3375,
+          "share_negative": 0.3525,
+          "share_tie": 0.31
+        },
+        "spam_precision": {
+          "a": 1.0,
+          "b": 1.0,
+          "difference": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "boot_sd": 0.0,
+          "share_positive": 0.0,
+          "share_negative": 0.0,
+          "share_tie": 1.0
+        }
+      },
+      "dataset": "D1",
+      "a_model": "Logistic Regression",
+      "b_model": "MuRIL seed 43",
+      "subset": "random test"
+    },
+    {
+      "n_rows": 299,
+      "n_groups": 299,
+      "metrics": {
+        "macro_f1": {
+          "a": 0.9650046816479401,
+          "b": 0.9556445631211987,
+          "difference": 0.009360118526741346,
+          "ci_low": 0.0,
+          "ci_high": 0.03030054554709207,
+          "boot_sd": 0.009157782174979671,
+          "share_positive": 0.6245,
+          "share_negative": 0.0,
+          "share_tie": 0.3755
+        },
+        "spam_recall": {
+          "a": 0.8823529411764706,
+          "b": 0.8529411764705882,
+          "difference": 0.02941176470588236,
+          "ci_low": 0.0,
+          "ci_high": 0.09090909090909094,
+          "boot_sd": 0.028046741621328322,
+          "share_positive": 0.6245,
+          "share_negative": 0.0,
+          "share_tie": 0.3755
+        },
+        "accuracy": {
+          "a": 0.9866220735785953,
+          "b": 0.9832775919732442,
+          "difference": 0.0033444816053511683,
+          "ci_low": 0.0,
+          "ci_high": 0.010033444816053505,
+          "boot_sd": 0.0032326882451713473,
+          "share_positive": 0.6245,
+          "share_negative": 0.0,
+          "share_tie": 0.3755
+        },
+        "spam_precision": {
+          "a": 1.0,
+          "b": 1.0,
+          "difference": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "boot_sd": 0.0,
+          "share_positive": 0.0,
+          "share_negative": 0.0,
+          "share_tie": 1.0
+        }
+      },
+      "dataset": "D1",
+      "a_model": "Linear SVM",
+      "b_model": "MuRIL seed 43",
+      "subset": "random test"
+    },
+    {
+      "n_rows": 299,
+      "n_groups": 299,
+      "metrics": {
+        "macro_f1": {
+          "a": 0.9556445631211987,
+          "b": 0.9650046816479401,
+          "difference": -0.009360118526741346,
+          "ci_low": -0.03214315072560611,
+          "ci_high": 0.0,
+          "boot_sd": 0.009502267456035777,
+          "share_positive": 0.0,
+          "share_negative": 0.6315,
+          "share_tie": 0.3685
+        },
+        "spam_recall": {
+          "a": 0.8529411764705882,
+          "b": 0.8823529411764706,
+          "difference": -0.02941176470588236,
+          "ci_low": -0.09756097560975607,
+          "ci_high": 0.0,
+          "boot_sd": 0.029198193970797804,
+          "share_positive": 0.0,
+          "share_negative": 0.6315,
+          "share_tie": 0.3685
+        },
+        "accuracy": {
+          "a": 0.9832775919732442,
+          "b": 0.9866220735785953,
+          "difference": -0.0033444816053511683,
+          "ci_low": -0.010033444816053505,
+          "ci_high": 0.0,
+          "boot_sd": 0.0032980424911102438,
+          "share_positive": 0.0,
+          "share_negative": 0.6315,
+          "share_tie": 0.3685
+        },
+        "spam_precision": {
+          "a": 1.0,
+          "b": 1.0,
+          "difference": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "boot_sd": 0.0,
+          "share_positive": 0.0,
+          "share_negative": 0.0,
+          "share_tie": 1.0
+        }
+      },
+      "dataset": "D1",
+      "a_model": "Logistic Regression",
+      "b_model": "MuRIL seed 44",
+      "subset": "random test"
+    },
+    {
+      "n_rows": 299,
+      "n_groups": 299,
+      "metrics": {
+        "macro_f1": {
+          "a": 0.9650046816479401,
+          "b": 0.9650046816479401,
+          "difference": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "boot_sd": 0.0,
+          "share_positive": 0.0,
+          "share_negative": 0.0,
+          "share_tie": 1.0
+        },
+        "spam_recall": {
+          "a": 0.8823529411764706,
+          "b": 0.8823529411764706,
+          "difference": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "boot_sd": 0.0,
+          "share_positive": 0.0,
+          "share_negative": 0.0,
+          "share_tie": 1.0
+        },
+        "accuracy": {
+          "a": 0.9866220735785953,
+          "b": 0.9866220735785953,
+          "difference": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "boot_sd": 0.0,
+          "share_positive": 0.0,
+          "share_negative": 0.0,
+          "share_tie": 1.0
+        },
+        "spam_precision": {
+          "a": 1.0,
+          "b": 1.0,
+          "difference": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "boot_sd": 0.0,
+          "share_positive": 0.0,
+          "share_negative": 0.0,
+          "share_tie": 1.0
+        }
+      },
+      "dataset": "D1",
+      "a_model": "Linear SVM",
+      "b_model": "MuRIL seed 44",
+      "subset": "random test"
+    },
+    {
+      "n_rows": 883,
+      "n_groups": 883,
+      "metrics": {
+        "macro_f1": {
+          "a": 0.8877423096432983,
+          "b": 0.882502980802467,
+          "difference": 0.0052393288408312255,
+          "ci_low": -0.012057195914150965,
+          "ci_high": 0.024416469688406814,
+          "boot_sd": 0.009369079326716925,
+          "share_positive": 0.717,
+          "share_negative": 0.283,
+          "share_tie": 0.0
+        },
+        "spam_recall": {
+          "a": 0.8208955223880597,
+          "b": 0.7761194029850746,
+          "difference": 0.04477611940298509,
+          "ci_low": 0.0,
+          "ci_high": 0.10003164556962006,
+          "boot_sd": 0.02513671473449408,
+          "share_positive": 0.948,
+          "share_negative": 0.0,
+          "share_tie": 0.052
+        },
+        "accuracy": {
+          "a": 0.9637599093997735,
+          "b": 0.9637599093997735,
+          "difference": 0.0,
+          "ci_low": -0.006795016987542371,
+          "ci_high": 0.005662514156285381,
+          "boot_sd": 0.003202912480147377,
+          "share_positive": 0.422,
+          "share_negative": 0.432,
+          "share_tie": 0.146
+        },
+        "spam_precision": {
+          "a": 0.7857142857142857,
+          "b": 0.7761194029850746,
+          "difference": 0.009594882729211052,
+          "ci_low": -0.023877162177307867,
+          "ci_high": 0.04488636363636362,
+          "boot_sd": 0.017540368601050398,
+          "share_positive": 0.714,
+          "share_negative": 0.2675,
+          "share_tie": 0.0185
+        }
+      },
+      "dataset": "D2",
+      "a_model": "Logistic Regression",
+      "b_model": "Linear SVM",
+      "subset": "random test"
+    }
+  ]
+}

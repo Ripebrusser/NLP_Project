@@ -1,0 +1,16 @@
+D1 Linear SVM 299 299
+D1 Logistic Regression 299 299
+D1 MuRIL seed 42 299 299
+D1 MuRIL seed 43 299 299
+D1 MuRIL seed 44 299 299
+D2 Logistic Regression 883 883
+D2 Linear SVM 883 883
+paired D1 Logistic Regression vs Linear SVM macroF1 diff -0.0094 CI (-0.0321, 0.0)
+paired D1 Logistic Regression vs MuRIL seed 42 macroF1 diff -0.0094 CI (-0.0321, 0.0)
+paired D1 Linear SVM vs MuRIL seed 42 macroF1 diff 0.0 CI (0.0, 0.0)
+paired D1 Logistic Regression vs MuRIL seed 43 macroF1 diff 0.0 CI (-0.0276, 0.0264)
+paired D1 Linear SVM vs MuRIL seed 43 macroF1 diff 0.0094 CI (0.0, 0.0303)
+paired D1 Logistic Regression vs MuRIL seed 44 macroF1 diff -0.0094 CI (-0.0321, 0.0)
+paired D1 Linear SVM vs MuRIL seed 44 macroF1 diff 0.0 CI (0.0, 0.0)
+paired D2 Logistic Regression vs Linear SVM macroF1 diff 0.0052 CI (-0.0121, 0.0244)
+wrote CI, paired, seed variation and statistical tables

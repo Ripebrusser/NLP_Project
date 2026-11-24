@@ -1,0 +1,128 @@
+
+=== slide1.xml ===
+Dayananda Sagar University (DSU) - Main Campus
+School of Engineering
+Devarakaggalahalli
+,
+Harohalli
+Kanakapura
+Road, Bengaluru South Dist., Karnataka 562112
+DEPARTMENT OF
+COMPUTER SCIENCE AND ENGINEERING
+(ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING)
+Natural Language Models(24AM3503)
+Review-1
+Title: “XYZ”
+Under the Supervision of
+XYZ,
+Assistant Professor
+Department of CSE (AI&amp;ML)
+SOE, DSU.
+Name 1                            USN
+Name 2                            USN
+Name 3                            USN
+Name 4                            USN
+Academic Year: 2024-2025
+=== slide2.xml ===
+Contents
+Introduction
+Domain &amp; SDG Mapping
+Problem Statement
+Objectives
+Project Scope
+Source of Data Collection
+Expected Outcomes
+Tools &amp; Technologies
+Methodology / Approach
+Timeline (Gantt Chart)
+References
+Guide’s Remarks (Optional in presentation)
+=== slide3.xml ===
+Introduction
+Background:
+Chronic diseases affect millions worldwide; early detection saves lives.
+Motivation:
+Many hospitals struggle with manual record-keeping and late diagnosis.
+Context:
+AI can analyze patient data to predict diseases earlier.
+Relevance:
+Uses ML models for classification and prediction.
+=== slide4.xml ===
+Domain &amp; SDG Mapping
+Identify under which AIML domain it falls (Healthcare AI, NLP, Computer Vision, etc.)
+Link to Sustainable Development Goals (SDG) – e.g., SDG 3 (Health), SDG 11 (Smart Cities), etc.
+=== slide5.xml ===
+Problem Statement
+Clear definition of the problem
+Gap or challenge being addressed
+=== slide6.xml ===
+Objectives
+3–5 measurable objectives from the synopsis
+=== slide7.xml ===
+Project Scope
+What will be covered
+What will not be covered (limitations/boundaries)
+Application domain (Healthcare, NLP, Vision, Cybersecurity, etc.)
+=== slide8.xml ===
+Literature Review
+{08FB837D-C827-4EFA-A057-4D05807E0F7C}Paper Title
+Algoirthm
+Dataset
+Metrics
+Research Gap
+Convolutional Neural Networks for Cardiac Arrhythmia Detection
+CNN
+MIT-BIH Arrhythmia Database
+Accuracy -93%
+Sensitivity -92%
+Limited studies on the robustness of CNNs under noisy conditions in ECG data
+=== slide9.xml ===
+Mention Base Paper and Novelty of your Proposed Work
+{08FB837D-C827-4EFA-A057-4D05807E0F7C}Paper Title
+Algoirthm
+Dataset
+Metrics
+Research Gap
+=== slide10.xml ===
+Methodology / Approach
+A simple
+workflow diagram
+=== slide11.xml ===
+Source of Data Collection
+Provide the information on the process of Data collection.
+=== slide12.xml ===
+Tools &amp; Technologies
+Programming languages
+Frameworks/libraries (TensorFlow,
+PyTorch
+, OpenCV, etc.)
+Platforms (cloud, edge devices, etc.)
+Hardware (if any)
+=== slide13.xml ===
+Expected Outcomes
+A functional AI/ML-based solution/prototype that addresses the defined problem statement.
+Performance metrics and evaluation results (accuracy, precision, recall, etc.) demonstrating the model’s effectiveness.
+A research/academic contribution such as a paper, technical report, or dataset that adds value to the domain.
+Real-world applicability and impact (e.g., decision support tool, automation, or societal benefit aligned with SDGs).
+=== slide14.xml ===
+Timeline (Gantt Chart)
+Paste the Gantt Chart
+=== slide15.xml ===
+References
+Minimum 10 references (IEEE style) from synopsis
+[1]	S. Nagaraj,
+B.Vamsi
+Krishna, Botta Chakradhar, Debanjan Sarkar, “Comparison of 32-bit ALU for Reversible Logic and Irreversible Logic”, Innovations in Power and Advanced Computing Technologies, 2021.
+[2]
+Bappaditya
+Dey, Kasem Khalil, Ashok Kumar, Magdy Bayoumi, “A Reversible-Logic based Architecture for
+VGGNet
+”, 28th IEEE International Conference on Electronics, Circuits, and Systems, 2021.
+[3]	R. Landauer, “Irreversibility and heat generation in the computing process”, IBM Journal of Research and Development, vol. 5, pp. 183-191, 1961.
+=== slide16.xml ===
+Guide’s Remarks (Optional in presentation)
+Key suggestion- 1 from the guide during Review 0
+Key suggestion- 2 from the guide during Review 0
+Key suggestion- 3 from the guide during Review 0
+Key suggestion- 4 from the guide during Review 0
+=== slide17.xml ===

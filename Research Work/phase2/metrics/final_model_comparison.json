@@ -1,0 +1,62 @@
+[
+  {
+    "model": "Logistic Regression",
+    "dataset": "D1",
+    "random_macro_f1": 0.9556445631211987,
+    "random_macro_f1_ci_low": 0.9120987786300345,
+    "random_macro_f1_ci_high": 0.9903038557576936,
+    "random_spam_recall": 0.8529411764705882,
+    "random_spam_recall_ci_low": 0.7221899224806202,
+    "random_spam_recall_ci_high": 0.9655172413793104,
+    "random_accuracy": 0.9832775919732442,
+    "block_macro_f1": 0.5447952856859739
+  },
+  {
+    "model": "Linear SVM",
+    "dataset": "D1",
+    "random_macro_f1": 0.9650046816479401,
+    "random_macro_f1_ci_low": 0.9249654608102603,
+    "random_macro_f1_ci_high": 0.992198303979126,
+    "random_spam_recall": 0.8823529411764706,
+    "random_spam_recall_ci_low": 0.76,
+    "random_spam_recall_ci_high": 0.972972972972973,
+    "random_accuracy": 0.9866220735785953,
+    "block_macro_f1": 0.5378449758089207
+  },
+  {
+    "model": "MuRIL (3-seed mean)",
+    "dataset": "D1",
+    "random_macro_f1": 0.9618846421390262,
+    "random_macro_f1_ci_low": null,
+    "random_macro_f1_ci_high": null,
+    "random_spam_recall": 0.8725490196078431,
+    "random_spam_recall_ci_low": null,
+    "random_spam_recall_ci_high": null,
+    "random_accuracy": 0.9855072463768115,
+    "block_macro_f1": 0.502776573361789
+  },
+  {
+    "model": "Logistic Regression",
+    "dataset": "D2",
+    "random_macro_f1": 0.8877423096432983,
+    "random_macro_f1_ci_low": 0.8482171221985192,
+    "random_macro_f1_ci_high": 0.9239080655617765,
+    "random_spam_recall": 0.8208955223880597,
+    "random_spam_recall_ci_low": 0.7222222222222222,
+    "random_spam_recall_ci_high": 0.9130434782608695,
+    "random_accuracy": 0.9637599093997735,
+    "block_macro_f1": null
+  },
+  {
+    "model": "Linear SVM",
+    "dataset": "D2",
+    "random_macro_f1": 0.882502980802467,
+    "random_macro_f1_ci_low": 0.8408452224721867,
+    "random_macro_f1_ci_high": 0.9195792782897316,
+    "random_spam_recall": 0.7761194029850746,
+    "random_spam_recall_ci_low": 0.6721311475409836,
+    "random_spam_recall_ci_high": 0.875,
+    "random_accuracy": 0.9637599093997735,
+    "block_macro_f1": null
+  }
+]

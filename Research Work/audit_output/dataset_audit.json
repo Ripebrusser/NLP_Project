@@ -1,0 +1,387 @@
+{
+  "dravidian": {
+    "file": "Spam Message Collection.xlsx",
+    "sheet_names": [
+      "Dravidian Dataset"
+    ],
+    "header": [
+      "Message",
+      "Type"
+    ],
+    "row_elements_including_blanks": 101173,
+    "blank_row_elements": 93455,
+    "records": 7717,
+    "raw_label_counts": {
+      "'Ham'": 6322,
+      "'Spam'": 1394,
+      "'Spa,'": 1
+    },
+    "normalised_label_counts": {
+      "Ham": 6322,
+      "Spam": 1394,
+      "Spa,": 1
+    },
+    "whitespace_label_variants": {},
+    "missing_message_records": 2,
+    "missing_label_records": 0,
+    "exact_duplicate_groups": 1154,
+    "exact_duplicate_excess": 1224,
+    "near_duplicate_groups": 1245,
+    "near_duplicate_excess": 1375,
+    "empty_normalised_key": 2,
+    "conflicting_label_groups": 28,
+    "conflict_examples": [
+      {
+        "key": "குடித்துவிட்டு வாகனம் ஓட்டாதீர்கள் உயிர் பறிபோகலாம் morth",
+        "labels": [
+          "Ham",
+          "Spam"
+        ],
+        "n": 2,
+        "samples": [
+          "குடித்துவிட்டு வாகனம் ஓட்டாதீர்கள். உயிர் பறிபோகலாம்..MoRTH",
+          "குடித்துவிட்டு வாகனம் ஓட்டாதீர்கள். உயிர் பறிபோகலாம்..MoRTH"
+        ]
+      },
+      {
+        "key": "did you hear about the new divorce barbie it comes with all of ken s stuff",
+        "labels": [
+          "Ham",
+          "Spam"
+        ],
+        "n": 2,
+        "samples": [
+          "Did you hear about the new \\Divorce Barbie\\\"? It comes with all of Ken's stuff!\"",
+          "Did you hear about the new \\Divorce Barbie\\\"? It comes with all of Ken's stuff!\""
+        ]
+      },
+      {
+        "key": "hey girl how r u hope u r well me an del r bak again long time no c give me a call sum time from lucyxx",
+        "labels": [
+          "Ham",
+          "Spam"
+        ],
+        "n": 2,
+        "samples": [
+          "HEY GIRL. HOW R U? HOPE U R WELL ME AN DEL R BAK! AGAIN LONG TIME NO C! GIVE ME A CALL SUM TIME FROM LUCYxx",
+          "HEY GIRL. HOW R U? HOPE U R WELL ME AN DEL R BAK! AGAIN LONG TIME NO C! GIVE ME A CALL SUM TIME FROM LUCYxx"
+        ]
+      },
+      {
+        "key": "i only haf msn it s url",
+        "labels": [
+          "Ham",
+          "Spam"
+        ],
+        "n": 2,
+        "samples": [
+          "I only haf msn. It's yijue@hotmail.com",
+          "I only haf msn. It's yijue@hotmail.com"
+        ]
+      },
+      {
+        "key": "are you unique enough find out from num th august url",
+        "labels": [
+          "Ham",
+          "Spam"
+        ],
+        "n": 2,
+        "samples": [
+          "Are you unique enough? Find out from 30th August. www.areyouunique.co.uk",
+          "Are you unique enough? Find out from 30th August. www.areyouunique.co.uk"
+        ]
+      },
+      {
+        "key": "hi baby im cruisin with my girl friend what r u up num give me a call in and hour at home if thats alright or fone me on",
+        "labels": [
+          "Ham",
+          "Spam"
+        ],
+        "n": 2,
+        "samples": [
+          "hi baby im cruisin with my girl friend what r u up 2? give me a call in and hour at home if thats alright or fone me on this fone now love jenny xxx",
+          "hi baby im cruisin with my girl friend what r u up 2? give me a call in and hour at home if thats alright or fone me on this fone now love jenny xxx"
+        ]
+      },
+      {
+        "key": "today is sorry day if ever i was angry with you if ever i misbehaved or hurt you plz plz just slap urself bcoz its ur fa",
+        "labels": [
+          "Ham",
+          "Spam"
+        ],
+        "n": 2,
+        "samples": [
+          "TODAY is Sorry day.! If ever i was angry with you, if ever i misbehaved or hurt you? plz plz JUST SLAP URSELF Bcoz, Its ur fault, I'm basically GOOD",
+          "TODAY is Sorry day.! If ever i was angry with you, if ever i misbehaved or hurt you? plz plz JUST SLAP URSELF Bcoz, Its ur fault, I'm basically GOOD"
+        ]
+      },
+      {
+        "key": "well there s not a lot of things happening in lindsay on new years sighs some bars in ptbo and the blue heron has someth",
+        "labels": [
+          "Ham",
+          "Spam"
+        ],
+        "n": 2,
+        "samples": [
+          "Well there's not a lot of things happening in Lindsay on New years *sighs* Some bars in Ptbo and the blue heron has something going",
+          "Well there's not a lot of things happening in Lindsay on New years *sighs* Some bars in Ptbo and the blue heron has something going"
+        ]
+      }
+    ],
+    "script_counts": {
+      "latin_only": 2817,
+      "no_letters": 1729,
+      "malayalam_only": 1489,
+      "tamil_only": 883,
+      "malayalam+latin": 503,
+      "tamil+latin": 292,
+      "devanagari": 4
+    },
+    "script_by_label": {
+      "tamil+latin": {
+        "Spam": 191,
+        "Ham": 101
+      },
+      "tamil_only": {
+        "Ham": 862,
+        "Spam": 21
+      },
+      "latin_only": {
+        "Ham": 2001,
+        "Spam": 815,
+        "Spa,": 1
+      },
+      "no_letters": {
+        "Ham": 1587,
+        "Spam": 142
+      },
+      "malayalam_only": {
+        "Ham": 1429,
+        "Spam": 60
+      },
+      "malayalam+latin": {
+        "Ham": 338,
+        "Spam": 165
+      },
+      "devanagari": {
+        "Ham": 4
+      }
+    },
+    "manglish_screen_count": 34,
+    "manglish_screen_by_label": {
+      "Ham": 26,
+      "Spam": 8
+    },
+    "char_health": {
+      "double_space": 291,
+      "nbsp": 57,
+      "zero_width": 1230,
+      "starts_or_ends_space": 58,
+      "replacement_char": 5
+    },
+    "tokens_mean": 12.47,
+    "tokens_median": 10,
+    "tokens_max": 80,
+    "tokens_min": 0,
+    "sha256": "24ca099ac1ffabc0b02fd491f57d577c56afb932bc81c5964a40e32eab9a023b",
+    "distinct_exact_messages": 6493
+  },
+  "mendeley": {
+    "file": "Dataset_5971.csv",
+    "header": [
+      "LABEL",
+      "TEXT",
+      "URL",
+      "EMAIL",
+      "PHONE"
+    ],
+    "row_width_distribution": {
+      "5": 5971
+    },
+    "malformed_rows": 0,
+    "records": 5971,
+    "raw_label_counts": {
+      "ham": 4844,
+      "Smishing": 616,
+      "spam": 466,
+      "Spam": 23,
+      "smishing": 22
+    },
+    "normalised_label_counts": {
+      "ham": 4844,
+      "smishing": 638,
+      "spam": 489
+    },
+    "missing_text": 0,
+    "missing_label": 0,
+    "metadata_columns": {
+      "URL": {
+        "unique_values": 2,
+        "top": {
+          "no": 5764,
+          "yes": 207
+        },
+        "non_no": 207
+      },
+      "EMAIL": {
+        "unique_values": 2,
+        "top": {
+          "no": 5952,
+          "yes": 19
+        },
+        "non_no": 19
+      },
+      "PHONE": {
+        "unique_values": 2,
+        "top": {
+          "no": 5127,
+          "yes": 844
+        },
+        "non_no": 844
+      }
+    },
+    "exact_duplicate_groups": 22,
+    "exact_duplicate_excess": 22,
+    "near_duplicate_groups": 179,
+    "near_duplicate_excess": 270,
+    "conflicting_label_groups": 37,
+    "conflict_examples": [
+      {
+        "key": "num free top polyphonic tones call num national rate get a toppoly tune sent every week just text subpoly to num num per",
+        "labels": [
+          "smishing",
+          "spam"
+        ],
+        "n": 2,
+        "samples": [
+          "\t5 Free Top Polyphonic Tones call 087018728737, National Rate. Get a toppoly tune sent every week, just text SUBPOLY to 81618, £3 per pole. UnSub 08718727870.",
+          "5 Free Top Polyphonic Tones call 087018728737, National Rate. Get a toppoly tune sent every week, just text SUBPOLY to 81618, £3 per pole. UnSub 08718727870."
+        ]
+      },
+      {
+        "key": "want a new video phone num anytime any network mins half price line rental free text for num months reply or call num fo",
+        "labels": [
+          "smishing",
+          "spam"
+        ],
+        "n": 2,
+        "samples": [
+          "\tWant a new Video Phone? 750 anytime any network mins? Half price line rental free text for 3 months? Reply or call 08000930705 for free delivery",
+          "Want a new Video Phone? 750 anytime any network mins? Half price line rental free text for 3 months? Reply or call 08000930705 for free delivery"
+        ]
+      },
+      {
+        "key": "free entry into our num weekly comp just send the word enter to num now num t c url cust care num",
+        "labels": [
+          "smishing",
+          "spam"
+        ],
+        "n": 2,
+        "samples": [
+          "\tFREE entry into our £250 weekly comp just send the word ENTER to 84128 NOW. 18 T&C www.textcomp.com cust care 08712405020.",
+          "FREE entry into our £250 weekly comp just send the word ENTER to 84128 NOW. 18 T&C www.textcomp.com cust care 08712405020."
+        ]
+      },
+      {
+        "key": "thanks for your ringtone order reference number x num your mobile will be charged num num should your tone not arrive pl",
+        "labels": [
+          "smishing",
+          "spam"
+        ],
+        "n": 4,
+        "samples": [
+          "\tThanks for your ringtone order, reference number X29. Your mobile will be charged 4.50. Should your tone not arrive please call customer services 09065989180",
+          "Thanks for your ringtone order, reference number X49.Your mobile will be charged 4.50. Should your tone not arrive please call customer services 09065989182",
+          "\tThanks for your ringtone order, reference number X49.Your mobile will be charged 4.50. Should your tone not arrive please call customer services 09065989182"
+        ]
+      },
+      {
+        "key": "do you want a new video handset num any time any network mins unlimited text camcorder reply or call now num for del sat",
+        "labels": [
+          "smishing",
+          "spam"
+        ],
+        "n": 2,
+        "samples": [
+          "Do you want a new Video handset? 750 any time any network mins? UNLIMITED TEXT? Camcorder? Reply or Call now 08000930705 for del Sat AM",
+          "\tDo you want a new Video handset? 750 any time any network mins? UNLIMITED TEXT? Camcorder? Reply or Call now 08000930705 for del Sat AM"
+        ]
+      },
+      {
+        "key": "you are now unsubscribed all services get tons of sexy babes or hunks straight to your phone go to url no subscriptions",
+        "labels": [
+          "smishing",
+          "spam"
+        ],
+        "n": 2,
+        "samples": [
+          "You are now unsubscribed all services. Get tons of sexy babes or hunks straight to your phone! go to http://gotbabes.co.uk. No subscriptions.",
+          "\tYou are now unsubscribed all services. Get tons of sexy babes or hunks straight to your phone! go to http://gotbabes.co.uk. No subscriptions."
+        ]
+      },
+      {
+        "key": "goldviking num m is inviting you to be his friend reply yes num or no num see him url stop send stop frnd to num",
+        "labels": [
+          "smishing",
+          "spam"
+        ],
+        "n": 2,
+        "samples": [
+          "\tgoldviking (29/M) is inviting you to be his friend. Reply YES-762 or NO-762 See him: www.SMS.ac/u/goldviking STOP? Send STOP FRND to 62468",
+          "goldviking (29/M) is inviting you to be his friend. Reply YES-762 or NO-762 See him: www.SMS.ac/u/goldviking STOP? Send STOP FRND to 62468"
+        ]
+      },
+      {
+        "key": "the current leading bid is num to pause this auction send out customer care num",
+        "labels": [
+          "smishing",
+          "spam"
+        ],
+        "n": 2,
+        "samples": [
+          "The current leading bid is 151. To pause this auction send OUT. Customer Care: 08718726270",
+          "\tThe current leading bid is 151. To pause this auction send OUT. Customer Care: 08718726270"
+        ]
+      }
+    ],
+    "script_counts": {
+      "latin_only": 5969,
+      "no_letters": 2
+    },
+    "script_by_label": {
+      "latin_only": {
+        "ham": 4842,
+        "smishing": 638,
+        "spam": 489
+      },
+      "no_letters": {
+        "ham": 2
+      }
+    },
+    "char_health": {
+      "replacement_char": 185,
+      "starts_or_ends_space": 254,
+      "double_space": 306
+    },
+    "tokens_mean": 15.81,
+    "tokens_median": 13,
+    "tokens_max": 171,
+    "tokens_min": 1,
+    "sha256": "649844f1c62a6b27e145eaf17a65f7010c56c390e11a794ea8329993a05ba71e",
+    "distinct_exact_messages": 5949
+  },
+  "cross_dataset": {
+    "dravidian_normalised_keys": 6341,
+    "mendeley_normalised_keys": 5700,
+    "overlapping_keys": 773,
+    "overlap_examples": [
+      "",
+      "I dled 3d its very imp",
+      "Do you know what Mallika Sherawat did yesterday? Find out now @ &lt;URL&gt;",
+      "Both :) i shoot big loads so get ready!",
+      "Maybe westshore or hyde park village, the place near my house?"
+    ],
+    "dravidian_messages_in_overlap": 1557,
+    "mendeley_messages_in_overlap": 831
+  }
+}

@@ -1,0 +1,148 @@
+2026-11-05 21:34:33,255 args {'seeds': [42, 43, 44], 'epochs': 6, 'patience': 2, 'batch': 4, 'accum': 2, 'eval_batch': 32, 'lr': 2e-05, 'max_len': 128, 'weight_cap': 10.0, 'skip_block': False}
+2026-11-05 21:34:33,283 split hashes verified: {'manifest_hash_ok': True, 'checks': [{'split': 'train', 'file': 'd1_malayalam_train.csv', 'sha256': 'bd4f5edb59ce2579f21a2ac9eca4a3b9968b499f15780cfa9a3bee306204ddc1', 'hash_ok': True, 'rows': 1394}, {'split': 'val', 'file': 'd1_malayalam_val.csv', 'sha256': '5bcc228f338b2685e2d5887f48815ba80579b670a71b4a0df6c0989243487f1f', 'hash_ok': True, 'rows': 299}, {'split': 'test', 'file': 'd1_malayalam_test.csv', 'sha256': '3922f037a2f52045ffc1d682e799880a06311dec9017ff33abef3fdd3d40be0b', 'hash_ok': True, 'rows': 299}]}
+2026-11-05 21:34:33,307 train rows=1394 ids=D1-04144..D1-06368 spam=157 groups=1226
+2026-11-05 21:34:33,308 val rows=299 ids=D1-04376..D1-06366 spam=34 groups=299
+2026-11-05 21:34:33,308 test rows=299 ids=D1-04369..D1-06367 spam=34 groups=299
+2026-11-05 21:34:33,608 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased "HTTP/1.1 200 OK"
+2026-11-05 21:34:33,869 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-11-05 21:34:34,105 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-11-05 21:34:34,424 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased "HTTP/1.1 200 OK"
+2026-11-05 21:34:34,615 token lengths {'n': 1992, 'mean': 32.53, 'median': 31.0, 'p90': 55.0, 'p95': 63.0, 'p99': 90.08999999999992, 'max': 127, 'max_len_used': 128, 'coverage_at_max_len': 1.0, 'coverage_64': 0.9538, 'coverage_96': 0.9935}
+2026-11-05 21:34:34,618 === random split seed 42 ===
+2026-11-05 21:34:35,000 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased "HTTP/1.1 200 OK"
+2026-11-05 21:34:37,401 HTTP Request: HEAD https://huggingface.co/google/muril-base-cased/resolve/main/model.safetensors "HTTP/1.1 404 Not Found"
+2026-11-05 21:34:37,402 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-11-05 21:34:37,633 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased "HTTP/1.1 200 OK"
+2026-11-05 21:34:37,875 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased/commits/main "HTTP/1.1 200 OK"
+2026-11-05 21:34:38,145 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased/discussions?p=0 "HTTP/1.1 200 OK"
+2026-11-05 21:34:38,408 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased/commits/refs%2Fpr%2F3 "HTTP/1.1 200 OK"
+2026-11-05 21:34:38,657 HTTP Request: HEAD https://huggingface.co/google/muril-base-cased/resolve/refs%2Fpr%2F3/model.safetensors.index.json "HTTP/1.1 404 Not Found"
+2026-11-05 21:34:38,911 HTTP Request: HEAD https://huggingface.co/google/muril-base-cased/resolve/refs%2Fpr%2F3/model.safetensors "HTTP/1.1 302 Found"
+2026-11-05 21:35:21,012 random seed=42 epoch=1 loss=0.5868 val_macro_f1=0.9154 val_spam_recall=0.7353
+2026-11-05 21:36:02,563 random seed=42 epoch=2 loss=0.2047 val_macro_f1=1.0000 val_spam_recall=1.0000
+2026-11-05 21:36:43,594 random seed=42 epoch=3 loss=0.0798 val_macro_f1=1.0000 val_spam_recall=1.0000
+2026-11-05 21:37:25,371 random seed=42 epoch=4 loss=0.0483 val_macro_f1=0.9830 val_spam_recall=0.9412
+2026-11-05 21:37:25,371 random seed=42 early stop at epoch 4 (best 2)
+2026-11-05 21:37:27,643 random seed=42 acc=0.9866 macro_f1=0.9650 spam_recall=0.8824 time=167.1s mem=4779MB
+2026-11-05 21:37:27,644 === block 4001-5000 seed 42 (fixed 2 epochs) train n=1362 spam=213 test n=630 spam=12 ===
+2026-11-05 21:37:28,133 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased "HTTP/1.1 200 OK"
+2026-11-05 21:37:28,377 HTTP Request: HEAD https://huggingface.co/google/muril-base-cased/resolve/main/model.safetensors "HTTP/1.1 404 Not Found"
+2026-11-05 21:37:28,631 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased "HTTP/1.1 200 OK"
+2026-11-05 21:37:28,880 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased/commits/main "HTTP/1.1 200 OK"
+2026-11-05 21:37:29,128 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased/discussions?p=0 "HTTP/1.1 200 OK"
+2026-11-05 21:37:29,392 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased/commits/refs%2Fpr%2F3 "HTTP/1.1 200 OK"
+2026-11-05 21:37:29,642 HTTP Request: HEAD https://huggingface.co/google/muril-base-cased/resolve/refs%2Fpr%2F3/model.safetensors.index.json "HTTP/1.1 404 Not Found"
+2026-11-05 21:37:29,912 HTTP Request: HEAD https://huggingface.co/google/muril-base-cased/resolve/refs%2Fpr%2F3/model.safetensors "HTTP/1.1 302 Found"
+2026-11-05 21:38:52,046 block 4001-5000 seed=42 acc=0.9873 macro_f1=0.8150 spam_recall=0.5833333333333334 time=80.8s
+2026-11-05 21:38:52,047 === block 5001-6000 seed 42 (fixed 2 epochs) train n=1001 spam=225 test n=991 spam=0 ===
+2026-11-05 21:38:52,503 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased "HTTP/1.1 200 OK"
+2026-11-05 21:38:52,747 HTTP Request: HEAD https://huggingface.co/google/muril-base-cased/resolve/main/model.safetensors "HTTP/1.1 404 Not Found"
+2026-11-05 21:38:53,005 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased "HTTP/1.1 200 OK"
+2026-11-05 21:38:53,249 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased/commits/main "HTTP/1.1 200 OK"
+2026-11-05 21:38:53,511 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased/discussions?p=0 "HTTP/1.1 200 OK"
+2026-11-05 21:38:53,835 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased/commits/refs%2Fpr%2F3 "HTTP/1.1 200 OK"
+2026-11-05 21:38:54,069 HTTP Request: HEAD https://huggingface.co/google/muril-base-cased/resolve/refs%2Fpr%2F3/model.safetensors.index.json "HTTP/1.1 404 Not Found"
+2026-11-05 21:38:54,310 HTTP Request: HEAD https://huggingface.co/google/muril-base-cased/resolve/refs%2Fpr%2F3/model.safetensors "HTTP/1.1 302 Found"
+2026-11-05 21:39:54,596 block 5001-6000 seed=42 acc=0.9909 macro_f1=0.4977 spam_recall=None time=59.3s
+2026-11-05 21:39:54,597 === block 6001-7000 seed 42 (fixed 2 epochs) train n=1621 spam=12 test n=371 spam=213 ===
+2026-11-05 21:39:55,051 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased "HTTP/1.1 200 OK"
+2026-11-05 21:39:55,306 HTTP Request: HEAD https://huggingface.co/google/muril-base-cased/resolve/main/model.safetensors "HTTP/1.1 404 Not Found"
+2026-11-05 21:39:55,550 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased "HTTP/1.1 200 OK"
+2026-11-05 21:39:55,972 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased/commits/main "HTTP/1.1 200 OK"
+2026-11-05 21:39:56,227 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased/discussions?p=0 "HTTP/1.1 200 OK"
+2026-11-05 21:39:56,489 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased/commits/refs%2Fpr%2F3 "HTTP/1.1 200 OK"
+2026-11-05 21:39:56,736 HTTP Request: HEAD https://huggingface.co/google/muril-base-cased/resolve/refs%2Fpr%2F3/model.safetensors.index.json "HTTP/1.1 404 Not Found"
+2026-11-05 21:39:56,971 HTTP Request: HEAD https://huggingface.co/google/muril-base-cased/resolve/refs%2Fpr%2F3/model.safetensors "HTTP/1.1 302 Found"
+2026-11-05 21:41:27,843 block 6001-7000 seed=42 acc=0.4259 macro_f1=0.2987 spam_recall=0.0 time=90.8s
+2026-11-05 21:41:27,843 === random split seed 43 ===
+2026-11-05 21:41:28,329 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased "HTTP/1.1 200 OK"
+2026-11-05 21:41:28,575 HTTP Request: HEAD https://huggingface.co/google/muril-base-cased/resolve/main/model.safetensors "HTTP/1.1 404 Not Found"
+2026-11-05 21:41:28,828 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased "HTTP/1.1 200 OK"
+2026-11-05 21:41:29,075 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased/commits/main "HTTP/1.1 200 OK"
+2026-11-05 21:41:29,334 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased/discussions?p=0 "HTTP/1.1 200 OK"
+2026-11-05 21:41:29,586 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased/commits/refs%2Fpr%2F3 "HTTP/1.1 200 OK"
+2026-11-05 21:41:29,818 HTTP Request: HEAD https://huggingface.co/google/muril-base-cased/resolve/refs%2Fpr%2F3/model.safetensors.index.json "HTTP/1.1 404 Not Found"
+2026-11-05 21:41:30,063 HTTP Request: HEAD https://huggingface.co/google/muril-base-cased/resolve/refs%2Fpr%2F3/model.safetensors "HTTP/1.1 302 Found"
+2026-11-05 21:42:07,720 random seed=43 epoch=1 loss=0.5850 val_macro_f1=0.9916 val_spam_recall=0.9706
+2026-11-05 21:42:45,737 random seed=43 epoch=2 loss=0.2012 val_macro_f1=0.9650 val_spam_recall=0.8824
+2026-11-05 21:43:23,675 random seed=43 epoch=3 loss=0.0725 val_macro_f1=0.9838 val_spam_recall=1.0000
+2026-11-05 21:43:23,676 random seed=43 early stop at epoch 3 (best 1)
+2026-11-05 21:43:24,529 random seed=43 acc=0.9833 macro_f1=0.9556 spam_recall=0.8529 time=114.5s mem=4778MB
+2026-11-05 21:43:24,530 === block 4001-5000 seed 43 (fixed 1 epochs) train n=1362 spam=213 test n=630 spam=12 ===
+2026-11-05 21:43:25,039 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased "HTTP/1.1 200 OK"
+2026-11-05 21:43:25,279 HTTP Request: HEAD https://huggingface.co/google/muril-base-cased/resolve/main/model.safetensors "HTTP/1.1 404 Not Found"
+2026-11-05 21:43:25,519 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased "HTTP/1.1 200 OK"
+2026-11-05 21:43:25,866 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased/commits/main "HTTP/1.1 200 OK"
+2026-11-05 21:43:26,119 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased/discussions?p=0 "HTTP/1.1 200 OK"
+2026-11-05 21:43:26,365 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased/commits/refs%2Fpr%2F3 "HTTP/1.1 200 OK"
+2026-11-05 21:43:26,618 HTTP Request: HEAD https://huggingface.co/google/muril-base-cased/resolve/refs%2Fpr%2F3/model.safetensors.index.json "HTTP/1.1 404 Not Found"
+2026-11-05 21:43:26,864 HTTP Request: HEAD https://huggingface.co/google/muril-base-cased/resolve/refs%2Fpr%2F3/model.safetensors "HTTP/1.1 302 Found"
+2026-11-05 21:44:03,837 block 4001-5000 seed=43 acc=0.9905 macro_f1=0.8476 spam_recall=0.5833333333333334 time=36.6s
+2026-11-05 21:44:03,838 === block 5001-6000 seed 43 (fixed 1 epochs) train n=1001 spam=225 test n=991 spam=0 ===
+2026-11-05 21:44:04,293 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased "HTTP/1.1 200 OK"
+2026-11-05 21:44:04,528 HTTP Request: HEAD https://huggingface.co/google/muril-base-cased/resolve/main/model.safetensors "HTTP/1.1 404 Not Found"
+2026-11-05 21:44:04,761 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased "HTTP/1.1 200 OK"
+2026-11-05 21:44:05,109 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased/commits/main "HTTP/1.1 200 OK"
+2026-11-05 21:44:05,370 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased/discussions?p=0 "HTTP/1.1 200 OK"
+2026-11-05 21:44:05,626 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased/commits/refs%2Fpr%2F3 "HTTP/1.1 200 OK"
+2026-11-05 21:44:05,880 HTTP Request: HEAD https://huggingface.co/google/muril-base-cased/resolve/refs%2Fpr%2F3/model.safetensors.index.json "HTTP/1.1 404 Not Found"
+2026-11-05 21:44:06,130 HTTP Request: HEAD https://huggingface.co/google/muril-base-cased/resolve/refs%2Fpr%2F3/model.safetensors "HTTP/1.1 302 Found"
+2026-11-05 21:44:33,817 block 5001-6000 seed=43 acc=0.9990 macro_f1=0.4997 spam_recall=None time=26.9s
+2026-11-05 21:44:33,818 === block 6001-7000 seed 43 (fixed 1 epochs) train n=1621 spam=12 test n=371 spam=213 ===
+2026-11-05 21:44:34,304 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased "HTTP/1.1 200 OK"
+2026-11-05 21:44:34,543 HTTP Request: HEAD https://huggingface.co/google/muril-base-cased/resolve/main/model.safetensors "HTTP/1.1 404 Not Found"
+2026-11-05 21:44:34,777 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased "HTTP/1.1 200 OK"
+2026-11-05 21:44:35,108 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased/commits/main "HTTP/1.1 200 OK"
+2026-11-05 21:44:35,370 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased/discussions?p=0 "HTTP/1.1 200 OK"
+2026-11-05 21:44:35,610 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased/commits/refs%2Fpr%2F3 "HTTP/1.1 200 OK"
+2026-11-05 21:44:35,847 HTTP Request: HEAD https://huggingface.co/google/muril-base-cased/resolve/refs%2Fpr%2F3/model.safetensors.index.json "HTTP/1.1 404 Not Found"
+2026-11-05 21:44:36,093 HTTP Request: HEAD https://huggingface.co/google/muril-base-cased/resolve/refs%2Fpr%2F3/model.safetensors "HTTP/1.1 302 Found"
+2026-11-05 21:45:19,844 block 6001-7000 seed=43 acc=0.4259 macro_f1=0.2987 spam_recall=0.0 time=43.7s
+2026-11-05 21:45:19,844 === random split seed 44 ===
+2026-11-05 21:45:20,373 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased "HTTP/1.1 200 OK"
+2026-11-05 21:45:20,633 HTTP Request: HEAD https://huggingface.co/google/muril-base-cased/resolve/main/model.safetensors "HTTP/1.1 404 Not Found"
+2026-11-05 21:45:20,893 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased "HTTP/1.1 200 OK"
+2026-11-05 21:45:21,145 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased/commits/main "HTTP/1.1 200 OK"
+2026-11-05 21:45:21,434 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased/discussions?p=0 "HTTP/1.1 200 OK"
+2026-11-05 21:45:21,694 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased/commits/refs%2Fpr%2F3 "HTTP/1.1 200 OK"
+2026-11-05 21:45:21,931 HTTP Request: HEAD https://huggingface.co/google/muril-base-cased/resolve/refs%2Fpr%2F3/model.safetensors.index.json "HTTP/1.1 404 Not Found"
+2026-11-05 21:45:22,190 HTTP Request: HEAD https://huggingface.co/google/muril-base-cased/resolve/refs%2Fpr%2F3/model.safetensors "HTTP/1.1 302 Found"
+2026-11-05 21:46:00,482 random seed=44 epoch=1 loss=0.5846 val_macro_f1=1.0000 val_spam_recall=1.0000
+2026-11-05 21:46:38,132 random seed=44 epoch=2 loss=0.1924 val_macro_f1=0.9830 val_spam_recall=0.9412
+2026-11-05 21:47:15,980 random seed=44 epoch=3 loss=0.0843 val_macro_f1=0.9650 val_spam_recall=0.8824
+2026-11-05 21:47:15,980 random seed=44 early stop at epoch 3 (best 1)
+2026-11-05 21:47:16,848 random seed=44 acc=0.9866 macro_f1=0.9650 spam_recall=0.8824 time=114.6s mem=4778MB
+2026-11-05 21:47:16,849 === block 4001-5000 seed 44 (fixed 1 epochs) train n=1362 spam=213 test n=630 spam=12 ===
+2026-11-05 21:47:17,312 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased "HTTP/1.1 200 OK"
+2026-11-05 21:47:17,560 HTTP Request: HEAD https://huggingface.co/google/muril-base-cased/resolve/main/model.safetensors "HTTP/1.1 404 Not Found"
+2026-11-05 21:47:17,802 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased "HTTP/1.1 200 OK"
+2026-11-05 21:47:18,054 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased/commits/main "HTTP/1.1 200 OK"
+2026-11-05 21:47:18,321 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased/discussions?p=0 "HTTP/1.1 200 OK"
+2026-11-05 21:47:18,703 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased/commits/refs%2Fpr%2F3 "HTTP/1.1 200 OK"
+2026-11-05 21:47:18,956 HTTP Request: HEAD https://huggingface.co/google/muril-base-cased/resolve/refs%2Fpr%2F3/model.safetensors.index.json "HTTP/1.1 404 Not Found"
+2026-11-05 21:47:19,217 HTTP Request: HEAD https://huggingface.co/google/muril-base-cased/resolve/refs%2Fpr%2F3/model.safetensors "HTTP/1.1 302 Found"
+2026-11-05 21:47:56,168 block 4001-5000 seed=44 acc=0.9841 macro_f1=0.8293 spam_recall=0.8333333333333334 time=36.6s
+2026-11-05 21:47:56,169 === block 5001-6000 seed 44 (fixed 1 epochs) train n=1001 spam=225 test n=991 spam=0 ===
+2026-11-05 21:47:56,644 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased "HTTP/1.1 200 OK"
+2026-11-05 21:47:56,885 HTTP Request: HEAD https://huggingface.co/google/muril-base-cased/resolve/main/model.safetensors "HTTP/1.1 404 Not Found"
+2026-11-05 21:47:57,138 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased "HTTP/1.1 200 OK"
+2026-11-05 21:47:57,457 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased/commits/main "HTTP/1.1 200 OK"
+2026-11-05 21:47:57,710 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased/discussions?p=0 "HTTP/1.1 200 OK"
+2026-11-05 21:47:57,974 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased/commits/refs%2Fpr%2F3 "HTTP/1.1 200 OK"
+2026-11-05 21:47:58,227 HTTP Request: HEAD https://huggingface.co/google/muril-base-cased/resolve/refs%2Fpr%2F3/model.safetensors.index.json "HTTP/1.1 404 Not Found"
+2026-11-05 21:47:58,485 HTTP Request: HEAD https://huggingface.co/google/muril-base-cased/resolve/refs%2Fpr%2F3/model.safetensors "HTTP/1.1 302 Found"
+2026-11-05 21:48:26,296 block 5001-6000 seed=44 acc=0.9950 macro_f1=0.4987 spam_recall=None time=27.0s
+2026-11-05 21:48:26,297 === block 6001-7000 seed 44 (fixed 1 epochs) train n=1621 spam=12 test n=371 spam=213 ===
+2026-11-05 21:48:26,750 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased "HTTP/1.1 200 OK"
+2026-11-05 21:48:26,999 HTTP Request: HEAD https://huggingface.co/google/muril-base-cased/resolve/main/model.safetensors "HTTP/1.1 404 Not Found"
+2026-11-05 21:48:27,262 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased "HTTP/1.1 200 OK"
+2026-11-05 21:48:27,582 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased/commits/main "HTTP/1.1 200 OK"
+2026-11-05 21:48:27,859 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased/discussions?p=0 "HTTP/1.1 200 OK"
+2026-11-05 21:48:28,166 HTTP Request: GET https://huggingface.co/api/models/google/muril-base-cased/commits/refs%2Fpr%2F3 "HTTP/1.1 200 OK"
+2026-11-05 21:48:28,403 HTTP Request: HEAD https://huggingface.co/google/muril-base-cased/resolve/refs%2Fpr%2F3/model.safetensors.index.json "HTTP/1.1 404 Not Found"
+2026-11-05 21:48:28,639 HTTP Request: HEAD https://huggingface.co/google/muril-base-cased/resolve/refs%2Fpr%2F3/model.safetensors "HTTP/1.1 302 Found"
+2026-11-05 21:49:11,954 block 6001-7000 seed=44 acc=0.4259 macro_f1=0.2987 spam_recall=0.0 time=43.4s
+2026-11-05 21:49:12,069 block pooled seed=42 macro_f1=0.4979 spam_recall=0.0311
+2026-11-05 21:49:12,078 block pooled seed=43 macro_f1=0.5006 spam_recall=0.0311
+2026-11-05 21:49:12,087 block pooled seed=44 macro_f1=0.5098 spam_recall=0.0444
+2026-11-05 21:49:12,098 wrote C:\Users\Sachin\OneDrive\Documents\NLP_Project\Research Work\phase2\metrics\muril_results.json

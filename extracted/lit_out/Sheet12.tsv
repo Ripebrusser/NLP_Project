@@ -1,0 +1,10 @@
+RESEARCH DECISION | 14 OCT 2026	
+Recommended direction	Switch scope to English SMS ham/spam/smishing classification only after D02 data bytes and labels are inspected.
+Original 3-form Malayalam phishing title	NO-GO: no confirmed accessible dataset with phishing-specific labels across Malayalam script, Manglish and Malayalam-English mix.
+Malayalam SMS spam alternative	CONDITIONAL: IEEE DataPort confirms Malayalam in a spam/ham collection but requires login and file inspection.
+Best primary dataset	Mishra &amp; Soni, SMS PHISHING DATASET FOR MACHINE LEARNING AND PATTERN RECOGNITION, 2022, Mendeley V1 (CC BY 4.0).
+What primary metadata proves	5,971 reported SMS; 4,844 ham, 489 spam, 638 smishing. Dataset_5971.zip listed.
+What remains unproved	No downloaded bytes, class counts directly checked, data duplicate analysis, natural-script samples, or independent evaluation.
+Explicit constraint	No student message collection or annotation. No training performed in this audit.
+Immediate step	Download D02 from official Mendeley page, unzip and run a non-annotating file audit for label counts, duplicates, source shortcuts.
+Do not cite as validated	Claims about paper metrics in original legacy sheets are preserved as historical notes, NOT freshly full-text verified.

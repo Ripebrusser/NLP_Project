@@ -1,0 +1,358 @@
+{
+  "audit": "final code audit",
+  "timestamp_utc": "2026-11-08T16:32:07+00:00",
+  "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+  "status": "PASS",
+  "failures": [],
+  "checks": {
+    "tests_passed": true,
+    "prototype_verifier_passed": true,
+    "literature_validation_passed": true,
+    "all_split_hashes_match": true,
+    "all_model_hashes_match": true,
+    "canonical_metrics_match": true,
+    "paired_direction_consistent": true
+  },
+  "tests": {
+    "tests_run": 125,
+    "passed": 125,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "warnings": 0,
+    "duration_seconds": 13.24,
+    "command": "python -m unittest discover -s \"Research Work/tests\" -t \"Research Work/tests\" -v"
+  },
+  "literature": {
+    "status": "PASS",
+    "records_register": 24,
+    "records_workbook": 24,
+    "active_records": 23,
+    "verification_counts": {
+      "METADATA": 10,
+      "FULL TEXT": 7,
+      "ABSTRACT": 6,
+      "EXCLUDED": 1
+    },
+    "expected_counts": {
+      "FULL TEXT": 7,
+      "ABSTRACT": 6,
+      "METADATA": 10,
+      "EXCLUDED": 1
+    },
+    "failures": []
+  },
+  "prototype": {
+    "status": "PASS",
+    "model_hashes": {
+      "d1_malayalam_linear_svm.joblib": {
+        "exists": true,
+        "sha256": "9ba1dcd62655bf501f4b0297d543bd232ad1348ab476c2efca9b07e0b97225cd",
+        "matches": true
+      },
+      "d1_malayalam_logreg.joblib": {
+        "exists": true,
+        "sha256": "fd4a1542436fc81890b117cdeba6cd1e3753bb1f0e832875068908a117af6e69",
+        "matches": true
+      },
+      "d2_linear_svm.joblib": {
+        "exists": true,
+        "sha256": "5de720cfcc7fe7179e976b6e2bb3e0410d1ca04145003dfcb8cb3ce5c5ea042e",
+        "matches": true
+      },
+      "d2_logreg.joblib": {
+        "exists": true,
+        "sha256": "6f8cd0e5498f672bd71ddeaf494284f3c7aad6315bc39dbfb449f0cf388dc856",
+        "matches": true
+      }
+    },
+    "split_hashes": {
+      "d1_malayalam_train.csv": true,
+      "d1_malayalam_val.csv": true,
+      "d1_malayalam_test.csv": true,
+      "d2_train.csv": true,
+      "d2_val.csv": true,
+      "d2_test.csv": true
+    },
+    "models": {
+      "d1": {
+        "model": "d1_malayalam_linear_svm.joblib",
+        "sha256": "9ba1dcd62655bf501f4b0297d543bd232ad1348ab476c2efca9b07e0b97225cd",
+        "hash_matches_manifest": true,
+        "test_rows": 299,
+        "prediction_parity": 299,
+        "classify_parity": 299,
+        "cleaning_parity": 299,
+        "classes_observed": [
+          "Ham",
+          "Spam"
+        ],
+        "labels_checked": 299
+      },
+      "d2": {
+        "model": "d2_logreg.joblib",
+        "sha256": "6f8cd0e5498f672bd71ddeaf494284f3c7aad6315bc39dbfb449f0cf388dc856",
+        "hash_matches_manifest": true,
+        "test_rows": 883,
+        "prediction_parity": 883,
+        "classify_parity": 883,
+        "cleaning_parity": 883,
+        "classes_observed": [
+          "ham",
+          "smishing",
+          "spam"
+        ],
+        "labels_checked": 883
+      }
+    },
+    "input_validation": {
+      "empty_rejected": true,
+      "none_rejected": true,
+      "bytes_rejected": true,
+      "latin_only_rejected_by_d1": true,
+      "malayalam_only_rejected_by_d2": true,
+      "oversize_rejected": true,
+      "controls_only_rejected": true,
+      "max_input_chars": 5000,
+      "length_at_limit_accepted": true,
+      "malayalam_detected": true,
+      "malayalam_absent": true,
+      "latin_detected": true,
+      "latin_absent": true,
+      "malayalam_preserved_after_clean": true
+    },
+    "failures": []
+  },
+  "canonical_metrics": {
+    "d1_logreg_random_macro_f1": 0.9556445631211987,
+    "d1_svm_random_macro_f1": 0.9650046816479401,
+    "d1_muril_random_macro_f1_mean": 0.9618846421390262,
+    "d1_muril_random_macro_f1_sd": 0.005404066951060919,
+    "d1_logreg_block_macro_f1": 0.5447952856859739,
+    "d1_svm_block_macro_f1": 0.5378449758089207,
+    "d1_muril_block_macro_f1_mean": 0.502776573361789,
+    "d1_logreg_block_spam_recall": 0.08888888888888889,
+    "d1_svm_block_spam_recall": 0.07555555555555556,
+    "d1_muril_block_spam_recall_mean": 0.035555555555555556
+  },
+  "canonical_check": {
+    "d1_logreg_random_macro_f1": {
+      "published": 0.9556,
+      "recomputed": 0.9556445631211987,
+      "tolerance": 5e-05,
+      "match": true
+    },
+    "d1_svm_random_macro_f1": {
+      "published": 0.965,
+      "recomputed": 0.9650046816479401,
+      "tolerance": 5e-05,
+      "match": true
+    },
+    "d1_muril_random_macro_f1_mean": {
+      "published": 0.9619,
+      "recomputed": 0.9618846421390262,
+      "tolerance": 5e-05,
+      "match": true
+    },
+    "d1_muril_random_macro_f1_sd": {
+      "published": 0.0054,
+      "recomputed": 0.005404066951060919,
+      "tolerance": 0.0005,
+      "match": true
+    },
+    "d1_logreg_block_macro_f1": {
+      "published": 0.5448,
+      "recomputed": 0.5447952856859739,
+      "tolerance": 5e-05,
+      "match": true
+    },
+    "d1_svm_block_macro_f1": {
+      "published": 0.5378,
+      "recomputed": 0.5378449758089207,
+      "tolerance": 5e-05,
+      "match": true
+    },
+    "d1_muril_block_macro_f1_mean": {
+      "published": 0.5028,
+      "recomputed": 0.502776573361789,
+      "tolerance": 5e-05,
+      "match": true
+    },
+    "d1_logreg_block_spam_recall": {
+      "published": 0.0889,
+      "recomputed": 0.08888888888888889,
+      "tolerance": 5e-05,
+      "match": true
+    },
+    "d1_svm_block_spam_recall": {
+      "published": 0.0756,
+      "recomputed": 0.07555555555555556,
+      "tolerance": 5e-05,
+      "match": true
+    },
+    "d1_muril_block_spam_recall_mean": {
+      "published": 0.0356,
+      "recomputed": 0.035555555555555556,
+      "tolerance": 5e-05,
+      "match": true
+    }
+  },
+  "paired_d1_macro_f1": {
+    "LR_minus_SVM": {
+      "a": 0.9556445631211987,
+      "b": 0.9650046816479401,
+      "difference": -0.009360118526741346,
+      "ci_low": -0.03214315072560611,
+      "ci_high": 0.0,
+      "boot_mean": -0.009470885945762727,
+      "boot_median": -0.008867265179782313,
+      "boot_min": -0.057057662545039856,
+      "boot_max": 0.0,
+      "q05": -0.028228946119372073,
+      "q95": 0.0,
+      "boot_sd": 0.009502267456035777,
+      "share_positive": 0.0,
+      "share_tie": 0.3685,
+      "share_negative": 0.6315,
+      "a_wrong_b_right": 1,
+      "a_right_b_wrong": 0,
+      "discordant_pairs": 1,
+      "discordance_exact_two_sided_p": 1.0,
+      "observed_inside_interval": true
+    },
+    "SVM_minus_LR": {
+      "a": 0.9650046816479401,
+      "b": 0.9556445631211987,
+      "difference": 0.009360118526741346,
+      "ci_low": 0.0,
+      "ci_high": 0.032143150725606105,
+      "boot_mean": 0.009470885945762727,
+      "boot_median": 0.008867265179782313,
+      "boot_min": 0.0,
+      "boot_max": 0.057057662545039856,
+      "q05": 0.0,
+      "q95": 0.02822894611937205,
+      "boot_sd": 0.009502267456035777,
+      "share_positive": 0.6315,
+      "share_tie": 0.3685,
+      "share_negative": 0.0,
+      "a_wrong_b_right": 0,
+      "a_right_b_wrong": 1,
+      "discordant_pairs": 1,
+      "discordance_exact_two_sided_p": 1.0,
+      "observed_inside_interval": true
+    }
+  },
+  "frozen_artifacts": {
+    "split_hashes": {
+      "d1_malayalam_train.csv": {
+        "expected": "bd4f5edb59ce2579f21a2ac9eca4a3b9968b499f15780cfa9a3bee306204ddc1",
+        "actual": "bd4f5edb59ce2579f21a2ac9eca4a3b9968b499f15780cfa9a3bee306204ddc1",
+        "match": true
+      },
+      "d1_malayalam_val.csv": {
+        "expected": "5bcc228f338b2685e2d5887f48815ba80579b670a71b4a0df6c0989243487f1f",
+        "actual": "5bcc228f338b2685e2d5887f48815ba80579b670a71b4a0df6c0989243487f1f",
+        "match": true
+      },
+      "d1_malayalam_test.csv": {
+        "expected": "3922f037a2f52045ffc1d682e799880a06311dec9017ff33abef3fdd3d40be0b",
+        "actual": "3922f037a2f52045ffc1d682e799880a06311dec9017ff33abef3fdd3d40be0b",
+        "match": true
+      },
+      "d2_train.csv": {
+        "expected": "ad19a6e8042dd4036331cf6920cd77da9cafe16787cd946dd821b3f0b2598499",
+        "actual": "ad19a6e8042dd4036331cf6920cd77da9cafe16787cd946dd821b3f0b2598499",
+        "match": true
+      },
+      "d2_val.csv": {
+        "expected": "2fc68c050731e90a3e511a8817796a4f3c639d00f0e8dad9a9d0268aa230400f",
+        "actual": "2fc68c050731e90a3e511a8817796a4f3c639d00f0e8dad9a9d0268aa230400f",
+        "match": true
+      },
+      "d2_test.csv": {
+        "expected": "44409491ebb1c4e22d3aa65b76ca6f4e18ad2eb6af1f58380ab7f19236b46c79",
+        "actual": "44409491ebb1c4e22d3aa65b76ca6f4e18ad2eb6af1f58380ab7f19236b46c79",
+        "match": true
+      }
+    },
+    "model_hashes": {
+      "d1_malayalam_linear_svm.joblib": {
+        "expected": "9ba1dcd62655bf501f4b0297d543bd232ad1348ab476c2efca9b07e0b97225cd",
+        "actual": "9ba1dcd62655bf501f4b0297d543bd232ad1348ab476c2efca9b07e0b97225cd",
+        "match": true
+      },
+      "d1_malayalam_logreg.joblib": {
+        "expected": "fd4a1542436fc81890b117cdeba6cd1e3753bb1f0e832875068908a117af6e69",
+        "actual": "fd4a1542436fc81890b117cdeba6cd1e3753bb1f0e832875068908a117af6e69",
+        "match": true
+      },
+      "d2_linear_svm.joblib": {
+        "expected": "5de720cfcc7fe7179e976b6e2bb3e0410d1ca04145003dfcb8cb3ce5c5ea042e",
+        "actual": "5de720cfcc7fe7179e976b6e2bb3e0410d1ca04145003dfcb8cb3ce5c5ea042e",
+        "match": true
+      },
+      "d2_logreg.joblib": {
+        "expected": "6f8cd0e5498f672bd71ddeaf494284f3c7aad6315bc39dbfb449f0cf388dc856",
+        "actual": "6f8cd0e5498f672bd71ddeaf494284f3c7aad6315bc39dbfb449f0cf388dc856",
+        "match": true
+      }
+    },
+    "prediction_hashes": {
+      "d1_malayalam_logreg_test_predictions.csv": {
+        "sha256": "c977e1e0c65e2fb09afc900bfcc3ada6693f22bc48f056e3a451e51f1a28a7ff",
+        "bytes": 190789
+      },
+      "d1_malayalam_linear_svm_test_predictions.csv": {
+        "sha256": "bd88b3c4519bf1c6808bc90e7527cf9f185f8aa772e661d8bda6f9d6404e821b",
+        "bytes": 190785
+      },
+      "muril_random_seed42_predictions.csv": {
+        "sha256": "e0fbdf4267418dc78139ffddd9f0486fe935e4603b821484fd211db24c20acde",
+        "bytes": 13165
+      },
+      "muril_random_seed43_predictions.csv": {
+        "sha256": "e8d8161016995493c950d8a258b2a5a07471cf3942181630a9464e47673b1c36",
+        "bytes": 12693
+      },
+      "muril_random_seed44_predictions.csv": {
+        "sha256": "8e2f1dd539f98edeeef7bb040d977466b9cb9a1c1a0c57a696c2e993576aa12f",
+        "bytes": 12790
+      },
+      "d2_logreg_test_predictions.csv": {
+        "sha256": "01d37c607cab4eacadd1e50ec2ef98f7fdef2382482edda8bbf1a6e39c6931b7",
+        "bytes": 243029
+      },
+      "d2_linear_svm_test_predictions.csv": {
+        "sha256": "72034359e8d726322ea00e973dfc989226447f337347a57206a7784f42557528",
+        "bytes": 241853
+      },
+      "block_cv_predictions.csv": {
+        "sha256": "7f500e348b03bfa013178338c6fbb703161b29ef2c280fee66a72da0ea98d7ad",
+        "bytes": 226988
+      }
+    },
+    "source_hashes": {
+      "d1": "24ca099ac1ffabc0b02fd491f57d577c56afb932bc81c5964a40e32eab9a023b",
+      "d2": "649844f1c62a6b27e145eaf17a65f7010c56c390e11a794ea8329993a05ba71e"
+    },
+    "note": "Prediction and source hashes are recorded, not compared to a pre-audit manifest (none existed). The audit scripts open them read-only; model and split hashes are compared to the recorded baselines."
+  },
+  "preserved_pre_audit_outputs": {
+    "verification_results.before_code_audit.json": true,
+    "final_verification.before_code_audit.json": true,
+    "final_audit_stats.before_code_audit.json": true
+  },
+  "environment": {
+    "python": "3.14.3",
+    "numpy": "2.5.4",
+    "pandas": "3.1.1",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.18.1",
+    "joblib": "1.6.0",
+    "openpyxl": "3.1.5",
+    "streamlit": "1.67.0",
+    "torch": "2.11.0+cu128",
+    "transformers": "5.22.1"
+  }
+}

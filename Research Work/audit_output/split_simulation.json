@@ -1,0 +1,135 @@
+{
+  "dravidian_all": {
+    "records": 7714,
+    "groups": 6340,
+    "strata": 10,
+    "train": {
+      "n": 5399,
+      "labels": {
+        "Ham": 4428,
+        "Spam": 971
+      }
+    },
+    "val": {
+      "n": 1159,
+      "labels": {
+        "Ham": 944,
+        "Spam": 215
+      }
+    },
+    "test": {
+      "n": 1156,
+      "labels": {
+        "Ham": 948,
+        "Spam": 208
+      }
+    }
+  },
+  "dravidian_malayalam": {
+    "records": 1992,
+    "groups": 1853,
+    "strata": 2,
+    "train": {
+      "n": 1394,
+      "labels": {
+        "Ham": 1237,
+        "Spam": 157
+      }
+    },
+    "val": {
+      "n": 299,
+      "labels": {
+        "Ham": 265,
+        "Spam": 34
+      }
+    },
+    "test": {
+      "n": 299,
+      "labels": {
+        "Ham": 265,
+        "Spam": 34
+      }
+    }
+  },
+  "dravidian_malayalam_only_script": {
+    "records": 1489,
+    "groups": 1379,
+    "strata": 2,
+    "train": {
+      "n": 1042,
+      "labels": {
+        "Ham": 1000,
+        "Spam": 42
+      }
+    },
+    "val": {
+      "n": 224,
+      "labels": {
+        "Ham": 215,
+        "Spam": 9
+      }
+    },
+    "test": {
+      "n": 223,
+      "labels": {
+        "Ham": 214,
+        "Spam": 9
+      }
+    }
+  },
+  "mendeley_3class": {
+    "records": 5971,
+    "groups": 5700,
+    "strata": 3,
+    "train": {
+      "n": 4180,
+      "labels": {
+        "ham": 3391,
+        "smishing": 449,
+        "spam": 340
+      }
+    },
+    "val": {
+      "n": 897,
+      "labels": {
+        "ham": 727,
+        "smishing": 95,
+        "spam": 75
+      }
+    },
+    "test": {
+      "n": 894,
+      "labels": {
+        "ham": 726,
+        "smishing": 94,
+        "spam": 74
+      }
+    }
+  },
+  "mendeley_binary_smishing": {
+    "records": 5971,
+    "groups": 5700,
+    "strata": 2,
+    "train": {
+      "n": 4180,
+      "labels": {
+        "not_smishing": 3731,
+        "smishing": 449
+      }
+    },
+    "val": {
+      "n": 896,
+      "labels": {
+        "not_smishing": 801,
+        "smishing": 95
+      }
+    },
+    "test": {
+      "n": 895,
+      "labels": {
+        "not_smishing": 801,
+        "smishing": 94
+      }
+    }
+  }
+}

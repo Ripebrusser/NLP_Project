@@ -1,0 +1,114 @@
+{
+  "status": "PASS",
+  "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+  "models": {
+    "d1": {
+      "model": "d1_malayalam_linear_svm.joblib",
+      "sha256": "9ba1dcd62655bf501f4b0297d543bd232ad1348ab476c2efca9b07e0b97225cd",
+      "hash_matches_manifest": true,
+      "test_rows": 299,
+      "prediction_parity": 299,
+      "classify_parity": 299,
+      "cleaning_parity": 299,
+      "classes_observed": [
+        "Ham",
+        "Spam"
+      ],
+      "labels_checked": 299
+    },
+    "d2": {
+      "model": "d2_logreg.joblib",
+      "sha256": "6f8cd0e5498f672bd71ddeaf494284f3c7aad6315bc39dbfb449f0cf388dc856",
+      "hash_matches_manifest": true,
+      "test_rows": 883,
+      "prediction_parity": 883,
+      "classify_parity": 883,
+      "cleaning_parity": 883,
+      "classes_observed": [
+        "ham",
+        "smishing",
+        "spam"
+      ],
+      "labels_checked": 883
+    }
+  },
+  "model_hashes": {
+    "d1_malayalam_linear_svm.joblib": {
+      "exists": true,
+      "sha256": "9ba1dcd62655bf501f4b0297d543bd232ad1348ab476c2efca9b07e0b97225cd",
+      "matches": true
+    },
+    "d1_malayalam_logreg.joblib": {
+      "exists": true,
+      "sha256": "fd4a1542436fc81890b117cdeba6cd1e3753bb1f0e832875068908a117af6e69",
+      "matches": true
+    },
+    "d2_linear_svm.joblib": {
+      "exists": true,
+      "sha256": "5de720cfcc7fe7179e976b6e2bb3e0410d1ca04145003dfcb8cb3ce5c5ea042e",
+      "matches": true
+    },
+    "d2_logreg.joblib": {
+      "exists": true,
+      "sha256": "6f8cd0e5498f672bd71ddeaf494284f3c7aad6315bc39dbfb449f0cf388dc856",
+      "matches": true
+    }
+  },
+  "split_hashes_match_manifest": {
+    "d1_malayalam_train.csv": true,
+    "d1_malayalam_val.csv": true,
+    "d1_malayalam_test.csv": true,
+    "d2_train.csv": true,
+    "d2_val.csv": true,
+    "d2_test.csv": true
+  },
+  "unicode_checks": {
+    "malayalam_detected": true,
+    "latin_detected": true,
+    "malayalam_preserved_after_clean": true
+  },
+  "input_validation": {
+    "empty_rejected": true,
+    "none_rejected": true,
+    "bytes_rejected": true,
+    "latin_only_rejected_by_d1": true,
+    "malayalam_only_rejected_by_d2": true,
+    "oversize_rejected": true,
+    "controls_only_rejected": true,
+    "max_input_chars": 5000,
+    "length_at_limit_accepted": true,
+    "malayalam_detected": true,
+    "malayalam_absent": true,
+    "latin_detected": true,
+    "latin_absent": true,
+    "malayalam_preserved_after_clean": true
+  },
+  "class_coverage": {
+    "d1": {
+      "Ham": {
+        "record_id": "D1-04388",
+        "display_label": "Ham"
+      },
+      "Spam": {
+        "record_id": "D1-04369",
+        "display_label": "Spam"
+      }
+    },
+    "d2": {
+      "ham": {
+        "record_id": "D2-00016",
+        "display_label": "Ham"
+      },
+      "smishing": {
+        "record_id": "D2-00169",
+        "display_label": "Smishing"
+      },
+      "spam": {
+        "record_id": "D2-00083",
+        "display_label": "Spam"
+      }
+    }
+  },
+  "failures": [],
+  "note": "No model was fitted or modified. Every frozen test prediction is reproduced after record_id alignment, and every model and split hash is re-derived from the file bytes."
+}

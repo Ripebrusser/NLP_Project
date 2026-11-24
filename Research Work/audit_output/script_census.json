@@ -1,0 +1,76 @@
+{
+  "buckets": {
+    "latin_only": 2130,
+    "malayalam_only": 1486,
+    "kannada_only": 980,
+    "tamil_only": 883,
+    "telugu_only": 747,
+    "malayalam+latin": 503,
+    "kannada+latin": 365,
+    "telugu+latin": 321,
+    "tamil+latin": 292,
+    "devanagari+kannada": 4,
+    "devanagari+malayalam": 2,
+    "no_letters": 2,
+    "devanagari+telugu+latin": 1,
+    "bengali+malayalam": 1
+  },
+  "per_bucket_labels": {
+    "tamil+latin": {
+      "Spam": 191,
+      "Ham": 101
+    },
+    "tamil_only": {
+      "Ham": 862,
+      "Spam": 21
+    },
+    "latin_only": {
+      "Spam": 522,
+      "Ham": 1608
+    },
+    "telugu+latin": {
+      "Spam": 74,
+      "Ham": 246,
+      "Spa,": 1
+    },
+    "telugu_only": {
+      "Spam": 29,
+      "Ham": 718
+    },
+    "devanagari+telugu+latin": {
+      "Spam": 1
+    },
+    "kannada_only": {
+      "Ham": 867,
+      "Spam": 113
+    },
+    "kannada+latin": {
+      "Ham": 147,
+      "Spam": 218
+    },
+    "malayalam_only": {
+      "Ham": 1426,
+      "Spam": 60
+    },
+    "malayalam+latin": {
+      "Spam": 165,
+      "Ham": 338
+    },
+    "devanagari+malayalam": {
+      "Ham": 2
+    },
+    "no_letters": {
+      "Ham": 2
+    },
+    "bengali+malayalam": {
+      "Ham": 1
+    },
+    "devanagari+kannada": {
+      "Ham": 4
+    }
+  },
+  "dravidian_script_any": 5585,
+  "dravidian_script_only": 4103,
+  "dravidian_plus_latin": 1482,
+  "mendeley_indic_script": 0
+}

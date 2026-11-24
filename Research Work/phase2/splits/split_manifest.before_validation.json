@@ -1,0 +1,171 @@
+{
+  "seed": 42,
+  "ratios": {
+    "train": 0.7,
+    "val": 0.15,
+    "test": 0.15
+  },
+  "algorithm": "groups = exact + normalised + fuzzy duplicate clusters; within each label stratum, groups shuffled with numpy default_rng(42), sorted by size, assigned to the split with the largest record deficit",
+  "source_files": {
+    "d1": "Spam Message Collection.xlsx",
+    "d2": "Dataset_5971.csv"
+  },
+  "source_hashes": {
+    "d1": "24ca099ac1ffabc0b02fd491f57d577c56afb932bc81c5964a40e32eab9a023b",
+    "d2": "649844f1c62a6b27e145eaf17a65f7010c56c390e11a794ea8329993a05ba71e"
+  },
+  "exclusions": {
+    "d1_conflict_groups": 0,
+    "d1_conflict_records": 0,
+    "d2_conflict_groups": 0,
+    "d2_conflict_records": 0
+  },
+  "d1": {
+    "rows": 1992,
+    "groups": 1824,
+    "classes": {
+      "Ham": 1767,
+      "Spam": 225
+    },
+    "checks": {
+      "group_overlap_train_val": 0,
+      "norm_overlap_train_val": 0,
+      "group_overlap_train_test": 0,
+      "norm_overlap_train_test": 0,
+      "group_overlap_val_test": 0,
+      "norm_overlap_val_test": 0,
+      "ok": true
+    },
+    "files": [
+      {
+        "file": "d1_malayalam_train.csv",
+        "rows": 1394,
+        "classes": {
+          "Ham": 1237,
+          "Spam": 157
+        },
+        "groups": 1226,
+        "sha256": "bd4f5edb59ce2579f21a2ac9eca4a3b9968b499f15780cfa9a3bee306204ddc1"
+      },
+      {
+        "file": "d1_malayalam_val.csv",
+        "rows": 299,
+        "classes": {
+          "Ham": 265,
+          "Spam": 34
+        },
+        "groups": 299,
+        "sha256": "5bcc228f338b2685e2d5887f48815ba80579b670a71b4a0df6c0989243487f1f"
+      },
+      {
+        "file": "d1_malayalam_test.csv",
+        "rows": 299,
+        "classes": {
+          "Ham": 265,
+          "Spam": 34
+        },
+        "groups": 299,
+        "sha256": "3922f037a2f52045ffc1d682e799880a06311dec9017ff33abef3fdd3d40be0b"
+      }
+    ],
+    "blocks": [
+      {
+        "split": "train",
+        "n": 1394,
+        "blocks": {
+          "4001-5000": 458,
+          "5001-6000": 679,
+          "6001-7000": 257
+        }
+      },
+      {
+        "split": "val",
+        "n": 299,
+        "blocks": {
+          "4001-5000": 84,
+          "5001-6000": 153,
+          "6001-7000": 62
+        }
+      },
+      {
+        "split": "test",
+        "n": 299,
+        "blocks": {
+          "4001-5000": 89,
+          "5001-6000": 159,
+          "6001-7000": 51
+        }
+      }
+    ]
+  },
+  "d2": {
+    "rows": 5895,
+    "groups": 5663,
+    "classes": {
+      "ham": 4844,
+      "smishing": 601,
+      "spam": 450
+    },
+    "checks": {
+      "group_overlap_train_val": 0,
+      "norm_overlap_train_val": 0,
+      "group_overlap_train_test": 0,
+      "norm_overlap_train_test": 0,
+      "group_overlap_val_test": 0,
+      "norm_overlap_val_test": 0,
+      "ok": true
+    },
+    "files": [
+      {
+        "file": "d2_train.csv",
+        "rows": 4127,
+        "classes": {
+          "ham": 3391,
+          "smishing": 421,
+          "spam": 315
+        },
+        "groups": 3895,
+        "sha256": "ad19a6e8042dd4036331cf6920cd77da9cafe16787cd946dd821b3f0b2598499"
+      },
+      {
+        "file": "d2_val.csv",
+        "rows": 885,
+        "classes": {
+          "ham": 727,
+          "smishing": 90,
+          "spam": 68
+        },
+        "groups": 885,
+        "sha256": "2fc68c050731e90a3e511a8817796a4f3c639d00f0e8dad9a9d0268aa230400f"
+      },
+      {
+        "file": "d2_test.csv",
+        "rows": 883,
+        "classes": {
+          "ham": 726,
+          "smishing": 90,
+          "spam": 67
+        },
+        "groups": 883,
+        "sha256": "44409491ebb1c4e22d3aa65b76ca6f4e18ad2eb6af1f58380ab7f19236b46c79"
+      }
+    ]
+  },
+  "malayalam_only_descriptive": {
+    "rows": 1489,
+    "classes": {
+      "Ham": 1429,
+      "Spam": 60
+    },
+    "split_rows": {
+      "train": 1052,
+      "val": 216,
+      "test": 221
+    },
+    "split_spam": {
+      "train": 37,
+      "val": 12,
+      "test": 11
+    }
+  }
+}

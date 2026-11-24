@@ -1,0 +1,12 @@
+[theme]
+base = "light"
+primaryColor = "#176b73"
+backgroundColor = "#f5f2ea"
+secondaryBackgroundColor = "#fffdf8"
+textColor = "#172b3a"
+font = "sans serif"
+
+[browser]
+# Do not send Streamlit usage statistics. The prototype must make no outbound
+# network calls of its own, and this removes the library's default telemetry.
+gatherUsageStats = false

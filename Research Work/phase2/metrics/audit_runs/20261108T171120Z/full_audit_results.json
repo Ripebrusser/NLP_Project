@@ -1,0 +1,368 @@
+{
+  "audit": "engineering closure — one-command audit",
+  "run_id": "20261108T171120Z",
+  "timestamp_utc": "2026-11-08T17:11:56+00:00",
+  "status": "PASS",
+  "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "command": ".venv/Scripts/python.exe \"Research Work/run_full_audit.py\"",
+  "summary": {
+    "checks_total": 15,
+    "checks_passed": 15,
+    "checks_failed": 0,
+    "required_failed": [],
+    "duration_seconds": 34.9
+  },
+  "checks": [
+    {
+      "id": "environment",
+      "title": "Python and pinned dependency versions",
+      "required": true,
+      "status": "PASS",
+      "detail": "all pinned versions present",
+      "duration_seconds": 3.79,
+      "command": null,
+      "evidence": {
+        "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+        "versions": {
+          "numpy": "2.5.4",
+          "pandas": "3.1.1",
+          "sklearn": "1.9.1",
+          "scipy": "1.18.1",
+          "joblib": "1.6.0",
+          "openpyxl": "3.1.5",
+          "streamlit": "1.67.0"
+        }
+      }
+    },
+    {
+      "id": "required_files",
+      "title": "Required deliverables and canonical files exist",
+      "required": true,
+      "status": "PASS",
+      "detail": "26 required files present",
+      "duration_seconds": 0.0,
+      "command": null,
+      "evidence": {
+        "missing": [],
+        "empty": [],
+        "checked": 26
+      }
+    },
+    {
+      "id": "dataset_integrity",
+      "title": "Dataset hashes and row counts",
+      "required": true,
+      "status": "PASS",
+      "detail": "source hashes and row counts match",
+      "duration_seconds": 0.92,
+      "command": null,
+      "evidence": {
+        "hashes": {
+          "d1": "24ca099ac1ffabc0b02fd491f57d577c56afb932bc81c5964a40e32eab9a023b",
+          "d2": "649844f1c62a6b27e145eaf17a65f7010c56c390e11a794ea8329993a05ba71e"
+        },
+        "row_counts": {
+          "d1_physical_rows": 7718,
+          "d1_labelled_records": 7717,
+          "d1_ham": 6322,
+          "d1_spam_incl_typo": 1395,
+          "d2_rows": 5971
+        }
+      }
+    },
+    {
+      "id": "split_hashes",
+      "title": "Frozen split hashes match the manifest",
+      "required": true,
+      "status": "PASS",
+      "detail": "6 split hashes match",
+      "duration_seconds": 0.01,
+      "command": null,
+      "evidence": {
+        "hashes": {
+          "d1_malayalam_train.csv": "bd4f5edb59ce2579f21a2ac9eca4a3b9968b499f15780cfa9a3bee306204ddc1",
+          "d1_malayalam_val.csv": "5bcc228f338b2685e2d5887f48815ba80579b670a71b4a0df6c0989243487f1f",
+          "d1_malayalam_test.csv": "3922f037a2f52045ffc1d682e799880a06311dec9017ff33abef3fdd3d40be0b",
+          "d2_train.csv": "ad19a6e8042dd4036331cf6920cd77da9cafe16787cd946dd821b3f0b2598499",
+          "d2_val.csv": "2fc68c050731e90a3e511a8817796a4f3c639d00f0e8dad9a9d0268aa230400f",
+          "d2_test.csv": "44409491ebb1c4e22d3aa65b76ca6f4e18ad2eb6af1f58380ab7f19236b46c79"
+        }
+      }
+    },
+    {
+      "id": "model_hashes",
+      "title": "Classical model hashes match the manifest",
+      "required": true,
+      "status": "PASS",
+      "detail": "4 model hashes match",
+      "duration_seconds": 0.01,
+      "command": null,
+      "evidence": {
+        "hashes": {
+          "d1_malayalam_linear_svm.joblib": "9ba1dcd62655bf501f4b0297d543bd232ad1348ab476c2efca9b07e0b97225cd",
+          "d1_malayalam_logreg.joblib": "fd4a1542436fc81890b117cdeba6cd1e3753bb1f0e832875068908a117af6e69",
+          "d2_linear_svm.joblib": "5de720cfcc7fe7179e976b6e2bb3e0410d1ca04145003dfcb8cb3ce5c5ea042e",
+          "d2_logreg.joblib": "6f8cd0e5498f672bd71ddeaf494284f3c7aad6315bc39dbfb449f0cf388dc856"
+        }
+      }
+    },
+    {
+      "id": "baseline_hashes",
+      "title": "All frozen artifacts match the pre-audit baseline",
+      "required": true,
+      "status": "PASS",
+      "detail": "all frozen artifacts byte-identical to baseline",
+      "duration_seconds": 0.87,
+      "command": null,
+      "evidence": {
+        "changed": [],
+        "added": [],
+        "artifact_count": 39
+      }
+    },
+    {
+      "id": "regression_tests",
+      "title": "114+ regression tests",
+      "required": true,
+      "status": "PASS",
+      "detail": "exit 0",
+      "duration_seconds": 12.86,
+      "command": "PYTHONIOENCODING=utf-8 .venv/Scripts/python.exe \"Research Work/tests/run_tests.py\"",
+      "evidence": {
+        "returncode": 0,
+        "duration_seconds": 12.86,
+        "stdout_tail": "tistics.TestExactChecks.test_zero_false_positives_interval_is_not_zero_risk) ... ok\ntest_clopper_pearson_known_values (test_statistics.TestIntervals.test_clopper_pearson_known_values) ... ok\ntest_empty_denominator_is_uninformative_not_a_number (test_statistics.TestIntervals.test_empty_denominator_is_uninformative_not_a_number) ... ok\ntest_intervals_are_ordered_and_bounded (test_statistics.TestIntervals.test_intervals_are_ordered_and_bounded) ... ok\ntest_wilson_known_values (test_statistics.TestIntervals.test_wilson_known_values) ... ok\ntest_denominators_for_spam (test_statistics.TestMetricCodes.test_denominators_for_spam) ... ok\ntest_empty_input_fails_instead_of_returning_nan (test_statistics.TestMetricCodes.test_empty_input_fails_instead_of_returning_nan) ... ok\ntest_invalid_label_fails_loudly (test_statistics.TestMetricCodes.test_invalid_label_fails_loudly) ... ok\ntest_matches_sklearn_reference (test_statistics.TestMetricCodes.test_matches_sklearn_reference) ... ok\ntest_multiclass_macro_matches_sklearn (test_statistics.TestMetricCodes.test_multiclass_macro_matches_sklearn) ... ok\ntest_no_predicted_positive_gives_zero_precision (test_statistics.TestMetricCodes.test_no_predicted_positive_gives_zero_precision) ... ok\ntest_perfect_and_single_class (test_statistics.TestMetricCodes.test_perfect_and_single_class) ... ok\ntest_logreg_minus_svm_is_negative (test_statistics.TestRealPairedDirection.test_logreg_minus_svm_is_negative) ... ok\ntest_models_share_test_rows_and_labels (test_statistics.TestRealPairedDirection.test_models_share_test_rows_and_labels) ... ok\ntest_reverse_comparison_is_exact_negation (test_statistics.TestRealPairedDirection.test_reverse_comparison_is_exact_negation) ... ok\ntest_d1_control_characters_do_not_crash (test_streamlit_app.StreamlitAppTests.test_d1_control_characters_do_not_crash) ... ok\ntest_d1_empty_input_warns (test_streamlit_app.StreamlitAppTests.test_d1_empty_input_warns) ... ok\ntest_d1_malayalam_prediction_renders (test_streamlit_app.StreamlitAppTests.test_d1_malayalam_prediction_renders) ... ok\ntest_d1_page_loads (test_streamlit_app.StreamlitAppTests.test_d1_page_loads) ... ok\ntest_d1_rejects_latin_only_input (test_streamlit_app.StreamlitAppTests.test_d1_rejects_latin_only_input) ... ok\ntest_d1_widget_caps_oversized_input_at_5000 (test_streamlit_app.StreamlitAppTests.test_d1_widget_caps_oversized_input_at_5000) ... ok\ntest_d2_page_and_prediction_render (test_streamlit_app.StreamlitAppTests.test_d2_page_and_prediction_render) ... ok\ntest_d2_rejects_malayalam_only_input (test_streamlit_app.StreamlitAppTests.test_d2_rejects_malayalam_only_input) ... ok\ntest_d2_warns_on_mixed_script_but_still_predicts (test_streamlit_app.StreamlitAppTests.test_d2_warns_on_mixed_script_but_still_predicts) ... ok\ntest_dashboard_renders_all_sections (test_streamlit_app.StreamlitAppTests.test_dashboard_renders_all_sections) ... ok\ntest_missing_model_shows_error_instead_of_blank_page (test_streamlit_app.StreamlitAppTests.test_missing_model_shows_error_instead_of_blank_page) ... ok\ntest_control_characters_become_space (test_unicode.TestCleanText.test_control_characters_become_space) ... ok\ntest_idempotent (test_unicode.TestCleanText.test_idempotent) ... ok\ntest_malayalam_combining_marks_survive (test_unicode.TestCleanText.test_malayalam_combining_marks_survive) ... ok\ntest_malayalam_text_is_preserved (test_unicode.TestCleanText.test_malayalam_text_is_preserved) ... ok\ntest_nfkc_normalisation (test_unicode.TestCleanText.test_nfkc_normalisation) ... ok\ntest_no_transliteration (test_unicode.TestCleanText.test_no_transliteration) ... ok\ntest_non_breaking_space_and_whitespace_collapse (test_unicode.TestCleanText.test_non_breaking_space_and_whitespace_collapse) ... ok\ntest_prototype_and_training_cleaning_agree_on_every_frozen_row (test_unicode.TestCleanText.test_prototype_and_training_cleaning_agree_on_every_frozen_row) ... ok\ntest_replacement_character_is_kept (test_unicode.TestCleanText.test_replacement_character_is_kept) ... ok\ntest_training_text_column_equals_cleaned_message (test_unicode.TestCleanText.test_training_text_column_equals_cleaned_message) ... ok\ntest_zero_width_and_bom_removed (test_unicode.TestCleanText.test_zero_width_and_bom_removed) ... ok\ntest_bytes_rejected (test_unicode.TestInputValidation.test_bytes_rejected) ... ok\ntest_control_only_input_rejected (test_unicode.TestInputValidation.test_control_only_input_rejected) ... ok\ntest_empty_inputs_rejected (test_unicode.TestInputValidation.test_empty_inputs_rejected) ... ok\ntest_length_limit (test_unicode.TestInputValidation.test_length_limit) ... ok\ntest_valid_input_returned_unchanged (test_unicode.TestInputValidation.test_valid_input_returned_unchanged) ... ok\ntest_wrong_script_rejected_per_task (test_unicode.TestInputValidation.test_wrong_script_rejected_per_task) ... ok\ntest_digits_only_is_neither_script (test_unicode.TestScriptDetection.test_digits_only_is_neither_script) ... ok\ntest_malayalam_and_latin_detection (test_unicode.TestScriptDetection.test_malayalam_and_latin_detection) ... ok\ntest_script_detection_is_not_language_identification (test_unicode.TestScriptDetection.test_script_detection_is_not_language_identification) ... ok\n\n----------------------------------------------------------------------\nRan 125 tests in 9.376s\n\nOK\n\n{\n  \"status\": \"PASS\",\n  \"timestamp_utc\": \"2026-11-08T17:11:38+00:00\",\n  \"command\": \"python -m unittest discover -s \\\"Research Work/tests\\\" -t \\\"Research Work/tests\\\" -v\",\n  \"python_version\": \"3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]\",\n  \"platform\": \"Windows-11-10.0.26300-SP0\",\n  \"duration_seconds\": 12.22,\n  \"tests_run\": 125,\n  \"passed\": 125,\n  \"failed\": 0,\n  \"errors\": 0,\n  \"skipped\": 0,\n  \"expected_failures\": 0,\n  \"unexpected_successes\": 0,\n  \"warnings\": 0,\n  \"failed_tests\": [],\n  \"errored_tests\": [],\n  \"skipped_tests\": [],\n  \"log_path\": \"C:\\\\Users\\\\Sachin\\\\OneDrive\\\\Documents\\\\NLP_Project\\\\Research Work\\\\phase2\\\\metrics\\\\code_audit_test_results.log\"\n}\n",
+        "stderr_tail": "emoved after 2025-12-31.\n\nFor `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.\n2026-11-08 22:41:37.796 Serialization of dataframe to Arrow table was unsuccessful. Applying automatic fixes for column types to make the dataframe Arrow-compatible.\nTraceback (most recent call last):\n  File \"C:\\Users\\Sachin\\OneDrive\\Documents\\NLP_Project\\.venv\\Lib\\site-packages\\streamlit\\dataframe_util.py\", line 967, in convert_pandas_df_to_arrow_table\n    return pa.Table.from_pandas(df, preserve_index=preserve_index)\n           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"pyarrow/table.pxi\", line 4777, in pyarrow.lib.Table.from_pandas\n  File \"C:\\Users\\Sachin\\OneDrive\\Documents\\NLP_Project\\.venv\\Lib\\site-packages\\pyarrow\\pandas_compat.py\", line 658, in dataframe_to_arrays\n    arrays = [convert_column(c, f)\n              ~~~~~~~~~~~~~~^^^^^^\n  File \"C:\\Users\\Sachin\\OneDrive\\Documents\\NLP_Project\\.venv\\Lib\\site-packages\\pyarrow\\pandas_compat.py\", line 643, in convert_column\n    raise e\n  File \"C:\\Users\\Sachin\\OneDrive\\Documents\\NLP_Project\\.venv\\Lib\\site-packages\\pyarrow\\pandas_compat.py\", line 637, in convert_column\n    result = pa.array(col, type=type_, from_pandas=True, safe=safe)\n  File \"pyarrow/array.pxi\", line 414, in pyarrow.lib.array\n  File \"pyarrow/array.pxi\", line 97, in pyarrow.lib._ndarray_to_array\n    check_status(NdarrayToArrow(pool, values, mask, from_pandas,\n  File \"pyarrow/error.pxi\", line 92, in pyarrow.lib.check_status\npyarrow.lib.ArrowInvalid: (\"Could not convert '0.9855 ± 0.0019' with type str: tried to convert to double\", 'Conversion failed for column Accuracy with type object')\n2026-11-08 22:41:38.150 Please replace `use_container_width` with `width`.\n\n`use_container_width` will be removed after 2025-12-31.\n\nFor `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.\n2026-11-08 22:41:38.151 Please replace `use_container_width` with `width`.\n\n`use_container_width` will be removed after 2025-12-31.\n\nFor `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.\n2026-11-08 22:41:38.154 Please replace `use_container_width` with `width`.\n\n`use_container_width` will be removed after 2025-12-31.\n\nFor `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.\n2026-11-08 22:41:38.155 Please replace `use_container_width` with `width`.\n\n`use_container_width` will be removed after 2025-12-31.\n\nFor `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.\n2026-11-08 22:41:38.156 Please replace `use_container_width` with `width`.\n\n`use_container_width` will be removed after 2025-12-31.\n\nFor `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.\n2026-11-08 22:41:38.174 Please replace `use_container_width` with `width`.\n\n`use_container_width` will be removed after 2025-12-31.\n\nFor `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.\n2026-11-08 22:41:38.177 Please replace `use_container_width` with `width`.\n\n`use_container_width` will be removed after 2025-12-31.\n\nFor `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.\n2026-11-08 22:41:38.191 Please replace `use_container_width` with `width`.\n\n`use_container_width` will be removed after 2025-12-31.\n\nFor `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.\n2026-11-08 22:41:38.193 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\nC:\\Users\\Sachin\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\tempfile.py:961: ResourceWarning: Implicitly cleaning up <TemporaryDirectory 'C:\\\\Users\\\\Sachin\\\\AppData\\\\Local\\\\Temp\\\\tmp2soy1tmr'>\n  _warnings.warn(warn_message, ResourceWarning)\n",
+        "output_tail": "emoved after 2025-12-31.\n\nFor `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.\n2026-11-08 22:41:37.796 Serialization of dataframe to Arrow table was unsuccessful. Applying automatic fixes for column types to make the dataframe Arrow-compatible.\nTraceback (most recent call last):\n  File \"C:\\Users\\Sachin\\OneDrive\\Documents\\NLP_Project\\.venv\\Lib\\site-packages\\streamlit\\dataframe_util.py\", line 967, in convert_pandas_df_to_arrow_table\n    return pa.Table.from_pandas(df, preserve_index=preserve_index)\n           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"pyarrow/table.pxi\", line 4777, in pyarrow.lib.Table.from_pandas\n  File \"C:\\Users\\Sachin\\OneDrive\\Documents\\NLP_Project\\.venv\\Lib\\site-packages\\pyarrow\\pandas_compat.py\", line 658, in dataframe_to_arrays\n    arrays = [convert_column(c, f)\n              ~~~~~~~~~~~~~~^^^^^^\n  File \"C:\\Users\\Sachin\\OneDrive\\Documents\\NLP_Project\\.venv\\Lib\\site-packages\\pyarrow\\pandas_compat.py\", line 643, in convert_column\n    raise e\n  File \"C:\\Users\\Sachin\\OneDrive\\Documents\\NLP_Project\\.venv\\Lib\\site-packages\\pyarrow\\pandas_compat.py\", line 637, in convert_column\n    result = pa.array(col, type=type_, from_pandas=True, safe=safe)\n  File \"pyarrow/array.pxi\", line 414, in pyarrow.lib.array\n  File \"pyarrow/array.pxi\", line 97, in pyarrow.lib._ndarray_to_array\n    check_status(NdarrayToArrow(pool, values, mask, from_pandas,\n  File \"pyarrow/error.pxi\", line 92, in pyarrow.lib.check_status\npyarrow.lib.ArrowInvalid: (\"Could not convert '0.9855 ± 0.0019' with type str: tried to convert to double\", 'Conversion failed for column Accuracy with type object')\n2026-11-08 22:41:38.150 Please replace `use_container_width` with `width`.\n\n`use_container_width` will be removed after 2025-12-31.\n\nFor `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.\n2026-11-08 22:41:38.151 Please replace `use_container_width` with `width`.\n\n`use_container_width` will be removed after 2025-12-31.\n\nFor `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.\n2026-11-08 22:41:38.154 Please replace `use_container_width` with `width`.\n\n`use_container_width` will be removed after 2025-12-31.\n\nFor `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.\n2026-11-08 22:41:38.155 Please replace `use_container_width` with `width`.\n\n`use_container_width` will be removed after 2025-12-31.\n\nFor `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.\n2026-11-08 22:41:38.156 Please replace `use_container_width` with `width`.\n\n`use_container_width` will be removed after 2025-12-31.\n\nFor `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.\n2026-11-08 22:41:38.174 Please replace `use_container_width` with `width`.\n\n`use_container_width` will be removed after 2025-12-31.\n\nFor `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.\n2026-11-08 22:41:38.177 Please replace `use_container_width` with `width`.\n\n`use_container_width` will be removed after 2025-12-31.\n\nFor `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.\n2026-11-08 22:41:38.191 Please replace `use_container_width` with `width`.\n\n`use_container_width` will be removed after 2025-12-31.\n\nFor `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.\n2026-11-08 22:41:38.193 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\nC:\\Users\\Sachin\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\tempfile.py:961: ResourceWarning: Implicitly cleaning up <TemporaryDirectory 'C:\\\\Users\\\\Sachin\\\\AppData\\\\Local\\\\Temp\\\\tmp2soy1tmr'>\n  _warnings.warn(warn_message, ResourceWarning)\n",
+        "timed_out": false
+      }
+    },
+    {
+      "id": "frozen_predictions",
+      "title": "Frozen-prediction verification",
+      "required": true,
+      "status": "PASS",
+      "detail": "exit 0",
+      "duration_seconds": 4.82,
+      "command": "cd \"Research Work/phase2\" && PYTHONIOENCODING=utf-8 ../../.venv/Scripts/python.exe p2_final_verification.py",
+      "evidence": {
+        "returncode": 0,
+        "duration_seconds": 4.82,
+        "stdout_tail": "{\n  \"out\": \"C:\\\\Users\\\\Sachin\\\\OneDrive\\\\Documents\\\\NLP_Project\\\\Research Work\\\\phase2\\\\metrics\\\\final_verification.json\",\n  \"d1\": {\n    \"Logistic Regression\": {\n      \"macro_f1\": 0.9556445631211987,\n      \"acc\": 0.9832775919732442,\n      \"spam_precision\": 1.0,\n      \"spam_recall\": 0.8529411764705882,\n      \"pred_spam\": 29,\n      \"exact_precision\": [\n        0.8805551309304973,\n        1.0\n      ]\n    },\n    \"Linear SVM\": {\n      \"macro_f1\": 0.9650046816479401,\n      \"acc\": 0.9866220735785953,\n      \"spam_precision\": 1.0,\n      \"spam_recall\": 0.8823529411764706,\n      \"pred_spam\": 30,\n      \"exact_precision\": [\n        0.8842966917779722,\n        1.0\n      ]\n    },\n    \"MuRIL seed 42\": {\n      \"macro_f1\": 0.9650046816479401,\n      \"acc\": 0.9866220735785953,\n      \"spam_precision\": 1.0,\n      \"spam_recall\": 0.8823529411764706,\n      \"pred_spam\": 30,\n      \"exact_precision\": [\n        0.8842966917779722,\n        1.0\n      ]\n    },\n    \"MuRIL seed 43\": {\n      \"macro_f1\": 0.9556445631211987,\n      \"acc\": 0.9832775919732442,\n      \"spam_precision\": 1.0,\n      \"spam_recall\": 0.8529411764705882,\n      \"pred_spam\": 29,\n      \"exact_precision\": [\n        0.8805551309304973,\n        1.0\n      ]\n    },\n    \"MuRIL seed 44\": {\n      \"macro_f1\": 0.9650046816479401,\n      \"acc\": 0.9866220735785953,\n      \"spam_precision\": 1.0,\n      \"spam_recall\": 0.8823529411764706,\n      \"pred_spam\": 30,\n      \"exact_precision\": [\n        0.8842966917779722,\n        1.0\n      ]\n    }\n  },\n  \"muril_mean_ci\": {\n    \"point\": 0.9618846421390262,\n    \"ci_low\": 0.9211320633721539,\n    \"ci_high\": 0.9908721799920629,\n    \"boot_mean\": 0.9614366959162302,\n    \"boot_sd\": 0.018099689807177462\n  },\n  \"svm_vs_muril_mean\": {\n    \"accuracy\": {\n      \"svm\": 0.9866220735785953,\n      \"muril_mean\": 0.9855072463768115,\n      \"difference\": 0.0011148272017837968,\n      \"ci_low\": -1.1102230246251565e-16,\n      \"ci_high\": 0.0033444816053512794,\n      \"share_positive\": 0.7215,\n      \"share_tie\": 0.1945,\n      \"share_negative\": 0.084\n    },\n    \"macro_f1\": {\n      \"svm\": 0.9650046816479401,\n      \"muril_mean\": 0.9618846421390262,\n      \"difference\": 0.003120039508913819,\n      \"ci_low\": -1.1102230246251565e-16,\n      \"ci_high\": 0.010100181849030618,\n      \"share_positive\": 0.6945,\n      \"share_tie\": 0.238,\n      \"share_negative\": 0.0675\n    },\n    \"spam_recall\": {\n      \"svm\": 0.8823529411764706,\n      \"muril_mean\": 0.8725490196078431,\n      \"difference\": 0.009803921568627416,\n      \"ci_low\": -1.1102230246251565e-16,\n      \"ci_high\": 0.030303030303030276,\n      \"share_positive\": 0.664,\n      \"share_tie\": 0.3085,\n      \"share_negative\": 0.0275\n    }\n  },\n  \"d2\": {\n    \"Logistic Regression\": {\n      \"macro_f1\": 0.8877423096432983,\n      \"acc\": 0.9637599093997735\n    },\n    \"Linear SVM\": {\n      \"macro_f1\": 0.882502980802467,\n      \"acc\": 0.9637599093997735\n    }\n  },\n  \"block_pooled\": [\n    {\n      \"model\": \"linear_svm\",\n      \"n\": 1992,\n      \"accuracy\": 0.8900602409638554,\n      \"macro_f1\": 0.5378449758089207,\n      \"spam_precision\": 0.6071428571428571,\n      \"spam_recall\": 0.07555555555555556,\n      \"confusion_matrix\": [\n        [\n          1756,\n          11\n        ],\n        [\n          208,\n          17\n        ]\n      ]\n    },\n    {\n      \"model\": \"logreg\",\n      \"n\": 1992,\n      \"accuracy\": 0.8865461847389559,\n      \"macro_f1\": 0.5447952856859739,\n      \"spam_precision\": 0.4878048780487805,\n      \"spam_recall\": 0.08888888888888889,\n      \"confusion_matrix\": [\n        [\n          1746,\n          21\n        ],\n        [\n          205,\n          20\n        ]\n      ]\n    },\n    {\n      \"model\": \"MuRIL seed 42\",\n      \"n\": 1992,\n      \"accuracy\": 0.8845381526104418,\n      \"macro_f1\": 0.4979398614885597,\n      \"spam_precision\": 0.3684210526315789,\n      \"spam_recall\": 0.03111111111111111,\n      \"confusion_matrix\": [\n        [\n          1755,\n          12\n        ],\n        [\n          218,\n          7\n        ]\n      ]\n    },\n    {\n      \"model\": \"MuRIL seed 43\",\n      \"n\": 1992,\n      \"accuracy\": 0.8895582329317269,\n      \"macro_f1\": 0.5005811965811966,\n      \"spam_precision\": 0.7777777777777778,\n      \"spam_recall\": 0.03111111111111111,\n      \"confusion_matrix\": [\n        [\n          1765,\n          2\n        ],\n        [\n          218,\n          7\n        ]\n      ]\n    },\n    {\n      \"model\": \"MuRIL seed 44\",\n      \"n\": 1992,\n      \"accuracy\": 0.8855421686746988,\n      \"macro_f1\": 0.5098086620156109,\n      \"spam_precision\": 0.43478260869565216,\n      \"spam_recall\": 0.044444444444444446,\n      \"confusion_matrix\": [\n        [\n          1754,\n          13\n        ],\n        [\n          215,\n          10\n        ]\n      ]\n    }\n  ]\n}\n",
+        "stderr_tail": "",
+        "output_tail": "    },\n    \"MuRIL seed 42\": {\n      \"macro_f1\": 0.9650046816479401,\n      \"acc\": 0.9866220735785953,\n      \"spam_precision\": 1.0,\n      \"spam_recall\": 0.8823529411764706,\n      \"pred_spam\": 30,\n      \"exact_precision\": [\n        0.8842966917779722,\n        1.0\n      ]\n    },\n    \"MuRIL seed 43\": {\n      \"macro_f1\": 0.9556445631211987,\n      \"acc\": 0.9832775919732442,\n      \"spam_precision\": 1.0,\n      \"spam_recall\": 0.8529411764705882,\n      \"pred_spam\": 29,\n      \"exact_precision\": [\n        0.8805551309304973,\n        1.0\n      ]\n    },\n    \"MuRIL seed 44\": {\n      \"macro_f1\": 0.9650046816479401,\n      \"acc\": 0.9866220735785953,\n      \"spam_precision\": 1.0,\n      \"spam_recall\": 0.8823529411764706,\n      \"pred_spam\": 30,\n      \"exact_precision\": [\n        0.8842966917779722,\n        1.0\n      ]\n    }\n  },\n  \"muril_mean_ci\": {\n    \"point\": 0.9618846421390262,\n    \"ci_low\": 0.9211320633721539,\n    \"ci_high\": 0.9908721799920629,\n    \"boot_mean\": 0.9614366959162302,\n    \"boot_sd\": 0.018099689807177462\n  },\n  \"svm_vs_muril_mean\": {\n    \"accuracy\": {\n      \"svm\": 0.9866220735785953,\n      \"muril_mean\": 0.9855072463768115,\n      \"difference\": 0.0011148272017837968,\n      \"ci_low\": -1.1102230246251565e-16,\n      \"ci_high\": 0.0033444816053512794,\n      \"share_positive\": 0.7215,\n      \"share_tie\": 0.1945,\n      \"share_negative\": 0.084\n    },\n    \"macro_f1\": {\n      \"svm\": 0.9650046816479401,\n      \"muril_mean\": 0.9618846421390262,\n      \"difference\": 0.003120039508913819,\n      \"ci_low\": -1.1102230246251565e-16,\n      \"ci_high\": 0.010100181849030618,\n      \"share_positive\": 0.6945,\n      \"share_tie\": 0.238,\n      \"share_negative\": 0.0675\n    },\n    \"spam_recall\": {\n      \"svm\": 0.8823529411764706,\n      \"muril_mean\": 0.8725490196078431,\n      \"difference\": 0.009803921568627416,\n      \"ci_low\": -1.1102230246251565e-16,\n      \"ci_high\": 0.030303030303030276,\n      \"share_positive\": 0.664,\n      \"share_tie\": 0.3085,\n      \"share_negative\": 0.0275\n    }\n  },\n  \"d2\": {\n    \"Logistic Regression\": {\n      \"macro_f1\": 0.8877423096432983,\n      \"acc\": 0.9637599093997735\n    },\n    \"Linear SVM\": {\n      \"macro_f1\": 0.882502980802467,\n      \"acc\": 0.9637599093997735\n    }\n  },\n  \"block_pooled\": [\n    {\n      \"model\": \"linear_svm\",\n      \"n\": 1992,\n      \"accuracy\": 0.8900602409638554,\n      \"macro_f1\": 0.5378449758089207,\n      \"spam_precision\": 0.6071428571428571,\n      \"spam_recall\": 0.07555555555555556,\n      \"confusion_matrix\": [\n        [\n          1756,\n          11\n        ],\n        [\n          208,\n          17\n        ]\n      ]\n    },\n    {\n      \"model\": \"logreg\",\n      \"n\": 1992,\n      \"accuracy\": 0.8865461847389559,\n      \"macro_f1\": 0.5447952856859739,\n      \"spam_precision\": 0.4878048780487805,\n      \"spam_recall\": 0.08888888888888889,\n      \"confusion_matrix\": [\n        [\n          1746,\n          21\n        ],\n        [\n          205,\n          20\n        ]\n      ]\n    },\n    {\n      \"model\": \"MuRIL seed 42\",\n      \"n\": 1992,\n      \"accuracy\": 0.8845381526104418,\n      \"macro_f1\": 0.4979398614885597,\n      \"spam_precision\": 0.3684210526315789,\n      \"spam_recall\": 0.03111111111111111,\n      \"confusion_matrix\": [\n        [\n          1755,\n          12\n        ],\n        [\n          218,\n          7\n        ]\n      ]\n    },\n    {\n      \"model\": \"MuRIL seed 43\",\n      \"n\": 1992,\n      \"accuracy\": 0.8895582329317269,\n      \"macro_f1\": 0.5005811965811966,\n      \"spam_precision\": 0.7777777777777778,\n      \"spam_recall\": 0.03111111111111111,\n      \"confusion_matrix\": [\n        [\n          1765,\n          2\n        ],\n        [\n          218,\n          7\n        ]\n      ]\n    },\n    {\n      \"model\": \"MuRIL seed 44\",\n      \"n\": 1992,\n      \"accuracy\": 0.8855421686746988,\n      \"macro_f1\": 0.5098086620156109,\n      \"spam_precision\": 0.43478260869565216,\n      \"spam_recall\": 0.044444444444444446,\n      \"confusion_matrix\": [\n        [\n          1754,\n          13\n        ],\n        [\n          215,\n          10\n        ]\n      ]\n    }\n  ]\n}\n",
+        "timed_out": false
+      }
+    },
+    {
+      "id": "statistical_audit",
+      "title": "Independent statistical audit",
+      "required": true,
+      "status": "PASS",
+      "detail": "exit 0",
+      "duration_seconds": 6.19,
+      "command": "cd \"Research Work/phase2\" && PYTHONIOENCODING=utf-8 ../../.venv/Scripts/python.exe p2_final_audit_stats.py",
+      "evidence": {
+        "returncode": 0,
+        "duration_seconds": 6.19,
+        "stdout_tail": "{\n  \"out\": \"C:\\\\Users\\\\Sachin\\\\OneDrive\\\\Documents\\\\NLP_Project\\\\Research Work\\\\phase2\\\\metrics\\\\final_audit_stats.json\",\n  \"LR_minus_SVM_macro_f1\": {\n    \"a\": 0.9556445631211987,\n    \"b\": 0.9650046816479401,\n    \"difference\": -0.009360118526741346,\n    \"ci_low\": -0.03214315072560611,\n    \"ci_high\": 0.0,\n    \"boot_mean\": -0.009470885945762727,\n    \"boot_median\": -0.008867265179782313,\n    \"boot_min\": -0.057057662545039856,\n    \"boot_max\": 0.0,\n    \"q05\": -0.028228946119372073,\n    \"q95\": 0.0,\n    \"boot_sd\": 0.009502267456035777,\n    \"share_positive\": 0.0,\n    \"share_tie\": 0.3685,\n    \"share_negative\": 0.6315,\n    \"a_wrong_b_right\": 1,\n    \"a_right_b_wrong\": 0,\n    \"discordant_pairs\": 1,\n    \"discordance_exact_two_sided_p\": 1.0,\n    \"observed_inside_interval\": true\n  },\n  \"SVM_minus_LR_macro_f1\": {\n    \"a\": 0.9650046816479401,\n    \"b\": 0.9556445631211987,\n    \"difference\": 0.009360118526741346,\n    \"ci_low\": 0.0,\n    \"ci_high\": 0.032143150725606105,\n    \"boot_mean\": 0.009470885945762727,\n    \"boot_median\": 0.008867265179782313,\n    \"boot_min\": 0.0,\n    \"boot_max\": 0.057057662545039856,\n    \"q05\": 0.0,\n    \"q95\": 0.02822894611937205,\n    \"boot_sd\": 0.009502267456035777,\n    \"share_positive\": 0.6315,\n    \"share_tie\": 0.3685,\n    \"share_negative\": 0.0,\n    \"a_wrong_b_right\": 0,\n    \"a_right_b_wrong\": 1,\n    \"discordant_pairs\": 1,\n    \"discordance_exact_two_sided_p\": 1.0,\n    \"observed_inside_interval\": true\n  },\n  \"SVM_minus_MuRIL_mean_macro_f1\": {\n    \"svm\": 0.9650046816479401,\n    \"muril_mean\": 0.9618846421390262,\n    \"difference\": 0.003120039508913819,\n    \"ci_low\": -1.1102230246251565e-16,\n    \"ci_high\": 0.010100181849030618,\n    \"share_positive\": 0.6945,\n    \"share_tie\": 0.238,\n    \"share_negative\": 0.0675,\n    \"observed_inside_interval\": true\n  },\n  \"blocks\": {\n    \"4001-5000\": {\n      \"n\": 630,\n      \"ham\": 618,\n      \"spam\": 12\n    },\n    \"5001-6000\": {\n      \"n\": 991,\n      \"ham\": 991,\n      \"spam\": 0\n    },\n    \"6001-7000\": {\n      \"n\": 371,\n      \"ham\": 158,\n      \"spam\": 213\n    }\n  },\n  \"script_composition\": {\n    \"malayalam_only_script\": {\n      \"Ham\": 1429,\n      \"Spam\": 60\n    },\n    \"malayalam_plus_latin\": {\n      \"Ham\": 338,\n      \"Spam\": 165\n    }\n  },\n  \"source_hashes\": {\n    \"d1_xlsx\": \"24ca099ac1ffabc0b02fd491f57d577c56afb932bc81c5964a40e32eab9a023b\",\n    \"d2_csv\": \"649844f1c62a6b27e145eaf17a65f7010c56c390e11a794ea8329993a05ba71e\",\n    \"d1_test\": \"3922f037a2f52045ffc1d682e799880a06311dec9017ff33abef3fdd3d40be0b\",\n    \"d2_test\": \"44409491ebb1c4e22d3aa65b76ca6f4e18ad2eb6af1f58380ab7f19236b46c79\"\n  }\n}\n",
+        "stderr_tail": "",
+        "output_tail": "{\n  \"out\": \"C:\\\\Users\\\\Sachin\\\\OneDrive\\\\Documents\\\\NLP_Project\\\\Research Work\\\\phase2\\\\metrics\\\\final_audit_stats.json\",\n  \"LR_minus_SVM_macro_f1\": {\n    \"a\": 0.9556445631211987,\n    \"b\": 0.9650046816479401,\n    \"difference\": -0.009360118526741346,\n    \"ci_low\": -0.03214315072560611,\n    \"ci_high\": 0.0,\n    \"boot_mean\": -0.009470885945762727,\n    \"boot_median\": -0.008867265179782313,\n    \"boot_min\": -0.057057662545039856,\n    \"boot_max\": 0.0,\n    \"q05\": -0.028228946119372073,\n    \"q95\": 0.0,\n    \"boot_sd\": 0.009502267456035777,\n    \"share_positive\": 0.0,\n    \"share_tie\": 0.3685,\n    \"share_negative\": 0.6315,\n    \"a_wrong_b_right\": 1,\n    \"a_right_b_wrong\": 0,\n    \"discordant_pairs\": 1,\n    \"discordance_exact_two_sided_p\": 1.0,\n    \"observed_inside_interval\": true\n  },\n  \"SVM_minus_LR_macro_f1\": {\n    \"a\": 0.9650046816479401,\n    \"b\": 0.9556445631211987,\n    \"difference\": 0.009360118526741346,\n    \"ci_low\": 0.0,\n    \"ci_high\": 0.032143150725606105,\n    \"boot_mean\": 0.009470885945762727,\n    \"boot_median\": 0.008867265179782313,\n    \"boot_min\": 0.0,\n    \"boot_max\": 0.057057662545039856,\n    \"q05\": 0.0,\n    \"q95\": 0.02822894611937205,\n    \"boot_sd\": 0.009502267456035777,\n    \"share_positive\": 0.6315,\n    \"share_tie\": 0.3685,\n    \"share_negative\": 0.0,\n    \"a_wrong_b_right\": 0,\n    \"a_right_b_wrong\": 1,\n    \"discordant_pairs\": 1,\n    \"discordance_exact_two_sided_p\": 1.0,\n    \"observed_inside_interval\": true\n  },\n  \"SVM_minus_MuRIL_mean_macro_f1\": {\n    \"svm\": 0.9650046816479401,\n    \"muril_mean\": 0.9618846421390262,\n    \"difference\": 0.003120039508913819,\n    \"ci_low\": -1.1102230246251565e-16,\n    \"ci_high\": 0.010100181849030618,\n    \"share_positive\": 0.6945,\n    \"share_tie\": 0.238,\n    \"share_negative\": 0.0675,\n    \"observed_inside_interval\": true\n  },\n  \"blocks\": {\n    \"4001-5000\": {\n      \"n\": 630,\n      \"ham\": 618,\n      \"spam\": 12\n    },\n    \"5001-6000\": {\n      \"n\": 991,\n      \"ham\": 991,\n      \"spam\": 0\n    },\n    \"6001-7000\": {\n      \"n\": 371,\n      \"ham\": 158,\n      \"spam\": 213\n    }\n  },\n  \"script_composition\": {\n    \"malayalam_only_script\": {\n      \"Ham\": 1429,\n      \"Spam\": 60\n    },\n    \"malayalam_plus_latin\": {\n      \"Ham\": 338,\n      \"Spam\": 165\n    }\n  },\n  \"source_hashes\": {\n    \"d1_xlsx\": \"24ca099ac1ffabc0b02fd491f57d577c56afb932bc81c5964a40e32eab9a023b\",\n    \"d2_csv\": \"649844f1c62a6b27e145eaf17a65f7010c56c390e11a794ea8329993a05ba71e\",\n    \"d1_test\": \"3922f037a2f52045ffc1d682e799880a06311dec9017ff33abef3fdd3d40be0b\",\n    \"d2_test\": \"44409491ebb1c4e22d3aa65b76ca6f4e18ad2eb6af1f58380ab7f19236b46c79\"\n  }\n}\n",
+        "timed_out": false
+      }
+    },
+    {
+      "id": "prototype_verification",
+      "title": "Prototype parity and frozen hashes",
+      "required": true,
+      "status": "PASS",
+      "detail": "exit 0",
+      "duration_seconds": 4.16,
+      "command": "PYTHONIOENCODING=utf-8 .venv/Scripts/python.exe \"Research Work/prototype/verify_prototype.py\"",
+      "evidence": {
+        "returncode": 0,
+        "duration_seconds": 4.16,
+        "stdout_tail": "{\n  \"status\": \"PASS\",\n  \"python\": \"3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]\",\n  \"models\": {\n    \"d1\": {\n      \"model\": \"d1_malayalam_linear_svm.joblib\",\n      \"sha256\": \"9ba1dcd62655bf501f4b0297d543bd232ad1348ab476c2efca9b07e0b97225cd\",\n      \"hash_matches_manifest\": true,\n      \"test_rows\": 299,\n      \"prediction_parity\": 299,\n      \"classify_parity\": 299,\n      \"cleaning_parity\": 299,\n      \"classes_observed\": [\n        \"Ham\",\n        \"Spam\"\n      ],\n      \"labels_checked\": 299\n    },\n    \"d2\": {\n      \"model\": \"d2_logreg.joblib\",\n      \"sha256\": \"6f8cd0e5498f672bd71ddeaf494284f3c7aad6315bc39dbfb449f0cf388dc856\",\n      \"hash_matches_manifest\": true,\n      \"test_rows\": 883,\n      \"prediction_parity\": 883,\n      \"classify_parity\": 883,\n      \"cleaning_parity\": 883,\n      \"classes_observed\": [\n        \"ham\",\n        \"smishing\",\n        \"spam\"\n      ],\n      \"labels_checked\": 883\n    }\n  },\n  \"model_hashes\": {\n    \"d1_malayalam_linear_svm.joblib\": {\n      \"exists\": true,\n      \"sha256\": \"9ba1dcd62655bf501f4b0297d543bd232ad1348ab476c2efca9b07e0b97225cd\",\n      \"matches\": true\n    },\n    \"d1_malayalam_logreg.joblib\": {\n      \"exists\": true,\n      \"sha256\": \"fd4a1542436fc81890b117cdeba6cd1e3753bb1f0e832875068908a117af6e69\",\n      \"matches\": true\n    },\n    \"d2_linear_svm.joblib\": {\n      \"exists\": true,\n      \"sha256\": \"5de720cfcc7fe7179e976b6e2bb3e0410d1ca04145003dfcb8cb3ce5c5ea042e\",\n      \"matches\": true\n    },\n    \"d2_logreg.joblib\": {\n      \"exists\": true,\n      \"sha256\": \"6f8cd0e5498f672bd71ddeaf494284f3c7aad6315bc39dbfb449f0cf388dc856\",\n      \"matches\": true\n    }\n  },\n  \"split_hashes_match_manifest\": {\n    \"d1_malayalam_train.csv\": true,\n    \"d1_malayalam_val.csv\": true,\n    \"d1_malayalam_test.csv\": true,\n    \"d2_train.csv\": true,\n    \"d2_val.csv\": true,\n    \"d2_test.csv\": true\n  },\n  \"unicode_checks\": {\n    \"malayalam_detected\": true,\n    \"latin_detected\": true,\n    \"malayalam_preserved_after_clean\": true\n  },\n  \"input_validation\": {\n    \"empty_rejected\": true,\n    \"none_rejected\": true,\n    \"bytes_rejected\": true,\n    \"latin_only_rejected_by_d1\": true,\n    \"malayalam_only_rejected_by_d2\": true,\n    \"oversize_rejected\": true,\n    \"controls_only_rejected\": true,\n    \"max_input_chars\": 5000,\n    \"length_at_limit_accepted\": true,\n    \"malayalam_detected\": true,\n    \"malayalam_absent\": true,\n    \"latin_detected\": true,\n    \"latin_absent\": true,\n    \"malayalam_preserved_after_clean\": true\n  },\n  \"class_coverage\": {\n    \"d1\": {\n      \"Ham\": {\n        \"record_id\": \"D1-04388\",\n        \"display_label\": \"Ham\"\n      },\n      \"Spam\": {\n        \"record_id\": \"D1-04369\",\n        \"display_label\": \"Spam\"\n      }\n    },\n    \"d2\": {\n      \"ham\": {\n        \"record_id\": \"D2-00016\",\n        \"display_label\": \"Ham\"\n      },\n      \"smishing\": {\n        \"record_id\": \"D2-00169\",\n        \"display_label\": \"Smishing\"\n      },\n      \"spam\": {\n        \"record_id\": \"D2-00083\",\n        \"display_label\": \"Spam\"\n      }\n    }\n  },\n  \"failures\": [],\n  \"note\": \"No model was fitted or modified. Every frozen test prediction is reproduced after record_id alignment, and every model and split hash is re-derived from the file bytes.\"\n}\n",
+        "stderr_tail": "",
+        "output_tail": "{\n  \"status\": \"PASS\",\n  \"python\": \"3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]\",\n  \"models\": {\n    \"d1\": {\n      \"model\": \"d1_malayalam_linear_svm.joblib\",\n      \"sha256\": \"9ba1dcd62655bf501f4b0297d543bd232ad1348ab476c2efca9b07e0b97225cd\",\n      \"hash_matches_manifest\": true,\n      \"test_rows\": 299,\n      \"prediction_parity\": 299,\n      \"classify_parity\": 299,\n      \"cleaning_parity\": 299,\n      \"classes_observed\": [\n        \"Ham\",\n        \"Spam\"\n      ],\n      \"labels_checked\": 299\n    },\n    \"d2\": {\n      \"model\": \"d2_logreg.joblib\",\n      \"sha256\": \"6f8cd0e5498f672bd71ddeaf494284f3c7aad6315bc39dbfb449f0cf388dc856\",\n      \"hash_matches_manifest\": true,\n      \"test_rows\": 883,\n      \"prediction_parity\": 883,\n      \"classify_parity\": 883,\n      \"cleaning_parity\": 883,\n      \"classes_observed\": [\n        \"ham\",\n        \"smishing\",\n        \"spam\"\n      ],\n      \"labels_checked\": 883\n    }\n  },\n  \"model_hashes\": {\n    \"d1_malayalam_linear_svm.joblib\": {\n      \"exists\": true,\n      \"sha256\": \"9ba1dcd62655bf501f4b0297d543bd232ad1348ab476c2efca9b07e0b97225cd\",\n      \"matches\": true\n    },\n    \"d1_malayalam_logreg.joblib\": {\n      \"exists\": true,\n      \"sha256\": \"fd4a1542436fc81890b117cdeba6cd1e3753bb1f0e832875068908a117af6e69\",\n      \"matches\": true\n    },\n    \"d2_linear_svm.joblib\": {\n      \"exists\": true,\n      \"sha256\": \"5de720cfcc7fe7179e976b6e2bb3e0410d1ca04145003dfcb8cb3ce5c5ea042e\",\n      \"matches\": true\n    },\n    \"d2_logreg.joblib\": {\n      \"exists\": true,\n      \"sha256\": \"6f8cd0e5498f672bd71ddeaf494284f3c7aad6315bc39dbfb449f0cf388dc856\",\n      \"matches\": true\n    }\n  },\n  \"split_hashes_match_manifest\": {\n    \"d1_malayalam_train.csv\": true,\n    \"d1_malayalam_val.csv\": true,\n    \"d1_malayalam_test.csv\": true,\n    \"d2_train.csv\": true,\n    \"d2_val.csv\": true,\n    \"d2_test.csv\": true\n  },\n  \"unicode_checks\": {\n    \"malayalam_detected\": true,\n    \"latin_detected\": true,\n    \"malayalam_preserved_after_clean\": true\n  },\n  \"input_validation\": {\n    \"empty_rejected\": true,\n    \"none_rejected\": true,\n    \"bytes_rejected\": true,\n    \"latin_only_rejected_by_d1\": true,\n    \"malayalam_only_rejected_by_d2\": true,\n    \"oversize_rejected\": true,\n    \"controls_only_rejected\": true,\n    \"max_input_chars\": 5000,\n    \"length_at_limit_accepted\": true,\n    \"malayalam_detected\": true,\n    \"malayalam_absent\": true,\n    \"latin_detected\": true,\n    \"latin_absent\": true,\n    \"malayalam_preserved_after_clean\": true\n  },\n  \"class_coverage\": {\n    \"d1\": {\n      \"Ham\": {\n        \"record_id\": \"D1-04388\",\n        \"display_label\": \"Ham\"\n      },\n      \"Spam\": {\n        \"record_id\": \"D1-04369\",\n        \"display_label\": \"Spam\"\n      }\n    },\n    \"d2\": {\n      \"ham\": {\n        \"record_id\": \"D2-00016\",\n        \"display_label\": \"Ham\"\n      },\n      \"smishing\": {\n        \"record_id\": \"D2-00169\",\n        \"display_label\": \"Smishing\"\n      },\n      \"spam\": {\n        \"record_id\": \"D2-00083\",\n        \"display_label\": \"Spam\"\n      }\n    }\n  },\n  \"failures\": [],\n  \"note\": \"No model was fitted or modified. Every frozen test prediction is reproduced after record_id alignment, and every model and split hash is re-derived from the file bytes.\"\n}\n",
+        "timed_out": false
+      }
+    },
+    {
+      "id": "literature_validation",
+      "title": "Literature matrix validation",
+      "required": true,
+      "status": "PASS",
+      "detail": "exit 0",
+      "duration_seconds": 1.21,
+      "command": "PYTHONIOENCODING=utf-8 .venv/Scripts/python.exe \"Research Work/validate_literature_matrix.py\"",
+      "evidence": {
+        "returncode": 0,
+        "duration_seconds": 1.21,
+        "stdout_tail": "{\n  \"status\": \"PASS\",\n  \"records_register\": 24,\n  \"records_workbook\": 24,\n  \"active_records\": 23,\n  \"verification_counts\": {\n    \"METADATA\": 10,\n    \"FULL TEXT\": 7,\n    \"ABSTRACT\": 6,\n    \"EXCLUDED\": 1\n  },\n  \"expected_counts\": {\n    \"FULL TEXT\": 7,\n    \"ABSTRACT\": 6,\n    \"METADATA\": 10,\n    \"EXCLUDED\": 1\n  },\n  \"failures\": []\n}\n",
+        "stderr_tail": "",
+        "output_tail": "{\n  \"status\": \"PASS\",\n  \"records_register\": 24,\n  \"records_workbook\": 24,\n  \"active_records\": 23,\n  \"verification_counts\": {\n    \"METADATA\": 10,\n    \"FULL TEXT\": 7,\n    \"ABSTRACT\": 6,\n    \"EXCLUDED\": 1\n  },\n  \"expected_counts\": {\n    \"FULL TEXT\": 7,\n    \"ABSTRACT\": 6,\n    \"METADATA\": 10,\n    \"EXCLUDED\": 1\n  },\n  \"failures\": []\n}\n",
+        "timed_out": false
+      }
+    },
+    {
+      "id": "browser_ui_evidence",
+      "title": "Recorded browser pass (informational)",
+      "required": false,
+      "status": "PASS",
+      "detail": "16 browser cases recorded, all PASS",
+      "duration_seconds": 0.0,
+      "command": null,
+      "evidence": {
+        "target": "http://127.0.0.1:8501/",
+        "timestamp_utc": "2026-11-08T16:20:00+00:00",
+        "cases": 16,
+        "not_covered": [
+          "Streamlit visual/CSS layout quality and mobile viewport rendering.",
+          "Two concurrent user sessions.",
+          "Accessibility tooling (axe) audit."
+        ]
+      }
+    },
+    {
+      "id": "code_risk_checks",
+      "title": "Documented code-risk invariants",
+      "required": true,
+      "status": "PASS",
+      "detail": "10 code-risk invariants checked",
+      "duration_seconds": 0.02,
+      "command": null,
+      "evidence": {
+        "invariants": [
+          {
+            "check": "stale_manifest_block_table_preserved",
+            "status": "PASS",
+            "detail": "frozen manifest still records {'4001-5000': 631, '5001-6000': 991, '6001-7000': 370} and was not edited"
+          },
+          {
+            "check": "block_number_formula_correct",
+            "status": "PASS",
+            "detail": "recomputed block totals {'5': 630, '6': 991, '7': 371} (expected 630/991/371; one train row moved out of 4001-5000)"
+          },
+          {
+            "check": "block_formula_used_by_writers",
+            "status": "PASS",
+            "detail": "split/robustness writers import and map p2_common.block_number"
+          },
+          {
+            "check": "legacy_ci_cannot_overwrite_canonical",
+            "status": "PASS",
+            "detail": "p2_ci.py writes *_legacy outputs unless explicitly overridden"
+          },
+          {
+            "check": "joblib_load_is_hash_guarded",
+            "status": "PASS",
+            "detail": "artifact SHA-256 is checked before joblib.load"
+          },
+          {
+            "check": "verifier_never_fits",
+            "status": "PASS",
+            "detail": "prototype verifier only loads and predicts"
+          },
+          {
+            "check": "read_only_scripts_never_fit",
+            "status": "PASS",
+            "detail": "verification/statistics scripts do not fit models"
+          },
+          {
+            "check": "readme_documents_do_not_rerun",
+            "status": "PASS",
+            "detail": "Phase 2 README lists the scripts that must not be rerun"
+          },
+          {
+            "check": "norm_key_url_placeholder_documented",
+            "status": "PASS",
+            "detail": "URL placeholder behaviour is documented as a frozen-artifact limitation"
+          },
+          {
+            "check": "stats_authoritative_documented",
+            "status": "PASS",
+            "detail": "p2_stats.py is documented as authoritative over p2_ci.py"
+          }
+        ]
+      }
+    },
+    {
+      "id": "verification_stability",
+      "title": "Frozen metrics unchanged by the audit run",
+      "required": true,
+      "status": "PASS",
+      "detail": "frozen metrics identical before and after the audit",
+      "duration_seconds": 0.03,
+      "command": null,
+      "evidence": {
+        "before": {
+          "final_verification.json": {
+            "d1_logreg_macro_f1": 0.9556445631211987,
+            "d1_svm_macro_f1": 0.9650046816479401,
+            "muril_mean": 0.9618846421390262,
+            "muril_sd": 0.005404066951060919,
+            "block_logreg": null,
+            "block_svm": null,
+            "block_logreg_spam_recall": null,
+            "block_svm_spam_recall": null
+          },
+          "final_audit_stats.json": {
+            "d1_logreg_macro_f1": 0.9556445631211987,
+            "d1_svm_macro_f1": 0.9650046816479401,
+            "muril_mean": null,
+            "muril_sd": null,
+            "block_logreg": 0.5447952856859739,
+            "block_svm": 0.5378449758089207,
+            "block_logreg_spam_recall": 0.08888888888888889,
+            "block_svm_spam_recall": 0.07555555555555556
+          }
+        },
+        "after": {
+          "final_verification.json": {
+            "d1_logreg_macro_f1": 0.9556445631211987,
+            "d1_svm_macro_f1": 0.9650046816479401,
+            "muril_mean": 0.9618846421390262,
+            "muril_sd": 0.005404066951060919,
+            "block_logreg": null,
+            "block_svm": null,
+            "block_logreg_spam_recall": null,
+            "block_svm_spam_recall": null
+          },
+          "final_audit_stats.json": {
+            "d1_logreg_macro_f1": 0.9556445631211987,
+            "d1_svm_macro_f1": 0.9650046816479401,
+            "muril_mean": null,
+            "muril_sd": null,
+            "block_logreg": 0.5447952856859739,
+            "block_svm": 0.5378449758089207,
+            "block_logreg_spam_recall": 0.08888888888888889,
+            "block_svm_spam_recall": 0.07555555555555556
+          }
+        }
+      }
+    },
+    {
+      "id": "post_run_hash_stability",
+      "title": "No frozen artifact changed during the audit run",
+      "required": true,
+      "status": "PASS",
+      "detail": "all frozen artifacts identical to the baseline after the run",
+      "duration_seconds": 0.0,
+      "command": null,
+      "evidence": {
+        "restored_outputs": [
+          "Research Work/prototype/verification_results.json",
+          "Research Work/phase2/metrics/final_verification.json",
+          "Research Work/phase2/metrics/final_audit_stats.json"
+        ],
+        "changed": []
+      }
+    }
+  ],
+  "frozen_artifacts_unchanged": true,
+  "baseline_path": "Research Work/phase2/metrics/audit_hash_baseline.json",
+  "preserved_outputs_dir": "Research Work/phase2/metrics/audit_runs/20261108T171120Z",
+  "run_directory": "Research Work/phase2/metrics/audit_runs/20261108T171120Z"
+}

@@ -1,0 +1,199 @@
+{
+  "task": "binary",
+  "labels": [
+    "Ham",
+    "Spam"
+  ],
+  "tag": "d1_malayalam",
+  "train_rows": 1394,
+  "val_rows": 299,
+  "test_rows": 299,
+  "train_class_counts": {
+    "Ham": 1237,
+    "Spam": 157
+  },
+  "val_class_counts": {
+    "Ham": 265,
+    "Spam": 34
+  },
+  "test_class_counts": {
+    "Spam": 34,
+    "Ham": 265
+  },
+  "selection_metric": "validation macro-F1",
+  "overall_model_family": "linear_svm",
+  "models": {
+    "linear_svm": {
+      "selected_config": "char_2_4",
+      "C": 0.5,
+      "val": {
+        "val_accuracy": 0.9933110367892977,
+        "val_macro_f1": 0.9829687856003646,
+        "val_spam_recall": 0.9411764705882353,
+        "val_spam_precision": 1.0
+      },
+      "test": {
+        "n": 299,
+        "accuracy": 0.9866220735785953,
+        "macro_f1": 0.9650046816479401,
+        "weighted_f1": 0.986254117971265,
+        "spam_precision": 1.0,
+        "spam_recall": 0.8823529411764706,
+        "spam_f1": 0.9375,
+        "ham_precision": 0.9851301115241635,
+        "ham_recall": 1.0,
+        "ham_f1": 0.9925093632958801,
+        "confusion_matrix": [
+          [
+            265,
+            0
+          ],
+          [
+            4,
+            30
+          ]
+        ],
+        "labels": [
+          "Ham",
+          "Spam"
+        ],
+        "roc_auc_spam": 0.9764705882352942,
+        "pr_auc_spam": 0.9498366013071895
+      },
+      "classification_report": {
+        "Ham": {
+          "precision": 0.9851301115241635,
+          "recall": 1.0,
+          "f1-score": 0.9925093632958801,
+          "support": 265.0
+        },
+        "Spam": {
+          "precision": 1.0,
+          "recall": 0.8823529411764706,
+          "f1-score": 0.9375,
+          "support": 34.0
+        },
+        "accuracy": 0.9866220735785953,
+        "macro avg": {
+          "precision": 0.9925650557620818,
+          "recall": 0.9411764705882353,
+          "f1-score": 0.9650046816479401,
+          "support": 299.0
+        },
+        "weighted avg": {
+          "precision": 0.9868210018525194,
+          "recall": 0.9866220735785953,
+          "f1-score": 0.986254117971265,
+          "support": 299.0
+        }
+      },
+      "model_file": "d1_malayalam_linear_svm.joblib",
+      "predictions_file": "d1_malayalam_linear_svm_test_predictions.csv",
+      "n_errors": 4
+    },
+    "logreg": {
+      "selected_config": "char_2_4",
+      "C": 1.0,
+      "val": {
+        "val_accuracy": 0.9899665551839465,
+        "val_macro_f1": 0.9747870815414453,
+        "val_spam_recall": 0.9411764705882353,
+        "val_spam_precision": 0.9696969696969697
+      },
+      "test": {
+        "n": 299,
+        "accuracy": 0.9832775919732442,
+        "macro_f1": 0.9556445631211986,
+        "weighted_f1": 0.9826921464467177,
+        "spam_precision": 1.0,
+        "spam_recall": 0.8529411764705882,
+        "spam_f1": 0.9206349206349206,
+        "ham_precision": 0.9814814814814815,
+        "ham_recall": 1.0,
+        "ham_f1": 0.9906542056074766,
+        "confusion_matrix": [
+          [
+            265,
+            0
+          ],
+          [
+            5,
+            29
+          ]
+        ],
+        "labels": [
+          "Ham",
+          "Spam"
+        ],
+        "roc_auc_spam": 0.9785793562708103,
+        "pr_auc_spam": 0.9499418107406897
+      },
+      "classification_report": {
+        "Ham": {
+          "precision": 0.9814814814814815,
+          "recall": 1.0,
+          "f1-score": 0.9906542056074766,
+          "support": 265.0
+        },
+        "Spam": {
+          "precision": 1.0,
+          "recall": 0.8529411764705882,
+          "f1-score": 0.9206349206349206,
+          "support": 34.0
+        },
+        "accuracy": 0.9832775919732442,
+        "macro avg": {
+          "precision": 0.9907407407407407,
+          "recall": 0.9264705882352942,
+          "f1-score": 0.9556445631211986,
+          "support": 299.0
+        },
+        "weighted avg": {
+          "precision": 0.9835872661959619,
+          "recall": 0.9832775919732442,
+          "f1-score": 0.9826921464467177,
+          "support": 299.0
+        }
+      },
+      "model_file": "d1_malayalam_logreg.joblib",
+      "predictions_file": "d1_malayalam_logreg_test_predictions.csv",
+      "n_errors": 5
+    }
+  },
+  "malayalam_only_subgroup": {
+    "rows": 221,
+    "class_counts": {
+      "Spam": 11,
+      "Ham": 210
+    },
+    "metrics": {
+      "n": 221,
+      "accuracy": 0.9909502262443439,
+      "macro_f1": 0.9476303317535545,
+      "weighted_f1": 0.9905191825180674,
+      "spam_precision": 1.0,
+      "spam_recall": 0.8181818181818182,
+      "spam_f1": 0.9,
+      "ham_precision": 0.9905660377358491,
+      "ham_recall": 1.0,
+      "ham_f1": 0.995260663507109,
+      "confusion_matrix": [
+        [
+          210,
+          0
+        ],
+        [
+          2,
+          9
+        ]
+      ],
+      "labels": [
+        "Ham",
+        "Spam"
+      ],
+      "roc_auc_spam": 0.9978354978354979,
+      "pr_auc_spam": 0.9715909090909092
+    },
+    "note": "descriptive only; 11 spam test rows, no separate model was trained"
+  }
+}

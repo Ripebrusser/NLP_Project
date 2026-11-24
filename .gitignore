@@ -1,0 +1,16 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+
+# Freebuff workspace marker
+.freebuff/
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Fine-tuned MuRIL weights (907 MB) exceed GitHub's 100 MB per-file limit.
+# Kept locally only; hash and role documented in Admin/IEEE_REPRODUCIBILITY_ARTIFACT_INDEX.md.
+Research Work/phase2/models/muril_d1_seed42/model.safetensors

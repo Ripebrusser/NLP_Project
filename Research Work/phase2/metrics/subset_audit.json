@@ -1,0 +1,142 @@
+{
+  "d1": {
+    "records": 7717,
+    "raw_label_counts": {
+      "Spam": 1394,
+      "Ham": 6322,
+      "Spa,": 1
+    },
+    "invalid_labels": 1,
+    "empty_messages": 2,
+    "contains_counts_inclusive": {
+      "malayalam": 1992,
+      "tamil": 1175,
+      "telugu": 1069,
+      "kannada": 1349,
+      "latin": 3612
+    },
+    "contains_sum": 9197,
+    "exclusive_buckets": {
+      "tamil_plus_latin": 292,
+      "tamil_only": 883,
+      "latin_only": 2130,
+      "telugu_plus_latin": 322,
+      "telugu_only": 747,
+      "kannada_only": 984,
+      "kannada_plus_latin": 365,
+      "malayalam_only_script": 1489,
+      "malayalam_plus_latin": 503,
+      "other_or_no_letters": 2
+    },
+    "exclusive_sum": 7717,
+    "discrepancy_explanation": "Inclusive 'contains' counts sum to more than 7,717 because a message can contain more than one script (most often Malayalam + Latin). The earlier audit mixed inclusive counts with exclusive buckets; the exclusive buckets here sum exactly to 7,717. Malayalam-containing records = 1,992, of which 503 also contain Latin and 1,489 contain no Latin. No Malayalam record contains Tamil, Telugu or Kannada.",
+    "malayalam": {
+      "records": 1992,
+      "labels": {
+        "Ham": 1767,
+        "Spam": 225
+      },
+      "latin_cooccurrence": 503,
+      "malayalam_only_script": 1489,
+      "other_indic_cooccurrence": 0,
+      "script_categories": {
+        "malayalam_only_script": 1489,
+        "malayalam_plus_latin": 503
+      },
+      "mean_tokens": 11.761,
+      "median_tokens": 11.0,
+      "url_records": 65
+    },
+    "row_blocks": [
+      {
+        "data_rows": "1-1000",
+        "n": 1000,
+        "malayalam": 0,
+        "malayalam_ham": 0,
+        "malayalam_spam": 0,
+        "all_spam": 78
+      },
+      {
+        "data_rows": "1001-2000",
+        "n": 1000,
+        "malayalam": 0,
+        "malayalam_ham": 0,
+        "malayalam_spam": 0,
+        "all_spam": 385
+      },
+      {
+        "data_rows": "2001-3000",
+        "n": 1000,
+        "malayalam": 0,
+        "malayalam_ham": 0,
+        "malayalam_spam": 0,
+        "all_spam": 184
+      },
+      {
+        "data_rows": "3001-4000",
+        "n": 1000,
+        "malayalam": 0,
+        "malayalam_ham": 0,
+        "malayalam_spam": 0,
+        "all_spam": 188
+      },
+      {
+        "data_rows": "4001-5000",
+        "n": 1000,
+        "malayalam": 632,
+        "malayalam_ham": 620,
+        "malayalam_spam": 12,
+        "all_spam": 15
+      },
+      {
+        "data_rows": "5001-6000",
+        "n": 1000,
+        "malayalam": 991,
+        "malayalam_ham": 991,
+        "malayalam_spam": 0,
+        "all_spam": 0
+      },
+      {
+        "data_rows": "6001-7000",
+        "n": 1000,
+        "malayalam": 369,
+        "malayalam_ham": 156,
+        "malayalam_spam": 213,
+        "all_spam": 216
+      },
+      {
+        "data_rows": "7001-7717",
+        "n": 717,
+        "malayalam": 0,
+        "malayalam_ham": 0,
+        "malayalam_spam": 0,
+        "all_spam": 328
+      }
+    ]
+  },
+  "d2": {
+    "records": 5971,
+    "raw_label_counts": {
+      "ham": 4844,
+      "Smishing": 616,
+      "spam": 466,
+      "Spam": 23,
+      "smishing": 22
+    },
+    "normalised_label_counts": {
+      "ham": 4844,
+      "smishing": 638,
+      "spam": 489
+    },
+    "empty_messages": 0,
+    "indic_records": 0,
+    "latin_records": 5969,
+    "url_flag_non_no": 207,
+    "email_flag_non_no": 19,
+    "phone_flag_non_no": 844
+  },
+  "source_hashes": {
+    "d1_xlsx": "24ca099ac1ffabc0b02fd491f57d577c56afb932bc81c5964a40e32eab9a023b",
+    "d2_csv": "649844f1c62a6b27e145eaf17a65f7010c56c390e11a794ea8329993a05ba71e"
+  }
+}

@@ -1,0 +1,1740 @@
+{
+  "generated_by": "Research Work/phase2/p2_validate.py",
+  "block_definition": "block = (source_row - 1) // 1000 + 1; source_row is the Excel row",
+  "block_definition_note": "Phase 2's p2_robustness.py used ((source_row-1)-1)//1000+1, which labelled blocks one row low; membership differed by two Ham rows. Corrected here.",
+  "verification": {
+    "checks": [
+      {
+        "dataset": "D1",
+        "model": "linear_svm",
+        "model_file": "d1_malayalam_linear_svm.joblib",
+        "config": "char_2_4",
+        "C": 0.5,
+        "n_features": 20629,
+        "rows": 299,
+        "accuracy_recomputed": 0.9866220735785953,
+        "accuracy_recorded": 0.9866220735785953,
+        "accuracy_match": true,
+        "predictions_match_saved_file": true
+      },
+      {
+        "dataset": "D1",
+        "model": "logreg",
+        "model_file": "d1_malayalam_logreg.joblib",
+        "config": "char_2_4",
+        "C": 1.0,
+        "n_features": 20629,
+        "rows": 299,
+        "accuracy_recomputed": 0.9832775919732442,
+        "accuracy_recorded": 0.9832775919732442,
+        "accuracy_match": true,
+        "predictions_match_saved_file": true
+      },
+      {
+        "dataset": "D2",
+        "model": "linear_svm",
+        "model_file": "d2_linear_svm.joblib",
+        "config": "char_2_4",
+        "C": 0.5,
+        "n_features": 24293,
+        "rows": 883,
+        "accuracy_recomputed": 0.9637599093997735,
+        "accuracy_recorded": 0.9637599093997735,
+        "accuracy_match": true,
+        "predictions_match_saved_file": true
+      },
+      {
+        "dataset": "D2",
+        "model": "logreg",
+        "model_file": "d2_logreg.joblib",
+        "config": "char_2_4",
+        "C": 1.0,
+        "n_features": 24293,
+        "rows": 883,
+        "accuracy_recomputed": 0.9637599093997735,
+        "accuracy_recorded": 0.9637599093997735,
+        "accuracy_match": true,
+        "predictions_match_saved_file": true
+      }
+    ],
+    "all_match": true
+  },
+  "comparison": {
+    "D1": [
+      {
+        "dataset": "D1",
+        "task": "Ham vs Spam",
+        "model": "linear_svm",
+        "config": "char_2_4",
+        "C": 0.5,
+        "val_macro_f1": 0.9829687856003646,
+        "accuracy": 0.9866220735785953,
+        "macro_f1": 0.9650046816479401,
+        "precision_macro": 0.9925650557620818,
+        "recall_macro": 0.9411764705882353,
+        "n_test": 299,
+        "n_errors": 4,
+        "confusion_matrix": [
+          [
+            265,
+            0
+          ],
+          [
+            4,
+            30
+          ]
+        ],
+        "labels": [
+          "Ham",
+          "Spam"
+        ],
+        "per_class": [
+          {
+            "label": "Ham",
+            "precision": 0.9851301115241635,
+            "recall": 1.0,
+            "f1": 0.9925093632958801,
+            "support": 265.0
+          },
+          {
+            "label": "Spam",
+            "precision": 1.0,
+            "recall": 0.8823529411764706,
+            "f1": 0.9375,
+            "support": 34.0
+          }
+        ],
+        "per_class_f1": "Ham 0.993 / Spam 0.938"
+      },
+      {
+        "dataset": "D1",
+        "task": "Ham vs Spam",
+        "model": "logreg",
+        "config": "char_2_4",
+        "C": 1.0,
+        "val_macro_f1": 0.9747870815414453,
+        "accuracy": 0.9832775919732442,
+        "macro_f1": 0.9556445631211986,
+        "precision_macro": 0.9907407407407407,
+        "recall_macro": 0.9264705882352942,
+        "n_test": 299,
+        "n_errors": 5,
+        "confusion_matrix": [
+          [
+            265,
+            0
+          ],
+          [
+            5,
+            29
+          ]
+        ],
+        "labels": [
+          "Ham",
+          "Spam"
+        ],
+        "per_class": [
+          {
+            "label": "Ham",
+            "precision": 0.9814814814814815,
+            "recall": 1.0,
+            "f1": 0.9906542056074766,
+            "support": 265.0
+          },
+          {
+            "label": "Spam",
+            "precision": 1.0,
+            "recall": 0.8529411764705882,
+            "f1": 0.9206349206349206,
+            "support": 34.0
+          }
+        ],
+        "per_class_f1": "Ham 0.991 / Spam 0.921"
+      }
+    ],
+    "D2": [
+      {
+        "dataset": "D2",
+        "task": "Ham vs Spam vs Smishing",
+        "model": "linear_svm",
+        "config": "char_2_4",
+        "C": 0.5,
+        "val_macro_f1": 0.9029760143268245,
+        "accuracy": 0.9637599093997735,
+        "macro_f1": 0.882502980802467,
+        "precision_macro": 0.9024073918504206,
+        "recall_macro": 0.8656547382463259,
+        "n_test": 883,
+        "n_errors": 32,
+        "confusion_matrix": [
+          [
+            725,
+            0,
+            1
+          ],
+          [
+            12,
+            52,
+            3
+          ],
+          [
+            1,
+            15,
+            74
+          ]
+        ],
+        "labels": [
+          "ham",
+          "spam",
+          "smishing"
+        ],
+        "per_class": [
+          {
+            "label": "ham",
+            "precision": 0.9823848238482384,
+            "recall": 0.9986225895316805,
+            "f1": 0.9904371584699454,
+            "support": 726.0
+          },
+          {
+            "label": "spam",
+            "precision": 0.7761194029850746,
+            "recall": 0.7761194029850746,
+            "f1": 0.7761194029850746,
+            "support": 67.0
+          },
+          {
+            "label": "smishing",
+            "precision": 0.9487179487179487,
+            "recall": 0.8222222222222222,
+            "f1": 0.8809523809523809,
+            "support": 90.0
+          }
+        ],
+        "per_class_f1": "ham 0.990 / spam 0.776 / smishing 0.881"
+      },
+      {
+        "dataset": "D2",
+        "task": "Ham vs Spam vs Smishing",
+        "model": "logreg",
+        "config": "char_2_4",
+        "C": 1.0,
+        "val_macro_f1": 0.904799738946362,
+        "accuracy": 0.9637599093997735,
+        "macro_f1": 0.8877423096432983,
+        "precision_macro": 0.8985691548106282,
+        "recall_macro": 0.8792027009123347,
+        "n_test": 883,
+        "n_errors": 32,
+        "confusion_matrix": [
+          [
+            722,
+            0,
+            4
+          ],
+          [
+            10,
+            55,
+            2
+          ],
+          [
+            1,
+            15,
+            74
+          ]
+        ],
+        "labels": [
+          "ham",
+          "spam",
+          "smishing"
+        ],
+        "per_class": [
+          {
+            "label": "ham",
+            "precision": 0.984993178717599,
+            "recall": 0.9944903581267218,
+            "f1": 0.9897189856065799,
+            "support": 726.0
+          },
+          {
+            "label": "spam",
+            "precision": 0.7857142857142857,
+            "recall": 0.8208955223880597,
+            "f1": 0.8029197080291971,
+            "support": 67.0
+          },
+          {
+            "label": "smishing",
+            "precision": 0.925,
+            "recall": 0.8222222222222222,
+            "f1": 0.8705882352941177,
+            "support": 90.0
+          }
+        ],
+        "per_class_f1": "ham 0.990 / spam 0.803 / smishing 0.871"
+      }
+    ]
+  },
+  "block_audit": {
+    "blocks": [
+      {
+        "block": "4001-5000",
+        "source_row_min": 4146,
+        "source_row_max": 5000,
+        "rows": 630,
+        "ham": 618,
+        "spam": 12,
+        "spam_rate": 0.01904761904761905,
+        "malayalam_only": 570,
+        "latin_also": 60,
+        "n_unique_text": 601,
+        "n_unique_skeleton": 590,
+        "length_chars": {
+          "all_mean": 129.26984126984127,
+          "ham_median": 124.0,
+          "spam_median": 174.5,
+          "all_p90": 176.0
+        },
+        "tokens": {
+          "all_mean": 13.061904761904762,
+          "ham_median": 12.0,
+          "spam_median": 16.5
+        },
+        "url_rate": 0.0015873015873015873,
+        "url_rate_ham": 0.0,
+        "url_rate_spam": 0.08333333333333333,
+        "digit_rate": 0.044444444444444446,
+        "digit_rate_ham": 0.025889967637540454,
+        "digit_rate_spam": 1.0,
+        "latin_rate_ham": 0.07928802588996764,
+        "latin_rate_spam": 0.9166666666666666,
+        "top_tokens": [
+          {
+            "token": "നമ",
+            "in_block": 162,
+            "outside": 130,
+            "z": 6.287
+          },
+          {
+            "token": "എന",
+            "in_block": 523,
+            "outside": 693,
+            "z": 4.18
+          },
+          {
+            "token": "ആത",
+            "in_block": 25,
+            "outside": 7,
+            "z": 4.178
+          },
+          {
+            "token": "ഒര",
+            "in_block": 293,
+            "outside": 357,
+            "z": 4.087
+          },
+          {
+            "token": "തത",
+            "in_block": 64,
+            "outside": 50,
+            "z": 4.034
+          },
+          {
+            "token": "അത",
+            "in_block": 156,
+            "outside": 171,
+            "z": 3.838
+          },
+          {
+            "token": "ദന",
+            "in_block": 41,
+            "outside": 27,
+            "z": 3.757
+          },
+          {
+            "token": "പക",
+            "in_block": 87,
+            "outside": 84,
+            "z": 3.597
+          },
+          {
+            "token": "സകൾ",
+            "in_block": 18,
+            "outside": 5,
+            "z": 3.55
+          },
+          {
+            "token": "മൾ",
+            "in_block": 26,
+            "outside": 13,
+            "z": 3.546
+          }
+        ],
+        "top_templates": [
+          {
+            "skeleton": "പരിഭവങ്ങള് പറയണം.. ഇടയ്ക്ക് പിണങ്ങണം..മൗനം കൊണ്ടെന്നെ നോവിക്കണം. അപ്പോഴേ...അപ്പോള് മാത്രമേ",
+            "n": 3,
+            "spam": 0
+          },
+          {
+            "skeleton": "കേരളത്തിലെ റോഡുകൾ ടാർ ചെയ്ത്‌ കഴിഞ്ഞാൽ ഉടനെ ത ന്നെ \"best before # months \"എന്ന കുറച്ച്‌ ബോ",
+            "n": 2,
+            "spam": 1
+          },
+          {
+            "skeleton": "പലപ്പോഴും പ്രണയിക്കുന്നവർ നൽകുന്ന കണ്ണുനീർ തുടയ്ക്കുന്നത് നമ്മൾ കൂടപ്പിറപ്പാക്കിയ കൂട്ടുകാ",
+            "n": 2,
+            "spam": 0
+          },
+          {
+            "skeleton": "ഇത്തിരി ദൂരത്തു നിന്നും ഒത്തിരി സ്നേഹത്തോടെ എന്റെ മുത്തിന് ഒരായിരം ജന്മദിനാശംസകൾ നേരുന്നു.",
+            "n": 2,
+            "spam": 0
+          },
+          {
+            "skeleton": "കാലത്തിന്റെ കവിൾ തടത്തിലെ കണ്ണീർ തുള്ളിയാണ് താജ് മഹൽ എങ്കിൽ .......എന്റെ കവിൾ തടത്തിലെ കണ്",
+            "n": 2,
+            "spam": 0
+          }
+        ]
+      },
+      {
+        "block": "5001-6000",
+        "source_row_min": 5001,
+        "source_row_max": 6000,
+        "rows": 991,
+        "ham": 991,
+        "spam": 0,
+        "spam_rate": 0.0,
+        "malayalam_only": 739,
+        "latin_also": 252,
+        "n_unique_text": 973,
+        "n_unique_skeleton": 968,
+        "length_chars": {
+          "all_mean": 96.73662966700303,
+          "ham_median": 92.0,
+          "spam_median": null,
+          "all_p90": 162.0
+        },
+        "tokens": {
+          "all_mean": 10.65287588294652,
+          "ham_median": 10.0,
+          "spam_median": null
+        },
+        "url_rate": 0.0,
+        "url_rate_ham": 0.0,
+        "url_rate_spam": null,
+        "digit_rate": 0.07769929364278506,
+        "digit_rate_ham": 0.07769929364278506,
+        "digit_rate_spam": null,
+        "latin_rate_ham": 0.2542885973763875,
+        "latin_rate_spam": null,
+        "top_tokens": [
+          {
+            "token": "എന",
+            "in_block": 619,
+            "outside": 597,
+            "z": 4.925
+          },
+          {
+            "token": "ഉണ",
+            "in_block": 114,
+            "outside": 70,
+            "z": 4.764
+          },
+          {
+            "token": "ൾക",
+            "in_block": 65,
+            "outside": 32,
+            "z": 4.358
+          },
+          {
+            "token": "ഇത",
+            "in_block": 82,
+            "outside": 47,
+            "z": 4.32
+          },
+          {
+            "token": "മയ",
+            "in_block": 37,
+            "outside": 11,
+            "z": 4.198
+          },
+          {
+            "token": "കണ",
+            "in_block": 211,
+            "outside": 181,
+            "z": 3.856
+          },
+          {
+            "token": "പട",
+            "in_block": 38,
+            "outside": 15,
+            "z": 3.798
+          },
+          {
+            "token": "song",
+            "in_block": 28,
+            "outside": 8,
+            "z": 3.69
+          },
+          {
+            "token": "നവർ",
+            "in_block": 41,
+            "outside": 20,
+            "z": 3.474
+          },
+          {
+            "token": "അവള",
+            "in_block": 50,
+            "outside": 28,
+            "z": 3.436
+          }
+        ],
+        "top_templates": [
+          {
+            "skeleton": "സുഷിൻ ശ്യാമിൻ്റെ രോമാൻജിഫികേഷൻ പരത്തുന്ന രോമാഞ്ചത്തിനായി കാത്തിരിക്കുന്നു , ടീസർ സോങ്ങ് uf",
+            "n": 3,
+            "spam": 0
+          },
+          {
+            "skeleton": "ആ മിഴി നിറയുമ്പോഴ് പിടയുന്നത് ഈ ഹൃദയമാണ് എന്നാല് ഈ ഹൃദയം പിടയുന്നത് കാണാ# ആ മിഴികള്ക് കഴിയ",
+            "n": 2,
+            "spam": 0
+          },
+          {
+            "skeleton": "ഈ പുഞ്ചിരിക്ക് പിന്നിൽ ഒരു കഥയുണ്ട് സ്നേഹിച്ചിട്ടും സ്നേഹിക്ക പെടാത്ത ആരും വായിക്കാതെ പോയ ",
+            "n": 2,
+            "spam": 0
+          },
+          {
+            "skeleton": "എന്റെ ജീവൻ അണയാത്ത കാലത്തോളം സ്നേഹിക്കും നിന്നെ ഞാൻ ... എന്റെ ഹൃദയം തുടിക്കുന്ന കാലത്തോളം ",
+            "n": 2,
+            "spam": 0
+          },
+          {
+            "skeleton": "നിന്നോട് പുറമേദേഷൃം കാട്ടാറുണ്ടെങ്കിലും എനിക്ക് ഒരിക്കലും നിന്നെ വെറുക്കാൻ കഴിയില്ല. അത്രയ",
+            "n": 2,
+            "spam": 0
+          }
+        ]
+      },
+      {
+        "block": "6001-7000",
+        "source_row_min": 6001,
+        "source_row_max": 6371,
+        "rows": 371,
+        "ham": 158,
+        "spam": 213,
+        "spam_rate": 0.5741239892183289,
+        "malayalam_only": 180,
+        "latin_also": 191,
+        "n_unique_text": 347,
+        "n_unique_skeleton": 337,
+        "length_chars": {
+          "all_mean": 100.5121293800539,
+          "ham_median": 53.0,
+          "spam_median": 138.0,
+          "all_p90": 186.0
+        },
+        "tokens": {
+          "all_mean": 12.50943396226415,
+          "ham_median": 7.0,
+          "spam_median": 16.0
+        },
+        "url_rate": 0.1725067385444744,
+        "url_rate_ham": 0.0,
+        "url_rate_spam": 0.3004694835680751,
+        "digit_rate": 0.522911051212938,
+        "digit_rate_ham": 0.08860759493670886,
+        "digit_rate_spam": 0.8450704225352113,
+        "latin_rate_ham": 0.23417721518987342,
+        "latin_rate_spam": 0.7230046948356808,
+        "top_tokens": [
+          {
+            "token": "ങള",
+            "in_block": 127,
+            "outside": 168,
+            "z": 10.638
+          },
+          {
+            "token": "in",
+            "in_block": 54,
+            "outside": 2,
+            "z": 7.111
+          },
+          {
+            "token": "പർ",
+            "in_block": 27,
+            "outside": 11,
+            "z": 6.783
+          },
+          {
+            "token": "ങൾക",
+            "in_block": 36,
+            "outside": 37,
+            "z": 6.383
+          },
+          {
+            "token": "ഗത",
+            "in_block": 26,
+            "outside": 3,
+            "z": 6.215
+          },
+          {
+            "token": "com",
+            "in_block": 24,
+            "outside": 3,
+            "z": 6.048
+          },
+          {
+            "token": "ഇപ",
+            "in_block": 44,
+            "outside": 61,
+            "z": 6.038
+          },
+          {
+            "token": "വസ",
+            "in_block": 31,
+            "outside": 32,
+            "z": 5.914
+          },
+          {
+            "token": "ലഭ",
+            "in_block": 25,
+            "outside": 2,
+            "z": 5.783
+          },
+          {
+            "token": "റർ",
+            "in_block": 19,
+            "outside": 5,
+            "z": 5.746
+          }
+        ],
+        "top_templates": [
+          {
+            "skeleton": "#-ൽ ക്രിക്കറ്റ് -# ഇയർ ഡിസ്നി ഹോട്ട്സ്റ്റാർ വിഐപി, # ജിബി / ദിവസം പരിധിയില്ലാത്ത കോൾ, # ദി",
+            "n": 4,
+            "spam": 4
+          },
+          {
+            "skeleton": "തമിഴ് കോംബോ പായ്ക്ക്, ജി, സൺ, വിജയ് + കിഡ്സ് & സ്പോർട്സ് + എല്ലാ തമിഴ് ചാനലുകളും പ്രതിമാസം",
+            "n": 4,
+            "spam": 4
+          },
+          {
+            "skeleton": "ഇപ്പോൾ എല്ലാ സമ്പാദ്യവും നിങ്ങളുടേതാണ്! എയർടെൽ ഡിടിഎച്ച് എച്ച്ഡി ബോക്സ് ഉപയോഗിച്ച് # രൂപ ല",
+            "n": 3,
+            "spam": 3
+          },
+          {
+            "skeleton": "ധനലക്ഷ്മി ഫിനാൻസ്: വ്യക്തിഗത വായ്പ #% പലിശ. ബാല: #",
+            "n": 3,
+            "spam": 3
+          },
+          {
+            "skeleton": "കൊട്ടക് # - ബാങ്ക് അക്കൗണ്ട് മിനിറ്റുകൾക്ക് തയ്യാറാണ്. നിങ്ങളുടെ അക്കൗണ്ട് നേടുക <url> * t",
+            "n": 3,
+            "spam": 3
+          }
+        ]
+      }
+    ],
+    "pairwise_divergence": [
+      {
+        "a": "4001-5000",
+        "b": "5001-6000",
+        "token_jaccard": 0.3518,
+        "char_trigram_js": 0.11
+      },
+      {
+        "a": "4001-5000",
+        "b": "6001-7000",
+        "token_jaccard": 0.2168,
+        "char_trigram_js": 0.3901
+      },
+      {
+        "a": "5001-6000",
+        "b": "6001-7000",
+        "token_jaccard": 0.2068,
+        "char_trigram_js": 0.3678
+      }
+    ],
+    "spam_centroid_cosine": [
+      {
+        "a": "4001-5000",
+        "b": "6001-7000",
+        "cosine": 0.2823
+      }
+    ],
+    "template_confinement": {
+      "unique_skeletons": 1867,
+      "confined_to_one_block": 1839,
+      "records_in_confined_skeletons": 1924,
+      "spam_share_in_confined": 0.11694386694386695
+    },
+    "label_by_block": {
+      "table": {
+        "Ham": {
+          "5": 618,
+          "6": 991,
+          "7": 158
+        },
+        "Spam": {
+          "5": 12,
+          "6": 0,
+          "7": 213
+        }
+      },
+      "chi2": 969.15,
+      "p_value": 3.560631003349543e-211,
+      "dof": 2,
+      "cramers_v": 0.6975
+    },
+    "block_only_predictor": {
+      "full_corpus": {
+        "n": 1992,
+        "ham_support": 1767,
+        "spam_support": 225,
+        "accuracy": 0.9146586345381527,
+        "macro_f1": 0.8322940025197499,
+        "macro_f1_present_labels": 0.8322940025197499,
+        "balanced_accuracy_present": 0.9286247877758913,
+        "ham_precision": 0.9925971622455274,
+        "ham_recall": 0.9105829088851161,
+        "ham_f1": 0.9498229043683589,
+        "spam_precision": 0.5741239892183289,
+        "spam_recall": 0.9466666666666667,
+        "spam_f1": 0.714765100671141,
+        "confusion_matrix": [
+          [
+            1609,
+            158
+          ],
+          [
+            12,
+            213
+          ]
+        ],
+        "labels": [
+          "Ham",
+          "Spam"
+        ],
+        "evaluable_for_spam": true,
+        "spam_pr_auc": null,
+        "spam_roc_auc": null
+      },
+      "random_test": {
+        "n": 299,
+        "ham_support": 265,
+        "spam_support": 34,
+        "accuracy": 0.9230769230769231,
+        "macro_f1": 0.8422887283568398,
+        "macro_f1_present_labels": 0.8422887283568398,
+        "balanced_accuracy_present": 0.9181465038845726,
+        "ham_precision": 0.9879032258064516,
+        "ham_recall": 0.9245283018867925,
+        "ham_f1": 0.9551656920077972,
+        "spam_precision": 0.6078431372549019,
+        "spam_recall": 0.9117647058823529,
+        "spam_f1": 0.7294117647058823,
+        "confusion_matrix": [
+          [
+            245,
+            20
+          ],
+          [
+            3,
+            31
+          ]
+        ],
+        "labels": [
+          "Ham",
+          "Spam"
+        ],
+        "evaluable_for_spam": true,
+        "spam_pr_auc": null,
+        "spam_roc_auc": null
+      },
+      "majority_label_by_block": {
+        "4001-5000": "Ham",
+        "5001-6000": "Ham",
+        "6001-7000": "Spam"
+      }
+    },
+    "label_runs": {
+      "observed_runs": 14,
+      "expected_runs": 400.17,
+      "z": -43.22,
+      "p_same_label_as_previous_record": 0.9935
+    },
+    "label_run_detail": [
+      {
+        "label": "Ham",
+        "start_row": 4146,
+        "end_row": 4146,
+        "n": 1
+      },
+      {
+        "label": "Spam",
+        "start_row": 4371,
+        "end_row": 4373,
+        "n": 3
+      },
+      {
+        "label": "Ham",
+        "start_row": 4374,
+        "end_row": 4376,
+        "n": 3
+      },
+      {
+        "label": "Spam",
+        "start_row": 4377,
+        "end_row": 4377,
+        "n": 1
+      },
+      {
+        "label": "Ham",
+        "start_row": 4378,
+        "end_row": 4387,
+        "n": 10
+      },
+      {
+        "label": "Spam",
+        "start_row": 4388,
+        "end_row": 4389,
+        "n": 2
+      },
+      {
+        "label": "Ham",
+        "start_row": 4390,
+        "end_row": 4392,
+        "n": 3
+      },
+      {
+        "label": "Spam",
+        "start_row": 4393,
+        "end_row": 4395,
+        "n": 3
+      },
+      {
+        "label": "Ham",
+        "start_row": 4396,
+        "end_row": 4454,
+        "n": 58
+      },
+      {
+        "label": "Spam",
+        "start_row": 4455,
+        "end_row": 4456,
+        "n": 2
+      },
+      {
+        "label": "Ham",
+        "start_row": 4457,
+        "end_row": 4486,
+        "n": 30
+      },
+      {
+        "label": "Spam",
+        "start_row": 4487,
+        "end_row": 4487,
+        "n": 1
+      },
+      {
+        "label": "Ham",
+        "start_row": 4488,
+        "end_row": 6158,
+        "n": 1662
+      },
+      {
+        "label": "Spam",
+        "start_row": 6159,
+        "end_row": 6371,
+        "n": 213
+      }
+    ],
+    "row_bins": {
+      "n_bins": 22,
+      "all_ham": 17,
+      "all_spam": 2,
+      "mixed": 3,
+      "bins": [
+        {
+          "bin": "4101-4200",
+          "n": 1,
+          "ham": 1,
+          "spam": 0,
+          "spam_rate": 0.0
+        },
+        {
+          "bin": "4301-4400",
+          "n": 29,
+          "ham": 20,
+          "spam": 9,
+          "spam_rate": 0.3103
+        },
+        {
+          "bin": "4401-4500",
+          "n": 100,
+          "ham": 97,
+          "spam": 3,
+          "spam_rate": 0.03
+        },
+        {
+          "bin": "4501-4600",
+          "n": 100,
+          "ham": 100,
+          "spam": 0,
+          "spam_rate": 0.0
+        },
+        {
+          "bin": "4601-4700",
+          "n": 100,
+          "ham": 100,
+          "spam": 0,
+          "spam_rate": 0.0
+        },
+        {
+          "bin": "4701-4800",
+          "n": 100,
+          "ham": 100,
+          "spam": 0,
+          "spam_rate": 0.0
+        },
+        {
+          "bin": "4801-4900",
+          "n": 100,
+          "ham": 100,
+          "spam": 0,
+          "spam_rate": 0.0
+        },
+        {
+          "bin": "4901-5000",
+          "n": 100,
+          "ham": 100,
+          "spam": 0,
+          "spam_rate": 0.0
+        },
+        {
+          "bin": "5001-5100",
+          "n": 100,
+          "ham": 100,
+          "spam": 0,
+          "spam_rate": 0.0
+        },
+        {
+          "bin": "5101-5200",
+          "n": 98,
+          "ham": 98,
+          "spam": 0,
+          "spam_rate": 0.0
+        },
+        {
+          "bin": "5201-5300",
+          "n": 99,
+          "ham": 99,
+          "spam": 0,
+          "spam_rate": 0.0
+        },
+        {
+          "bin": "5301-5400",
+          "n": 100,
+          "ham": 100,
+          "spam": 0,
+          "spam_rate": 0.0
+        },
+        {
+          "bin": "5401-5500",
+          "n": 100,
+          "ham": 100,
+          "spam": 0,
+          "spam_rate": 0.0
+        },
+        {
+          "bin": "5501-5600",
+          "n": 96,
+          "ham": 96,
+          "spam": 0,
+          "spam_rate": 0.0
+        },
+        {
+          "bin": "5601-5700",
+          "n": 98,
+          "ham": 98,
+          "spam": 0,
+          "spam_rate": 0.0
+        },
+        {
+          "bin": "5701-5800",
+          "n": 100,
+          "ham": 100,
+          "spam": 0,
+          "spam_rate": 0.0
+        },
+        {
+          "bin": "5801-5900",
+          "n": 100,
+          "ham": 100,
+          "spam": 0,
+          "spam_rate": 0.0
+        },
+        {
+          "bin": "5901-6000",
+          "n": 100,
+          "ham": 100,
+          "spam": 0,
+          "spam_rate": 0.0
+        },
+        {
+          "bin": "6001-6100",
+          "n": 100,
+          "ham": 100,
+          "spam": 0,
+          "spam_rate": 0.0
+        },
+        {
+          "bin": "6101-6200",
+          "n": 100,
+          "ham": 58,
+          "spam": 42,
+          "spam_rate": 0.42
+        },
+        {
+          "bin": "6201-6300",
+          "n": 100,
+          "ham": 0,
+          "spam": 100,
+          "spam_rate": 1.0
+        },
+        {
+          "bin": "6301-6400",
+          "n": 71,
+          "ham": 0,
+          "spam": 71,
+          "spam_rate": 1.0
+        }
+      ]
+    }
+  },
+  "structure_models": {
+    "structure_only": {
+      "name": "structure only (no text, no block id)",
+      "features": [
+        "n_chars",
+        "n_tokens",
+        "n_digits",
+        "has_url",
+        "has_latin",
+        "malayalam_only"
+      ],
+      "accuracy": 0.9464882943143813,
+      "macro_f1": 0.8705627705627705,
+      "spam_precision": 0.75,
+      "spam_recall": 0.7941176470588235,
+      "confusion_matrix": [
+        [
+          256,
+          9
+        ],
+        [
+          7,
+          27
+        ]
+      ]
+    },
+    "block_only_logreg": {
+      "name": "block identity only",
+      "features": [
+        "block_4001-5000",
+        "block_5001-6000",
+        "block_6001-7000"
+      ],
+      "accuracy": 0.9230769230769231,
+      "macro_f1": 0.8422887283568398,
+      "spam_precision": 0.6078431372549019,
+      "spam_recall": 0.9117647058823529,
+      "confusion_matrix": [
+        [
+          245,
+          20
+        ],
+        [
+          3,
+          31
+        ]
+      ]
+    },
+    "structure_plus_block": {
+      "name": "structure + block identity",
+      "features": [
+        "n_chars",
+        "n_tokens",
+        "n_digits",
+        "has_url",
+        "has_latin",
+        "malayalam_only",
+        "block_4001-5000",
+        "block_5001-6000",
+        "block_6001-7000"
+      ],
+      "accuracy": 0.9565217391304348,
+      "macro_f1": 0.9009050350541746,
+      "spam_precision": 0.7560975609756098,
+      "spam_recall": 0.9117647058823529,
+      "confusion_matrix": [
+        [
+          255,
+          10
+        ],
+        [
+          3,
+          31
+        ]
+      ]
+    },
+    "note": "Trained on the frozen random-split train rows and evaluated on its test rows. These models are diagnostics of metadata leakage, not competing classifiers."
+  },
+  "block_cv": {
+    "logreg": {
+      "config": "char_2_4",
+      "C": 1.0,
+      "folds": [
+        {
+          "held_out_block": "4001-5000",
+          "source_row_min": 4146,
+          "source_row_max": 5000,
+          "train_rows": 1362,
+          "train_ham": 1149,
+          "train_spam": 213,
+          "test_rows": 630,
+          "test_ham": 618,
+          "test_spam": 12,
+          "accuracy": 0.9857142857142858,
+          "macro_f1": 0.6963855421686747,
+          "macro_f1_present_labels": 0.6963855421686747,
+          "balanced_accuracy_present": 0.625,
+          "ham_precision": 0.9856459330143541,
+          "ham_recall": 1.0,
+          "ham_f1": 0.9927710843373494,
+          "spam_precision": 1.0,
+          "spam_recall": 0.25,
+          "spam_f1": 0.4,
+          "spam_pr_auc": 0.6325086711444459,
+          "confusion_matrix": [
+            [
+              618,
+              0
+            ],
+            [
+              9,
+              3
+            ]
+          ],
+          "labels": [
+            "Ham",
+            "Spam"
+          ],
+          "evaluable_for_spam": true,
+          "note": ""
+        },
+        {
+          "held_out_block": "5001-6000",
+          "source_row_min": 5001,
+          "source_row_max": 6000,
+          "train_rows": 1001,
+          "train_ham": 776,
+          "train_spam": 225,
+          "test_rows": 991,
+          "test_ham": 991,
+          "test_spam": 0,
+          "accuracy": 0.9788092835519677,
+          "macro_f1": 0.4946455889852116,
+          "macro_f1_present_labels": 0.9892911779704232,
+          "balanced_accuracy_present": 0.9788092835519677,
+          "ham_precision": 1.0,
+          "ham_recall": 0.9788092835519677,
+          "ham_f1": 0.9892911779704232,
+          "spam_precision": null,
+          "spam_recall": null,
+          "spam_f1": null,
+          "spam_pr_auc": null,
+          "confusion_matrix": [
+            [
+              970,
+              21
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "labels": [
+            "Ham",
+            "Spam"
+          ],
+          "evaluable_for_spam": false,
+          "note": "test block contains no Spam; spam precision/recall are undefined"
+        },
+        {
+          "held_out_block": "6001-7000",
+          "source_row_min": 6001,
+          "source_row_max": 6371,
+          "train_rows": 1621,
+          "train_ham": 1609,
+          "train_spam": 12,
+          "test_rows": 371,
+          "test_ham": 158,
+          "test_spam": 213,
+          "accuracy": 0.4716981132075472,
+          "macro_f1": 0.3825067934782609,
+          "macro_f1_present_labels": 0.3825067934782609,
+          "balanced_accuracy_present": 0.539906103286385,
+          "ham_precision": 0.4463276836158192,
+          "ham_recall": 1.0,
+          "ham_f1": 0.6171875,
+          "spam_precision": 1.0,
+          "spam_recall": 0.07981220657276995,
+          "spam_f1": 0.14782608695652175,
+          "spam_pr_auc": 0.9804177857914782,
+          "confusion_matrix": [
+            [
+              158,
+              0
+            ],
+            [
+              196,
+              17
+            ]
+          ],
+          "labels": [
+            "Ham",
+            "Spam"
+          ],
+          "evaluable_for_spam": true,
+          "note": "training blocks contain only 12 Spam"
+        }
+      ],
+      "pooled": {
+        "n": 1992,
+        "ham_support": 1767,
+        "spam_support": 225,
+        "accuracy": 0.8865461847389559,
+        "macro_f1": 0.5447952856859739,
+        "macro_f1_present_labels": 0.5447952856859739,
+        "balanced_accuracy_present": 0.5385021694019996,
+        "ham_precision": 0.8949256791389031,
+        "ham_recall": 0.9881154499151104,
+        "ham_f1": 0.9392146315223239,
+        "spam_precision": 0.4878048780487805,
+        "spam_recall": 0.08888888888888889,
+        "spam_f1": 0.15037593984962405,
+        "spam_pr_auc": 0.2688301816725319,
+        "confusion_matrix": [
+          [
+            1746,
+            21
+          ],
+          [
+            205,
+            20
+          ]
+        ],
+        "labels": [
+          "Ham",
+          "Spam"
+        ]
+      },
+      "random_split_reference": {
+        "accuracy": 0.9832775919732442,
+        "macro_f1": 0.9556445631211986,
+        "spam_precision": 1.0,
+        "spam_recall": 0.8529411764705882,
+        "confusion_matrix": [
+          [
+            265,
+            0
+          ],
+          [
+            5,
+            29
+          ]
+        ]
+      }
+    },
+    "linear_svm": {
+      "config": "char_2_4",
+      "C": 0.5,
+      "folds": [
+        {
+          "held_out_block": "4001-5000",
+          "source_row_min": 4146,
+          "source_row_max": 5000,
+          "train_rows": 1362,
+          "train_ham": 1149,
+          "train_spam": 213,
+          "test_rows": 630,
+          "test_ham": 618,
+          "test_spam": 12,
+          "accuracy": 0.9857142857142858,
+          "macro_f1": 0.6963855421686747,
+          "macro_f1_present_labels": 0.6963855421686747,
+          "balanced_accuracy_present": 0.625,
+          "ham_precision": 0.9856459330143541,
+          "ham_recall": 1.0,
+          "ham_f1": 0.9927710843373494,
+          "spam_precision": 1.0,
+          "spam_recall": 0.25,
+          "spam_f1": 0.4,
+          "spam_pr_auc": 0.635082204255677,
+          "confusion_matrix": [
+            [
+              618,
+              0
+            ],
+            [
+              9,
+              3
+            ]
+          ],
+          "labels": [
+            "Ham",
+            "Spam"
+          ],
+          "evaluable_for_spam": true,
+          "note": ""
+        },
+        {
+          "held_out_block": "5001-6000",
+          "source_row_min": 5001,
+          "source_row_max": 6000,
+          "train_rows": 1001,
+          "train_ham": 776,
+          "train_spam": 225,
+          "test_rows": 991,
+          "test_ham": 991,
+          "test_spam": 0,
+          "accuracy": 0.9889001009081736,
+          "macro_f1": 0.4972095383054287,
+          "macro_f1_present_labels": 0.9944190766108574,
+          "balanced_accuracy_present": 0.9889001009081736,
+          "ham_precision": 1.0,
+          "ham_recall": 0.9889001009081736,
+          "ham_f1": 0.9944190766108574,
+          "spam_precision": null,
+          "spam_recall": null,
+          "spam_f1": null,
+          "spam_pr_auc": null,
+          "confusion_matrix": [
+            [
+              980,
+              11
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "labels": [
+            "Ham",
+            "Spam"
+          ],
+          "evaluable_for_spam": false,
+          "note": "test block contains no Spam; spam precision/recall are undefined"
+        },
+        {
+          "held_out_block": "6001-7000",
+          "source_row_min": 6001,
+          "source_row_max": 6371,
+          "train_rows": 1621,
+          "train_ham": 1609,
+          "train_spam": 12,
+          "test_rows": 371,
+          "test_ham": 158,
+          "test_spam": 213,
+          "accuracy": 0.4636118598382749,
+          "macro_f1": 0.36847012531542706,
+          "macro_f1_present_labels": 0.36847012531542706,
+          "balanced_accuracy_present": 0.5328638497652582,
+          "ham_precision": 0.4425770308123249,
+          "ham_recall": 1.0,
+          "ham_f1": 0.6135922330097088,
+          "spam_precision": 1.0,
+          "spam_recall": 0.06572769953051644,
+          "spam_f1": 0.12334801762114538,
+          "spam_pr_auc": 0.9798446256910155,
+          "confusion_matrix": [
+            [
+              158,
+              0
+            ],
+            [
+              199,
+              14
+            ]
+          ],
+          "labels": [
+            "Ham",
+            "Spam"
+          ],
+          "evaluable_for_spam": true,
+          "note": "training blocks contain only 12 Spam"
+        }
+      ],
+      "pooled": {
+        "n": 1992,
+        "ham_support": 1767,
+        "spam_support": 225,
+        "accuracy": 0.8900602409638554,
+        "macro_f1": 0.5378449758089207,
+        "macro_f1_present_labels": 0.5378449758089207,
+        "balanced_accuracy_present": 0.5346651575174496,
+        "ham_precision": 0.8940936863543788,
+        "ham_recall": 0.9937747594793436,
+        "ham_f1": 0.9413025998391852,
+        "spam_precision": 0.6071428571428571,
+        "spam_recall": 0.07555555555555556,
+        "spam_f1": 0.13438735177865613,
+        "spam_pr_auc": 0.3386849589087728,
+        "confusion_matrix": [
+          [
+            1756,
+            11
+          ],
+          [
+            208,
+            17
+          ]
+        ],
+        "labels": [
+          "Ham",
+          "Spam"
+        ]
+      },
+      "random_split_reference": {
+        "accuracy": 0.9866220735785953,
+        "macro_f1": 0.9650046816479401,
+        "spam_precision": 1.0,
+        "spam_recall": 0.8823529411764706,
+        "confusion_matrix": [
+          [
+            265,
+            0
+          ],
+          [
+            4,
+            30
+          ]
+        ]
+      }
+    }
+  },
+  "d2": {
+    "class_style": [
+      {
+        "label": "ham",
+        "n": 4844,
+        "chars_mean": 70.7,
+        "chars_median": 53.0,
+        "tokens_mean": 14.16,
+        "url_rate": 0.0004,
+        "digit_rate": 0.1579,
+        "latin_rate": 0.9996
+      },
+      {
+        "label": "spam",
+        "n": 489,
+        "chars_mean": 133.9,
+        "chars_median": 143.0,
+        "tokens_mean": 23.0,
+        "url_rate": 0.1738,
+        "digit_rate": 0.9162,
+        "latin_rate": 1.0
+      },
+      {
+        "label": "smishing",
+        "n": 638,
+        "chars_mean": 139.6,
+        "chars_median": 146.0,
+        "tokens_mean": 22.83,
+        "url_rate": 0.1505,
+        "digit_rate": 0.9655,
+        "latin_rate": 1.0
+      }
+    ],
+    "train_style": [
+      {
+        "label": "ham",
+        "n": 3391,
+        "chars_mean": 70.4,
+        "chars_median": 52.0,
+        "tokens_mean": 14.08,
+        "url_rate": 0.0006,
+        "digit_rate": 0.1525,
+        "latin_rate": 0.9994
+      },
+      {
+        "label": "spam",
+        "n": 315,
+        "chars_mean": 135.2,
+        "chars_median": 145.0,
+        "tokens_mean": 23.26,
+        "url_rate": 0.1587,
+        "digit_rate": 0.9333,
+        "latin_rate": 1.0
+      },
+      {
+        "label": "smishing",
+        "n": 421,
+        "chars_mean": 139.4,
+        "chars_median": 146.0,
+        "tokens_mean": 22.78,
+        "url_rate": 0.1188,
+        "digit_rate": 0.9715,
+        "latin_rate": 1.0
+      }
+    ],
+    "centroid_cosine": [
+      {
+        "a": "ham",
+        "b": "spam",
+        "cosine": 0.6947
+      },
+      {
+        "a": "ham",
+        "b": "smishing",
+        "cosine": 0.6273
+      },
+      {
+        "a": "spam",
+        "b": "smishing",
+        "cosine": 0.7507
+      }
+    ],
+    "top_feature_overlap": {
+      "ham__spam": {
+        "jaccard_top50": 0.0,
+        "shared_terms": []
+      },
+      "ham__smishing": {
+        "jaccard_top50": 0.0,
+        "shared_terms": []
+      },
+      "spam__smishing": {
+        "jaccard_top50": 0.0101,
+        "shared_terms": [
+          "50"
+        ]
+      }
+    },
+    "models": {
+      "logreg": {
+        "n_errors": 32,
+        "error_pairs": {
+          "smishing->spam": 15,
+          "spam->ham": 10,
+          "ham->smishing": 4,
+          "spam->smishing": 2,
+          "smishing->ham": 1
+        },
+        "examples": [
+          {
+            "record_id": "D2-04565",
+            "true": "smishing",
+            "pred": "spam",
+            "margin": 0.925,
+            "message": "Txt: CALL to No: 86888 & claim your reward of 3 hours talk time to use from your phone now! Subscribe6GBP/mnth inc 3hrs 16 stop?txtStop www.gamb.tv"
+          },
+          {
+            "record_id": "D2-00768",
+            "true": "spam",
+            "pred": "ham",
+            "margin": 0.9216,
+            "message": "Do you ever notice that when you're driving, anyone going slower than you is an idiot and everyone driving faster than you is a maniac?"
+          },
+          {
+            "record_id": "D2-04483",
+            "true": "smishing",
+            "pred": "spam",
+            "margin": 0.9059,
+            "message": "U are subscribed to the best Mobile Content Service in the UK for £3 per ten days until you send STOP to 83435. Helpline 08706091795."
+          },
+          {
+            "record_id": "D2-05181",
+            "true": "smishing",
+            "pred": "spam",
+            "margin": 0.8286,
+            "message": "\tFreeMsg Today's the day if you are ready! I'm  & live in your town. I love sex fun & games! Netcollex Ltd 08700621170150p per msg reply Stop to end"
+          },
+          {
+            "record_id": "D2-03809",
+            "true": "smishing",
+            "pred": "spam",
+            "margin": 0.8082,
+            "message": "For ur chance to win a £250 wkly shopping spree TXT: SHOP to 80878. T's&C's  custcare 08715705022, 1x150p/wk"
+          },
+          {
+            "record_id": "D2-03623",
+            "true": "spam",
+            "pred": "ham",
+            "margin": 0.7924,
+            "message": "How come it takes so little time for a child who is afraid of the dark to become a teenager who wants to stay out all night?"
+          }
+        ],
+        "per_class": {
+          "ham": {
+            "precision": 0.984993178717599,
+            "recall": 0.9944903581267218,
+            "f1": 0.9897189856065799,
+            "support": 726
+          },
+          "spam": {
+            "precision": 0.7857142857142857,
+            "recall": 0.8208955223880597,
+            "f1": 0.8029197080291971,
+            "support": 67
+          },
+          "smishing": {
+            "precision": 0.925,
+            "recall": 0.8222222222222222,
+            "f1": 0.8705882352941177,
+            "support": 90
+          }
+        },
+        "confusion_matrix": [
+          [
+            722,
+            0,
+            4
+          ],
+          [
+            10,
+            55,
+            2
+          ],
+          [
+            1,
+            15,
+            74
+          ]
+        ],
+        "labels": [
+          "ham",
+          "spam",
+          "smishing"
+        ],
+        "accuracy": 0.9637599093997735,
+        "macro_f1": 0.8877423096432983
+      },
+      "linear_svm": {
+        "n_errors": 32,
+        "error_pairs": {
+          "smishing->spam": 15,
+          "spam->ham": 12,
+          "spam->smishing": 3,
+          "smishing->ham": 1,
+          "ham->smishing": 1
+        },
+        "examples": [
+          {
+            "record_id": "D2-00768",
+            "true": "spam",
+            "pred": "ham",
+            "margin": 2.4204,
+            "message": "Do you ever notice that when you're driving, anyone going slower than you is an idiot and everyone driving faster than you is a maniac?"
+          },
+          {
+            "record_id": "D2-04565",
+            "true": "smishing",
+            "pred": "spam",
+            "margin": 2.2685,
+            "message": "Txt: CALL to No: 86888 & claim your reward of 3 hours talk time to use from your phone now! Subscribe6GBP/mnth inc 3hrs 16 stop?txtStop www.gamb.tv"
+          },
+          {
+            "record_id": "D2-04483",
+            "true": "smishing",
+            "pred": "spam",
+            "margin": 2.0664,
+            "message": "U are subscribed to the best Mobile Content Service in the UK for £3 per ten days until you send STOP to 83435. Helpline 08706091795."
+          },
+          {
+            "record_id": "D2-03623",
+            "true": "spam",
+            "pred": "ham",
+            "margin": 1.6609,
+            "message": "How come it takes so little time for a child who is afraid of the dark to become a teenager who wants to stay out all night?"
+          },
+          {
+            "record_id": "D2-05181",
+            "true": "smishing",
+            "pred": "spam",
+            "margin": 1.5343,
+            "message": "\tFreeMsg Today's the day if you are ready! I'm  & live in your town. I love sex fun & games! Netcollex Ltd 08700621170150p per msg reply Stop to end"
+          },
+          {
+            "record_id": "D2-03809",
+            "true": "smishing",
+            "pred": "spam",
+            "margin": 1.4221,
+            "message": "For ur chance to win a £250 wkly shopping spree TXT: SHOP to 80878. T's&C's  custcare 08715705022, 1x150p/wk"
+          }
+        ],
+        "per_class": {
+          "ham": {
+            "precision": 0.9823848238482384,
+            "recall": 0.9986225895316805,
+            "f1": 0.9904371584699454,
+            "support": 726
+          },
+          "spam": {
+            "precision": 0.7761194029850746,
+            "recall": 0.7761194029850746,
+            "f1": 0.7761194029850746,
+            "support": 67
+          },
+          "smishing": {
+            "precision": 0.9487179487179487,
+            "recall": 0.8222222222222222,
+            "f1": 0.8809523809523809,
+            "support": 90
+          }
+        },
+        "confusion_matrix": [
+          [
+            725,
+            0,
+            1
+          ],
+          [
+            12,
+            52,
+            3
+          ],
+          [
+            1,
+            15,
+            74
+          ]
+        ],
+        "labels": [
+          "ham",
+          "spam",
+          "smishing"
+        ],
+        "accuracy": 0.9637599093997735,
+        "macro_f1": 0.882502980802467
+      }
+    },
+    "train_support": {
+      "ham": 3391,
+      "smishing": 421,
+      "spam": 315
+    },
+    "test_support": {
+      "ham": 726,
+      "smishing": 90,
+      "spam": 67
+    }
+  }
+}

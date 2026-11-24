@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "timestamp_utc": "2026-11-08T17:11:38+00:00",
+  "command": "python -m unittest discover -s \"Research Work/tests\" -t \"Research Work/tests\" -v",
+  "python_version": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "duration_seconds": 12.22,
+  "tests_run": 125,
+  "passed": 125,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "expected_failures": 0,
+  "unexpected_successes": 0,
+  "warnings": 0,
+  "failed_tests": [],
+  "errored_tests": [],
+  "skipped_tests": [],
+  "warning_messages": [],
+  "log_path": "C:\\Users\\Sachin\\OneDrive\\Documents\\NLP_Project\\Research Work\\phase2\\metrics\\code_audit_test_results.log"
+}

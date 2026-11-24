@@ -1,0 +1,12 @@
+W1106 04:48:50.907000 27076 Lib\site-packages\torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights:  24%|██▍       | 49/201 [00:00<00:00, 481.55it/s]Loading weights:  49%|████▉     | 98/201 [00:00<00:00, 307.89it/s]Loading weights: 100%|██████████| 201/201 [00:00<00:00, 662.13it/s]
+wrote threshold_calibration.json/.csv, threshold_calibration_splits.csv, tables and figures
+random Logistic Regression t 0.4764428199586039 default 0.9556 0.8529 selected 0.965 0.8824
+random Linear SVM t -0.23698545800324528 default 0.965 0.8824 selected 0.9659 0.9118
+random MuRIL seed 42 t 0.4663797412067652 default 0.965 0.8824 selected 0.965 0.8824
+block Logistic Regression 4001-5000 t 0.4414 default 0.6964 0.25 selected 0.6388 0.1667 stab 0.049
+block Logistic Regression 5001-6000 t 0.5835 default 0.4946 0.0 selected 0.4997 0.0 stab 0.053
+block Logistic Regression 6001-7000 t 0.2219 default 0.3825 0.0798 selected 0.3541 0.0516 stab 0.058
+block Linear SVM 4001-5000 t -0.1907 default 0.6964 0.25 selected 0.7913 0.4167 stab 0.065
+block Linear SVM 5001-6000 t 0.0244 default 0.4972 0.0 selected 0.4977 0.0 stab 0.067
+block Linear SVM 6001-7000 t -0.5853 default 0.3685 0.0657 selected 0.7694 0.6009 stab 0.105

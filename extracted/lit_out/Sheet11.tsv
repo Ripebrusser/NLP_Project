@@ -1,0 +1,17 @@
+Type	Record IDs	Primary record	Exact URL	Section/locator	Supported claim	Inspection limitation
+DATA	D01	UCI dataset original page	https://archive.ics.uci.edu/dataset/228/sms+spam+collection	Dataset lines 13–17, 34–36, 59–69, 125–139	Metadata: 5574; ham/spam; file listing; CC BY 4.0	Metadata checked; bytes NOT downloaded
+DATA	D02	Mendeley creator release	https://data.mendeley.com/datasets/f45bkkt8pr/1	Description / Files / Steps to reproduce / Licence	5971; ham 4844, spam 489, smishing 638; zip; CC BY 4.0; sourced from images and labelled by source	Metadata checked; bytes NOT downloaded
+DATA	D10	IEEE DataPort creator record	https://ieee-dataport.org/documents/spam-sms-dravidian-languages	Dataset Files and Access / abstract / instructions	Malayalam mentioned; approx 7700 spam/ham; file name; login gate	File not downloaded, subset unconfirmed
+DATA	D09	SMSDHL preprint landing reference	https://doi.org/10.36227/techrxiv.173603655.53756505/v1	Preprint DOI reference; ResearchGate abstract only	Preprint exists as a lead; class counts and released Malayalam data NOT verified	Public dataset release unresolved
+DATA	D11	Mendeley creator release	https://data.mendeley.com/datasets/vmg875v4xs/1	Description / Files / Licence	LLM-generated 10191; three classes; CSV; CC BY 4.0	Only metadata; synthetic nature matters
+DATA	D12	Mendeley creator release	https://data.mendeley.com/datasets/jfkfbw3gzh/3	Dataset description and version information	Bangla 2772; smishing/promotional/normal; not Malayalam	Only metadata
+DATA	D04/D13	PhishNet authors repository	https://github.com/AbeerAlhuthali/PhishNet	Repository README file list	PhishNet_Dataset1_original.csv and PhishNet_Dataset2.csv listed	Dataset bytes not inspected
+PAPER	P01	ACM baseline; UCI original citation	https://dl.acm.org/doi/10.1145/2034691.2034742	ACM bibliographic citation linked by UCI	English SMS spam baseline (not phishing, not Malayalam)	Full text not rechecked
+PAPER	P02	Mishra and Soni 2020	https://doi.org/10.1016/j.future.2020.03.021	Mendeley creator cites original study	Record cross-referenced with creators' release	Full-text methods not rechecked
+PAPER	P06	IEEE Xplore 11564455	https://ieeexplore.ieee.org/abstract/document/11564455/references	IEEE abstract, publication metadata, DOI	2026 regional-language phishing framework exists; listed languages do not include Malayalam	Full text not opened
+PAPER	P07	Nature article	https://www.nature.com/articles/s41598-026-37769-4	DOI redirect attempted	Target reached sign-in redirect; results not rechecked	Blocked at sign-in
+PAPER	P09	Taylor and Francis	https://doi.org/10.1080/24751839.2026.2713250	DOI landing attempt	HTTP 403; no validation of methods	Blocked
+PAPER	P12	DravidianCodeMix original DOI	https://doi.org/10.1007/s10579-022-09583-7	Existing workbook bibliography; not newly fetched	Sentiment/offensive task; not spam/phishing	Requires recheck
+PAPER	P13	MuRIL preprint	https://arxiv.org/abs/2103.10730	Existing workbook bibliography; not newly fetched	Candidate Indian-language representations; not a task dataset	Requires recheck
+PAPER	P14	XLM-R ACL	https://aclanthology.org/2020.acl-main.747/	Existing workbook bibliography; not newly fetched	Pretraining paper; not a phishing benchmark	Requires recheck
+PAPER	P15	BERT ACL	https://aclanthology.org/N19-1423/	Existing workbook bibliography; not newly fetched	General language-model methods	Requires recheck

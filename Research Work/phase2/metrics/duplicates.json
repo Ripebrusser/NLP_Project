@@ -1,0 +1,320 @@
+{
+  "d1_malayalam": {
+    "records": 1992,
+    "exact_groups": 1905,
+    "exact_excess": 87,
+    "norm_groups": 1853,
+    "fuzzy_extra_pairs": 181,
+    "final_groups": 1824,
+    "final_excess": 168,
+    "conflict_groups": 0,
+    "conflict_records": 0,
+    "conflict_labels": {},
+    "largest_groups": [
+      {
+        "group_id": "G00137",
+        "n": 4,
+        "labels": {
+          "Ham": 4
+        }
+      },
+      {
+        "group_id": "G01645",
+        "n": 4,
+        "labels": {
+          "Spam": 4
+        }
+      },
+      {
+        "group_id": "G01647",
+        "n": 4,
+        "labels": {
+          "Spam": 4
+        }
+      },
+      {
+        "group_id": "G01648",
+        "n": 4,
+        "labels": {
+          "Spam": 4
+        }
+      },
+      {
+        "group_id": "G00275",
+        "n": 3,
+        "labels": {
+          "Ham": 3
+        }
+      },
+      {
+        "group_id": "G00316",
+        "n": 3,
+        "labels": {
+          "Ham": 3
+        }
+      },
+      {
+        "group_id": "G00139",
+        "n": 3,
+        "labels": {
+          "Ham": 3
+        }
+      },
+      {
+        "group_id": "G00302",
+        "n": 3,
+        "labels": {
+          "Ham": 3
+        }
+      },
+      {
+        "group_id": "G00405",
+        "n": 3,
+        "labels": {
+          "Ham": 3
+        }
+      },
+      {
+        "group_id": "G00132",
+        "n": 3,
+        "labels": {
+          "Ham": 3
+        }
+      }
+    ]
+  },
+  "d2": {
+    "records": 5971,
+    "exact_groups": 5949,
+    "exact_excess": 22,
+    "norm_groups": 5700,
+    "fuzzy_extra_pairs": 0,
+    "final_groups": 5700,
+    "final_excess": 271,
+    "conflict_groups": 37,
+    "conflict_records": 76,
+    "conflict_labels": {
+      "G00067": {
+        "spam": 1,
+        "smishing": 1
+      },
+      "G00180": {
+        "smishing": 1,
+        "spam": 1
+      },
+      "G00213": {
+        "smishing": 1,
+        "spam": 1
+      },
+      "G00230": {
+        "smishing": 1,
+        "spam": 3
+      },
+      "G00253": {
+        "spam": 1,
+        "smishing": 1
+      },
+      "G00330": {
+        "spam": 1,
+        "smishing": 1
+      },
+      "G00378": {
+        "spam": 1,
+        "smishing": 1
+      },
+      "G00455": {
+        "spam": 1,
+        "smishing": 1
+      },
+      "G00465": {
+        "smishing": 1,
+        "spam": 1
+      },
+      "G00588": {
+        "spam": 1,
+        "smishing": 1
+      },
+      "G00740": {
+        "spam": 1,
+        "smishing": 1
+      },
+      "G00761": {
+        "spam": 1,
+        "smishing": 1
+      },
+      "G00891": {
+        "smishing": 1,
+        "spam": 1
+      },
+      "G00941": {
+        "spam": 1,
+        "smishing": 1
+      },
+      "G01039": {
+        "spam": 1,
+        "smishing": 1
+      },
+      "G01061": {
+        "spam": 1,
+        "smishing": 1
+      },
+      "G01067": {
+        "smishing": 1,
+        "spam": 1
+      },
+      "G01098": {
+        "spam": 1,
+        "smishing": 1
+      },
+      "G01271": {
+        "smishing": 1,
+        "spam": 1
+      },
+      "G01299": {
+        "smishing": 1,
+        "spam": 1
+      },
+      "G01402": {
+        "smishing": 1,
+        "spam": 1
+      },
+      "G01593": {
+        "smishing": 1,
+        "spam": 1
+      },
+      "G01935": {
+        "smishing": 1,
+        "spam": 1
+      },
+      "G02090": {
+        "spam": 1,
+        "smishing": 1
+      },
+      "G02368": {
+        "spam": 1,
+        "smishing": 1
+      },
+      "G02631": {
+        "smishing": 1,
+        "spam": 1
+      },
+      "G02779": {
+        "smishing": 1,
+        "spam": 1
+      },
+      "G02974": {
+        "spam": 1,
+        "smishing": 1
+      },
+      "G02995": {
+        "smishing": 1,
+        "spam": 1
+      },
+      "G03332": {
+        "spam": 1,
+        "smishing": 1
+      },
+      "G03455": {
+        "smishing": 1,
+        "spam": 1
+      },
+      "G03460": {
+        "spam": 1,
+        "smishing": 1
+      },
+      "G03465": {
+        "spam": 1,
+        "smishing": 1
+      },
+      "G03833": {
+        "spam": 1,
+        "smishing": 1
+      },
+      "G04084": {
+        "spam": 1,
+        "smishing": 1
+      },
+      "G04474": {
+        "spam": 1,
+        "smishing": 1
+      },
+      "G04589": {
+        "smishing": 1,
+        "spam": 1
+      }
+    },
+    "largest_groups": [
+      {
+        "group_id": "G00207",
+        "n": 8,
+        "labels": {
+          "smishing": 8
+        }
+      },
+      {
+        "group_id": "G01323",
+        "n": 7,
+        "labels": {
+          "smishing": 7
+        }
+      },
+      {
+        "group_id": "G00155",
+        "n": 7,
+        "labels": {
+          "smishing": 7
+        }
+      },
+      {
+        "group_id": "G01917",
+        "n": 7,
+        "labels": {
+          "smishing": 7
+        }
+      },
+      {
+        "group_id": "G00793",
+        "n": 7,
+        "labels": {
+          "smishing": 7
+        }
+      },
+      {
+        "group_id": "G00379",
+        "n": 7,
+        "labels": {
+          "smishing": 7
+        }
+      },
+      {
+        "group_id": "G00270",
+        "n": 7,
+        "labels": {
+          "smishing": 7
+        }
+      },
+      {
+        "group_id": "G02716",
+        "n": 6,
+        "labels": {
+          "smishing": 6
+        }
+      },
+      {
+        "group_id": "G02225",
+        "n": 6,
+        "labels": {
+          "smishing": 6
+        }
+      },
+      {
+        "group_id": "G00173",
+        "n": 6,
+        "labels": {
+          "smishing": 6
+        }
+      }
+    ]
+  },
+  "note": "D1 fuzzy pass: char_wb 3-5 TF-IDF cosine >= 0.90 plus token Jaccard >= 0.60 (or cosine >= 0.97). D2 uses exact + normalised groups only; fuzzy matching on 5,971 short texts risks merging generic templates, and D2 is secondary."
+}

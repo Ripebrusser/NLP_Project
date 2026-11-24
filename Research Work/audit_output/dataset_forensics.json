@@ -1,0 +1,52 @@
+{
+  "dravidian_problem_records": [
+    {
+      "index": 3749,
+      "label": "Spa,",
+      "message": "ఇప్పుడే ప్రారంభించబడింది! Airtel 5G Plus ఇప్పుడు భారతదేశంలో ప్రత్యక్ష ప్రసారం చేయబడుతోంది. డేటా స్పీడ్ 30 రెట్లు వేగవంతం కానుంది. మరింత తెలుసుకోవడానికి, https://i.airtel.in/e/Airtel5Gishere క్లిక్ చేయండి"
+    },
+    {
+      "index": 5121,
+      "label": "Ham",
+      "message": ""
+    },
+    {
+      "index": 5212,
+      "label": "Ham",
+      "message": ""
+    }
+  ],
+  "dravidian_conflict_groups": 28,
+  "dravidian_conflict_records": 58,
+  "dravidian_top_cluster_sizes": [
+    12,
+    10,
+    6,
+    5,
+    5,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+  ],
+  "overlap_message_count": 1555,
+  "overlap_label_pairs": {
+    "Ham|ham": 1340,
+    "Spam|smishing": 189,
+    "Spam|spam": 87,
+    "Spam|ham": 51,
+    "Ham|spam": 6,
+    "Ham|smishing": 1
+  }
+}

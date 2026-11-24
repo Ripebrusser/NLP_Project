@@ -1,0 +1,202 @@
+
+=== slide1.xml ===
+NLP FOR DETECTING CYBERSECURITY THREATS FOR CODE-MIXED LANGUAGE (MALAYALAM, MALAYALAM + ENGLISH)
+Guide &amp; Co-Guide
+Prof.
+Ripunjay
+Jaiswar
+&amp;
+Prof. Prajwal Lamsal
+Assoc. Professor &amp;Asst. Professor
+Department of CSE(AI&amp;ML)
+Dayananda Sagar University
+1
+{5C22544A-7EE6-4342-B048-85BDC9FD1C3A}Sl. No
+Name of Student
+USN
+Contribution
+1.
+Sachin Sebastian P
+ENG24AM0271
+Dataset Collection &amp; Preprocessing
+2.
+Manjunath
+ENG25AM1002
+Model Development &amp; Training
+3.
+Shaikh Asgar
+ENG24AM0358
+Threat Classification &amp; Evaluation
+4.
+Abinav B L
+ENG24AM0125
+Documentation
+=== slide2.xml ===
+Content
+01
+Introduction
+Literature Review
+02
+03
+04
+05
+Objectives
+Problem Definition
+Methodology
+06
+References
+=== slide3.xml ===
+3
+Introduction
+Cybersecurity threats increasingly surface in social media, messaging, and everyday online text not just network logs.
+NLP can automatically flag suspicious or threat-related text, but most existing systems are built for English or other high-resource languages.
+Malayalam users frequently mix Malayalam script, Romanized Malayalam (Manglish), and Malayalam-English code-mixed text creating transliteration noise, spelling variation, and code-switching that standard NLP pipelines aren't tuned for.
+Existing Malayalam/Manglish NLP research (
+DravidianCodeMix
+,
+DravidianLangTech
+) is concentrated on offensive language, hate speech, and sentiment not cybersecurity-specific threats leaving this intersection largely unexplored.
+=== slide4.xml ===
+4
+Literature Review
+{8799B23B-EC83-4686-B30A-512413B5E67A}Sr. No
+Paper Title
+Author
+Year &amp; Type
+Objective
+Methodology
+Datasets
+Findings
+Research Gap
+1
+Multi-Lingual Cyber Threat Detection in Tweets/X Using ML, DL, and LLM
+Murad, Dahal &amp; Rahimi
+2026 – IEEE
+Detect cyber threats across languages in tweets
+ML, DL, and LLM comparison; BiLSTM best performer
+4-language tweet corpus (Eng, Chinese, Russian, Arabic)
+BiLSTM outperformed DL/LLM baselines across all languages
+No Indian/Dravidian language coverage; no code-mixed/Romanized text
+2
+NLP-based Techniques for Cyber Threat Intelligence
+Arazzi et al.
+2025 – Survey (Computer Science Review)
+Survey NLP techniques used across the CTI lifecycle
+Systematic literature review, 2018–2025
+N/A (survey)
+Maps NLP methods to CTI tasks (crawling, extraction, classification)
+Survey identifies low-resource/multilingual CTI as an open gap
+=== slide5.xml ===
+5
+Literature Review
+{8799B23B-EC83-4686-B30A-512413B5E67A}3
+BERT-spaCy Hybrid NLP and Blockchain-Enhanced Adaptive CTI for IOC Extraction and Threat Prediction
+Mishra et al.
+2026 – Scientific Reports
+Extract Indicators of Compromise from unstructured threat text
+BERT + spaCy + regex hybrid, blockchain ledger for trust
+CICIDS2017, UNSW-NB15
+95% accuracy, 95.7% F1 on IOC extraction
+English-only; no social-media/code-mixed threat text
+4
+byteSizedLLM@DravidianLangTech 2025: Abusive Tamil and Malayalam Text Using XLM-RoBERTa and Attention-BiLSTM
+Kodali et al.
+2025 – ACL Workshop
+Detect abusive/code-mixed Tamil-Malayalam social text
+Hybrid Attention-BiLSTM + XLM-RoBERTa
+DravidianLangTech shared-task data
+Strong performance on code-mixed abusive text
+Targets abuse, not cybersecurity threats specifically
+=== slide6.xml ===
+6
+Literature Review
+{8799B23B-EC83-4686-B30A-512413B5E67A}5
+HTMS@DravidianLangTech 2025: Fusing TF-IDF and BERT with Dimensionality Reduction for Abusive Language Detection in Tamil and Malayalam
+Harini et al.
+2025 – ACL Workshop
+Classify abusive Tamil/Malayalam text
+TF-IDF + BERT fusion with dimensionality reduction
+DravidianLangTech 2025 dataset
+BERT (F1 0.729) outperformed logistic regression (F1 0.628)
+No cybersecurity-threat labels; abuse-only taxonomy
+6
+Does Hate Transfer? Cross-Lingual Generalisation of Offensive Content Detection Across Indic Languages
+Reddy &amp; Renjit
+2026 – NLPAICS
+Test cross-lingual transfer of offensive-content models across Indic languages
+Cross-lingual transfer experiments, confusion-matrix analysis
+Indic-language offensive-text corpora (incl. Malayalam)
+Malayalam most transferable source; typology doesn't predict transfer success
+Presented at an NLP-for-cybersecurity venue, yet no threat-specific Malayalam task exists
+=== slide7.xml ===
+7
+Problem Definition
+"To develop an NLP-based framework for detecting cybersecurity-related threats in Malayalam and Malayalam-English code-mixed text, addressing the challenges of low-resource language processing, Romanized Malayalam, code-switching, spelling variation, and the absence of threat-specific annotated datasets for this language pair."
+=== slide8.xml ===
+8
+Objectives
+To develop a threat-specific Malayalam and Malayalam-English code-mixed dataset for cybersecurity threat detection, built on existing Dravidian code-mixed corpora with manual threat annotation.
+To preprocess and normalize Malayalam, Manglish, and code-mixed text to handle transliteration, spelling variation, and language switching.
+1
+2
+=== slide9.xml ===
+9
+Objectives
+To develop and compare a TF-IDF+SVM baseline against a multilingual transformer (MuRIL/XLM-R) for threat detection.
+3
+To evaluate performance using Accuracy, Precision, Recall, F1-score, and error analysis across Malayalam script vs. Manglish text.
+4
+=== slide10.xml ===
+10
+Methodology
+=== slide11.xml ===
+11
+References
+[1] S. A. Murad, A. Dahal, and N. Rahimi, "Multi-Lingual Cyber Threat Detection in Tweets/X Using ML, DL, and LLM: A Comparative Analysis,"
+IEEE
+, 2026.
+[2] M.
+Arazzi
+, D. R.
+Arikkat
+, S. Nicolazzo, A. Nocera, M. Conti et al., "NLP-based Techniques for Cyber Threat Intelligence,"
+Computer Science Review
+, 2025.
+[3] S. Mishra et al., "BERT-
+spaCy
+Hybrid NLP and Blockchain-Enhanced Adaptive CTI for IOC Extraction and Threat Prediction,"
+Scientific Reports
+, vol. 16, 2026.
+[4] R. G. Kodali, D. P.
+Manukonda
+, and M.
+Pannakkaran
+, "
+byteSizedLLM@DravidianLangTech
+2025: Abusive Tamil and Malayalam Text Using XLM-
+RoBERTa
+and Attention-
+BiLSTM
+," in
+Proc. 5th Workshop on Speech, Vision, and Language Technologies for Dravidian Languages
+, 2025, pp. 80–85.
+[5] B. N. S. Harini, K. V. Meghana, K. Supriya, T. Samiksha, and Premjith B., "
+HTMS@DravidianLangTech
+2025: Fusing TF-IDF and BERT with Dimensionality Reduction for Abusive Language Detection in Tamil and Malayalam," in
+Proc. 5th Workshop on Speech, Vision, and Language Technologies for Dravidian Languages
+, 2025, pp. 152–156.
+[6] P. M. Reddy and S.
+Renjit
+, "Does Hate Transfer? Cross-Lingual Generalisation of Offensive Content Detection Across Indic Languages," in
+Proc. 2nd Int. Conf. on NLP and AI for Cyber Security (NLPAICS)
+, 2026, pp. 228–231.
+[7] B. R. Chakravarthi, R. Priyadharshini, V.
+Muralidaran
+, N. Jose, S.
+Suryawanshi
+, E. Sherly, and J. P. McCrae, "
+DravidianCodeMix
+: Sentiment Analysis and Offensive Language Identification Dataset for Dravidian Languages in Code-Mixed Text,"
+Language Resources and Evaluation
+, 2022.
+(dataset source)

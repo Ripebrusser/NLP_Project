@@ -1,0 +1,85 @@
+{
+  "model": {
+    "family": "linear_svm",
+    "config": "char_2_4",
+    "C": 0.5
+  },
+  "design": "leave-one-1000-row-block-out; blocks derived from Excel source_row",
+  "blocks": [
+    {
+      "held_out_block": "4001-5000",
+      "test_rows": 631,
+      "test_ham": 619,
+      "test_spam": 12,
+      "train_rows": 1361,
+      "train_spam": 213,
+      "accuracy": 0.9857369255150554,
+      "macro_f1": 0.6963913392141139,
+      "spam_recall": 0.25,
+      "spam_precision": 1.0,
+      "confusion_matrix": [
+        [
+          619,
+          0
+        ],
+        [
+          9,
+          3
+        ]
+      ],
+      "evaluable_for_spam": true,
+      "note": ""
+    },
+    {
+      "held_out_block": "5001-6000",
+      "test_rows": 991,
+      "test_ham": 991,
+      "test_spam": 0,
+      "train_rows": 1001,
+      "train_spam": 225,
+      "accuracy": 0.9889001009081736,
+      "macro_f1": 0.4972095383054287,
+      "spam_recall": null,
+      "spam_precision": null,
+      "confusion_matrix": [
+        [
+          980,
+          11
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "evaluable_for_spam": false,
+      "note": "test block contains no Spam"
+    },
+    {
+      "held_out_block": "6001-7000",
+      "test_rows": 370,
+      "test_ham": 157,
+      "test_spam": 213,
+      "train_rows": 1622,
+      "train_spam": 12,
+      "accuracy": 0.46216216216216216,
+      "macro_f1": 0.36771689380082606,
+      "spam_recall": 0.06572769953051644,
+      "spam_precision": 1.0,
+      "confusion_matrix": [
+        [
+          157,
+          0
+        ],
+        [
+          199,
+          14
+        ]
+      ],
+      "evaluable_for_spam": true,
+      "note": "train blocks contain almost no Spam"
+    }
+  ],
+  "primary_random_split_test_macro_f1": 0.9650046816479401,
+  "primary_random_split_test_spam_recall": 0.8823529411764706,
+  "interpretation": "If block-held-out scores are materially lower than the random-split score, the random split is optimistic because train and test share source-block style/template structure. The headline result must then be reported with that caveat, and a block-aware split should be the confirmatory design."
+}

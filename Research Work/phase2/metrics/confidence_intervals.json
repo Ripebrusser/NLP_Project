@@ -1,0 +1,1907 @@
+{
+  "method": "nonparametric percentile bootstrap over duplicate groups, 2000 replicates, numpy default_rng(42); 2.5/97.5 percentiles",
+  "unit": "duplicate group (group_id); every frozen test group has one row",
+  "test_sets_changed": false,
+  "models_retrained": false,
+  "results": {
+    "D1::Linear SVM": {
+      "n_boot": 2000,
+      "seed": 42,
+      "n_groups": 299,
+      "n_rows": 299,
+      "rows_per_group_max": 1.0,
+      "metrics": {
+        "accuracy": {
+          "point": 0.9866220735785953,
+          "ci_low": 0.9732441471571907,
+          "ci_high": 0.9966555183946488,
+          "boot_mean": 0.9866555183946489,
+          "boot_sd": 0.006613161571306691
+        },
+        "macro_f1": {
+          "point": 0.9650046816479401,
+          "ci_low": 0.9249654608102603,
+          "ci_high": 0.992198303979126,
+          "boot_mean": 0.9645132188306637,
+          "boot_sd": 0.017755661100304156
+        },
+        "spam_precision": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "boot_mean": 1.0,
+          "boot_sd": 0.0
+        },
+        "spam_recall": {
+          "point": 0.8823529411764706,
+          "ci_low": 0.76,
+          "ci_high": 0.972972972972973,
+          "boot_mean": 0.8822835523931701,
+          "boot_sd": 0.05597031317313186
+        },
+        "spam_f1": {
+          "point": 0.9375,
+          "ci_low": 0.8636363636363636,
+          "ci_high": 0.9863013698630138,
+          "boot_mean": 0.936508852988566,
+          "boot_sd": 0.03205648816351013
+        },
+        "f1_Ham": {
+          "point": 0.9925093632958801,
+          "ci_low": 0.9846153846153847,
+          "ci_high": 0.9981851179673321,
+          "boot_mean": 0.9925175846727614,
+          "boot_sd": 0.003731051084555183
+        },
+        "precision_Ham": {
+          "point": 0.9851301115241635,
+          "ci_low": 0.9696969696969697,
+          "ci_high": 0.9963768115942029,
+          "boot_mean": 0.9851734758082435,
+          "boot_sd": 0.007339026221267437
+        },
+        "recall_Ham": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "boot_mean": 1.0,
+          "boot_sd": 0.0
+        },
+        "f1_Spam": {
+          "point": 0.9375,
+          "ci_low": 0.8636363636363636,
+          "ci_high": 0.9863013698630138,
+          "boot_mean": 0.936508852988566,
+          "boot_sd": 0.03205648816351013
+        },
+        "precision_Spam": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "boot_mean": 1.0,
+          "boot_sd": 0.0
+        },
+        "recall_Spam": {
+          "point": 0.8823529411764706,
+          "ci_low": 0.76,
+          "ci_high": 0.972972972972973,
+          "boot_mean": 0.8822835523931701,
+          "boot_sd": 0.05597031317313186
+        }
+      }
+    },
+    "D1::Logistic Regression": {
+      "n_boot": 2000,
+      "seed": 42,
+      "n_groups": 299,
+      "n_rows": 299,
+      "rows_per_group_max": 1.0,
+      "metrics": {
+        "accuracy": {
+          "point": 0.9832775919732442,
+          "ci_low": 0.9665551839464883,
+          "ci_high": 0.9966555183946488,
+          "boot_mean": 0.9833377926421405,
+          "boot_sd": 0.007406443479714067
+        },
+        "macro_f1": {
+          "point": 0.9556445631211987,
+          "ci_low": 0.9120987786300345,
+          "ci_high": 0.9903038557576936,
+          "boot_mean": 0.9550423328849009,
+          "boot_sd": 0.020134192420328233
+        },
+        "spam_precision": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "boot_mean": 1.0,
+          "boot_sd": 0.0
+        },
+        "spam_recall": {
+          "point": 0.8529411764705882,
+          "ci_low": 0.7221899224806202,
+          "ci_high": 0.9655172413793104,
+          "boot_mean": 0.8529205219911985,
+          "boot_sd": 0.06174091752501332
+        },
+        "spam_f1": {
+          "point": 0.9206349206349206,
+          "ci_low": 0.8386878814298169,
+          "ci_high": 0.9824561403508771,
+          "boot_mean": 0.9194095349283211,
+          "boot_sd": 0.036469501880820036
+        },
+        "f1_Ham": {
+          "point": 0.9906542056074767,
+          "ci_low": 0.9813415366985299,
+          "ci_high": 0.9981448838987788,
+          "boot_mean": 0.9906751308414807,
+          "boot_sd": 0.004178797482575087
+        },
+        "precision_Ham": {
+          "point": 0.9814814814814815,
+          "ci_low": 0.9633665966386555,
+          "ci_high": 0.9962966379663797,
+          "boot_mean": 0.9815564525491722,
+          "boot_sd": 0.008190117510984788
+        },
+        "recall_Ham": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "boot_mean": 1.0,
+          "boot_sd": 0.0
+        },
+        "f1_Spam": {
+          "point": 0.9206349206349206,
+          "ci_low": 0.8386878814298169,
+          "ci_high": 0.9824561403508771,
+          "boot_mean": 0.9194095349283211,
+          "boot_sd": 0.036469501880820036
+        },
+        "precision_Spam": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "boot_mean": 1.0,
+          "boot_sd": 0.0
+        },
+        "recall_Spam": {
+          "point": 0.8529411764705882,
+          "ci_low": 0.7221899224806202,
+          "ci_high": 0.9655172413793104,
+          "boot_mean": 0.8529205219911985,
+          "boot_sd": 0.06174091752501332
+        }
+      }
+    },
+    "D1::MuRIL seed 42": {
+      "n_boot": 2000,
+      "seed": 42,
+      "n_groups": 299,
+      "n_rows": 299,
+      "rows_per_group_max": 1.0,
+      "metrics": {
+        "accuracy": {
+          "point": 0.9866220735785953,
+          "ci_low": 0.9732441471571907,
+          "ci_high": 0.9966555183946488,
+          "boot_mean": 0.9866555183946489,
+          "boot_sd": 0.006613161571306691
+        },
+        "macro_f1": {
+          "point": 0.9650046816479401,
+          "ci_low": 0.9249654608102603,
+          "ci_high": 0.992198303979126,
+          "boot_mean": 0.9645132188306637,
+          "boot_sd": 0.017755661100304156
+        },
+        "spam_precision": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "boot_mean": 1.0,
+          "boot_sd": 0.0
+        },
+        "spam_recall": {
+          "point": 0.8823529411764706,
+          "ci_low": 0.76,
+          "ci_high": 0.972972972972973,
+          "boot_mean": 0.8822835523931701,
+          "boot_sd": 0.05597031317313186
+        },
+        "spam_f1": {
+          "point": 0.9375,
+          "ci_low": 0.8636363636363636,
+          "ci_high": 0.9863013698630138,
+          "boot_mean": 0.936508852988566,
+          "boot_sd": 0.03205648816351013
+        },
+        "f1_Ham": {
+          "point": 0.9925093632958801,
+          "ci_low": 0.9846153846153847,
+          "ci_high": 0.9981851179673321,
+          "boot_mean": 0.9925175846727614,
+          "boot_sd": 0.003731051084555183
+        },
+        "precision_Ham": {
+          "point": 0.9851301115241635,
+          "ci_low": 0.9696969696969697,
+          "ci_high": 0.9963768115942029,
+          "boot_mean": 0.9851734758082435,
+          "boot_sd": 0.007339026221267437
+        },
+        "recall_Ham": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "boot_mean": 1.0,
+          "boot_sd": 0.0
+        },
+        "f1_Spam": {
+          "point": 0.9375,
+          "ci_low": 0.8636363636363636,
+          "ci_high": 0.9863013698630138,
+          "boot_mean": 0.936508852988566,
+          "boot_sd": 0.03205648816351013
+        },
+        "precision_Spam": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "boot_mean": 1.0,
+          "boot_sd": 0.0
+        },
+        "recall_Spam": {
+          "point": 0.8823529411764706,
+          "ci_low": 0.76,
+          "ci_high": 0.972972972972973,
+          "boot_mean": 0.8822835523931701,
+          "boot_sd": 0.05597031317313186
+        }
+      }
+    },
+    "D1::MuRIL seed 43": {
+      "n_boot": 2000,
+      "seed": 42,
+      "n_groups": 299,
+      "n_rows": 299,
+      "rows_per_group_max": 1.0,
+      "metrics": {
+        "accuracy": {
+          "point": 0.9832775919732442,
+          "ci_low": 0.9665551839464883,
+          "ci_high": 0.9966555183946488,
+          "boot_mean": 0.9833996655518394,
+          "boot_sd": 0.007463259658249226
+        },
+        "macro_f1": {
+          "point": 0.9556445631211987,
+          "ci_low": 0.9098945253641386,
+          "ci_high": 0.9903038557576936,
+          "boot_mean": 0.9552836500873632,
+          "boot_sd": 0.020203447578074567
+        },
+        "spam_precision": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "boot_mean": 1.0,
+          "boot_sd": 0.0
+        },
+        "spam_recall": {
+          "point": 0.8529411764705882,
+          "ci_low": 0.71875,
+          "ci_high": 0.9655172413793104,
+          "boot_mean": 0.8537024498528519,
+          "boot_sd": 0.061879811662823386
+        },
+        "spam_f1": {
+          "point": 0.9206349206349206,
+          "ci_low": 0.8363636363636363,
+          "ci_high": 0.9824561403508771,
+          "boot_mean": 0.9198593059984823,
+          "boot_sd": 0.03656752868594806
+        },
+        "f1_Ham": {
+          "point": 0.9906542056074767,
+          "ci_low": 0.9813432835820896,
+          "ci_high": 0.9981378026070763,
+          "boot_mean": 0.9907079941762442,
+          "boot_sd": 0.004212452105295701
+        },
+        "precision_Ham": {
+          "point": 0.9814814814814815,
+          "ci_low": 0.9633699633699634,
+          "ci_high": 0.9962825278810409,
+          "boot_mean": 0.9816215178094437,
+          "boot_sd": 0.008255151258672511
+        },
+        "recall_Ham": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "boot_mean": 1.0,
+          "boot_sd": 0.0
+        },
+        "f1_Spam": {
+          "point": 0.9206349206349206,
+          "ci_low": 0.8363636363636363,
+          "ci_high": 0.9824561403508771,
+          "boot_mean": 0.9198593059984823,
+          "boot_sd": 0.03656752868594806
+        },
+        "precision_Spam": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "boot_mean": 1.0,
+          "boot_sd": 0.0
+        },
+        "recall_Spam": {
+          "point": 0.8529411764705882,
+          "ci_low": 0.71875,
+          "ci_high": 0.9655172413793104,
+          "boot_mean": 0.8537024498528519,
+          "boot_sd": 0.061879811662823386
+        }
+      }
+    },
+    "D1::MuRIL seed 44": {
+      "n_boot": 2000,
+      "seed": 42,
+      "n_groups": 299,
+      "n_rows": 299,
+      "rows_per_group_max": 1.0,
+      "metrics": {
+        "accuracy": {
+          "point": 0.9866220735785953,
+          "ci_low": 0.9732441471571907,
+          "ci_high": 0.9966555183946488,
+          "boot_mean": 0.9866555183946489,
+          "boot_sd": 0.006613161571306691
+        },
+        "macro_f1": {
+          "point": 0.9650046816479401,
+          "ci_low": 0.9249654608102603,
+          "ci_high": 0.992198303979126,
+          "boot_mean": 0.9645132188306637,
+          "boot_sd": 0.017755661100304156
+        },
+        "spam_precision": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "boot_mean": 1.0,
+          "boot_sd": 0.0
+        },
+        "spam_recall": {
+          "point": 0.8823529411764706,
+          "ci_low": 0.76,
+          "ci_high": 0.972972972972973,
+          "boot_mean": 0.8822835523931701,
+          "boot_sd": 0.05597031317313186
+        },
+        "spam_f1": {
+          "point": 0.9375,
+          "ci_low": 0.8636363636363636,
+          "ci_high": 0.9863013698630138,
+          "boot_mean": 0.936508852988566,
+          "boot_sd": 0.03205648816351013
+        },
+        "f1_Ham": {
+          "point": 0.9925093632958801,
+          "ci_low": 0.9846153846153847,
+          "ci_high": 0.9981851179673321,
+          "boot_mean": 0.9925175846727614,
+          "boot_sd": 0.003731051084555183
+        },
+        "precision_Ham": {
+          "point": 0.9851301115241635,
+          "ci_low": 0.9696969696969697,
+          "ci_high": 0.9963768115942029,
+          "boot_mean": 0.9851734758082435,
+          "boot_sd": 0.007339026221267437
+        },
+        "recall_Ham": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "boot_mean": 1.0,
+          "boot_sd": 0.0
+        },
+        "f1_Spam": {
+          "point": 0.9375,
+          "ci_low": 0.8636363636363636,
+          "ci_high": 0.9863013698630138,
+          "boot_mean": 0.936508852988566,
+          "boot_sd": 0.03205648816351013
+        },
+        "precision_Spam": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "boot_mean": 1.0,
+          "boot_sd": 0.0
+        },
+        "recall_Spam": {
+          "point": 0.8823529411764706,
+          "ci_low": 0.76,
+          "ci_high": 0.972972972972973,
+          "boot_mean": 0.8822835523931701,
+          "boot_sd": 0.05597031317313186
+        }
+      }
+    },
+    "D2::Logistic Regression": {
+      "n_boot": 2000,
+      "seed": 42,
+      "n_groups": 883,
+      "n_rows": 883,
+      "rows_per_group_max": 1.0,
+      "metrics": {
+        "accuracy": {
+          "point": 0.9637599093997735,
+          "ci_low": 0.9513023782559457,
+          "ci_high": 0.9762174405436014,
+          "boot_mean": 0.9637836919592299,
+          "boot_sd": 0.006329482953807618
+        },
+        "macro_f1": {
+          "point": 0.8877423096432983,
+          "ci_low": 0.8482171221985192,
+          "ci_high": 0.9239080655617765,
+          "boot_mean": 0.8871678994952,
+          "boot_sd": 0.01913638436040913
+        },
+        "spam_precision": {
+          "point": 0.7857142857142857,
+          "ci_low": 0.6885245901639344,
+          "ci_high": 0.8783886158886158,
+          "boot_mean": 0.7855505915665897,
+          "boot_sd": 0.04822013775591
+        },
+        "spam_recall": {
+          "point": 0.8208955223880597,
+          "ci_low": 0.7222222222222222,
+          "ci_high": 0.9130434782608695,
+          "boot_mean": 0.8210889126605483,
+          "boot_sd": 0.04806524931363692
+        },
+        "spam_f1": {
+          "point": 0.8029197080291971,
+          "ci_low": 0.7244026608742873,
+          "ci_high": 0.8721804511278195,
+          "boot_mean": 0.8017998709143395,
+          "boot_sd": 0.03790348137447381
+        },
+        "f1_ham": {
+          "point": 0.98971898560658,
+          "ci_low": 0.9841269841269842,
+          "ci_high": 0.9946599016176029,
+          "boot_mean": 0.9897553807088221,
+          "boot_sd": 0.0026931101280009747
+        },
+        "precision_ham": {
+          "point": 0.984993178717599,
+          "ci_low": 0.9757076813655761,
+          "ci_high": 0.9931882425994921,
+          "boot_mean": 0.985092243997327,
+          "boot_sd": 0.0045146851223779195
+        },
+        "recall_ham": {
+          "point": 0.9944903581267218,
+          "ci_low": 0.9884007635762722,
+          "ci_high": 0.9986431478968792,
+          "boot_mean": 0.9944772003188943,
+          "boot_sd": 0.0028226562585435874
+        },
+        "f1_spam": {
+          "point": 0.8029197080291971,
+          "ci_low": 0.7244026608742873,
+          "ci_high": 0.8721804511278195,
+          "boot_mean": 0.8017998709143395,
+          "boot_sd": 0.03790348137447381
+        },
+        "precision_spam": {
+          "point": 0.7857142857142857,
+          "ci_low": 0.6885245901639344,
+          "ci_high": 0.8783886158886158,
+          "boot_mean": 0.7855505915665897,
+          "boot_sd": 0.04822013775591
+        },
+        "recall_spam": {
+          "point": 0.8208955223880597,
+          "ci_low": 0.7222222222222222,
+          "ci_high": 0.9130434782608695,
+          "boot_mean": 0.8210889126605483,
+          "boot_sd": 0.04806524931363692
+        },
+        "f1_smishing": {
+          "point": 0.8705882352941177,
+          "ci_low": 0.813791413116971,
+          "ci_high": 0.9222810503546457,
+          "boot_mean": 0.8699484468624386,
+          "boot_sd": 0.02741864626795532
+        },
+        "precision_smishing": {
+          "point": 0.925,
+          "ci_low": 0.8611023206751055,
+          "ci_high": 0.9759036144578314,
+          "boot_mean": 0.9246330033981938,
+          "boot_sd": 0.02967148659102066
+        },
+        "recall_smishing": {
+          "point": 0.8222222222222222,
+          "ci_low": 0.7399931506849315,
+          "ci_high": 0.9000247524752474,
+          "boot_mean": 0.8225495303321761,
+          "boot_sd": 0.04000279200694382
+        }
+      }
+    },
+    "D2::Linear SVM": {
+      "n_boot": 2000,
+      "seed": 42,
+      "n_groups": 883,
+      "n_rows": 883,
+      "rows_per_group_max": 1.0,
+      "metrics": {
+        "accuracy": {
+          "point": 0.9637599093997735,
+          "ci_low": 0.9513023782559457,
+          "ci_high": 0.9762174405436014,
+          "boot_mean": 0.9638267270668177,
+          "boot_sd": 0.00633586182007323
+        },
+        "macro_f1": {
+          "point": 0.882502980802467,
+          "ci_low": 0.8408452224721867,
+          "ci_high": 0.9195792782897316,
+          "boot_mean": 0.8819567171599385,
+          "boot_sd": 0.019815353442252225
+        },
+        "spam_precision": {
+          "point": 0.7761194029850746,
+          "ci_low": 0.6734595761381476,
+          "ci_high": 0.870979262672811,
+          "boot_mean": 0.7760995208786978,
+          "boot_sd": 0.05009265546827255
+        },
+        "spam_recall": {
+          "point": 0.7761194029850746,
+          "ci_low": 0.6721311475409836,
+          "ci_high": 0.875,
+          "boot_mean": 0.7759273176877787,
+          "boot_sd": 0.05127944854930863
+        },
+        "spam_f1": {
+          "point": 0.7761194029850746,
+          "ci_low": 0.6896551724137931,
+          "ci_high": 0.8493150684931506,
+          "boot_mean": 0.774776279659047,
+          "boot_sd": 0.04035197378924715
+        },
+        "f1_ham": {
+          "point": 0.9904371584699454,
+          "ci_low": 0.9852543855352227,
+          "ci_high": 0.9952414939567091,
+          "boot_mean": 0.9904930455896745,
+          "boot_sd": 0.002584383062703429
+        },
+        "precision_ham": {
+          "point": 0.9823848238482384,
+          "ci_low": 0.9726766612096611,
+          "ci_high": 0.9917241379310345,
+          "boot_mean": 0.9824697380025794,
+          "boot_sd": 0.004867318835450748
+        },
+        "recall_ham": {
+          "point": 0.9986225895316805,
+          "ci_low": 0.9957922786296233,
+          "ci_high": 1.0,
+          "boot_mean": 0.9986615653334255,
+          "boot_sd": 0.001363964824255718
+        },
+        "f1_spam": {
+          "point": 0.7761194029850746,
+          "ci_low": 0.6896551724137931,
+          "ci_high": 0.8493150684931506,
+          "boot_mean": 0.774776279659047,
+          "boot_sd": 0.04035197378924715
+        },
+        "precision_spam": {
+          "point": 0.7761194029850746,
+          "ci_low": 0.6734595761381476,
+          "ci_high": 0.870979262672811,
+          "boot_mean": 0.7760995208786978,
+          "boot_sd": 0.05009265546827255
+        },
+        "recall_spam": {
+          "point": 0.7761194029850746,
+          "ci_low": 0.6721311475409836,
+          "ci_high": 0.875,
+          "boot_mean": 0.7759273176877787,
+          "boot_sd": 0.05127944854930863
+        },
+        "f1_smishing": {
+          "point": 0.8809523809523809,
+          "ci_low": 0.8251669234720083,
+          "ci_high": 0.9289617486338798,
+          "boot_mean": 0.8806008262310939,
+          "boot_sd": 0.026522862724544887
+        },
+        "precision_smishing": {
+          "point": 0.9487179487179487,
+          "ci_low": 0.8928434065934067,
+          "ci_high": 0.9879518072289156,
+          "boot_mean": 0.9485388409537567,
+          "boot_sd": 0.025426072221337796
+        },
+        "recall_smishing": {
+          "point": 0.8222222222222222,
+          "ci_low": 0.7411655773420479,
+          "ci_high": 0.8989044943820222,
+          "boot_mean": 0.8228051936875175,
+          "boot_sd": 0.03977039531350094
+        }
+      }
+    }
+  },
+  "muril_seed_variation": {
+    "accuracy": {
+      "mean": 0.9855072463768115,
+      "sd": 0.0019309373551492487,
+      "min": 0.9832775919732442,
+      "max": 0.9866220735785953,
+      "values": [
+        0.9866220735785953,
+        0.9832775919732442,
+        0.9866220735785953
+      ]
+    },
+    "macro_f1": {
+      "mean": 0.9618846421390262,
+      "sd": 0.005404066951060919,
+      "min": 0.9556445631211987,
+      "max": 0.9650046816479401,
+      "values": [
+        0.9650046816479401,
+        0.9556445631211987,
+        0.9650046816479401
+      ]
+    },
+    "spam_precision": {
+      "mean": 1.0,
+      "sd": 0.0,
+      "min": 1.0,
+      "max": 1.0,
+      "values": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "spam_recall": {
+      "mean": 0.8725490196078431,
+      "sd": 0.016980890270283114,
+      "min": 0.8529411764705882,
+      "max": 0.8823529411764706,
+      "values": [
+        0.8823529411764706,
+        0.8529411764705882,
+        0.8823529411764706
+      ]
+    },
+    "spam_f1": {
+      "mean": 0.9318783068783069,
+      "sd": 0.009737058111333003,
+      "min": 0.9206349206349206,
+      "max": 0.9375,
+      "values": [
+        0.9375,
+        0.9206349206349206,
+        0.9375
+      ]
+    },
+    "f1_Ham": {
+      "mean": 0.9918909773997457,
+      "sd": 0.0010710757907888989,
+      "min": 0.9906542056074767,
+      "max": 0.9925093632958801,
+      "values": [
+        0.9925093632958801,
+        0.9906542056074767,
+        0.9925093632958801
+      ]
+    },
+    "f1_Spam": {
+      "mean": 0.9318783068783069,
+      "sd": 0.009737058111333003,
+      "min": 0.9206349206349206,
+      "max": 0.9375,
+      "values": [
+        0.9375,
+        0.9206349206349206,
+        0.9375
+      ]
+    }
+  },
+  "paired": [
+    {
+      "n_rows": 299,
+      "n_groups": 299,
+      "metrics": {
+        "macro_f1": {
+          "a": 0.9556445631211987,
+          "b": 0.9650046816479401,
+          "difference": -0.009360118526741346,
+          "ci_low": -0.03214315072560611,
+          "ci_high": 0.0,
+          "boot_sd": 0.009502267456035777,
+          "share_positive": 0.0,
+          "share_negative": 0.6315,
+          "share_tie": 0.3685
+        },
+        "spam_recall": {
+          "a": 0.8529411764705882,
+          "b": 0.8823529411764706,
+          "difference": -0.02941176470588236,
+          "ci_low": -0.09756097560975607,
+          "ci_high": 0.0,
+          "boot_sd": 0.029198193970797804,
+          "share_positive": 0.0,
+          "share_negative": 0.6315,
+          "share_tie": 0.3685
+        },
+        "accuracy": {
+          "a": 0.9832775919732442,
+          "b": 0.9866220735785953,
+          "difference": -0.0033444816053511683,
+          "ci_low": -0.010033444816053505,
+          "ci_high": 0.0,
+          "boot_sd": 0.0032980424911102438,
+          "share_positive": 0.0,
+          "share_negative": 0.6315,
+          "share_tie": 0.3685
+        },
+        "spam_precision": {
+          "a": 1.0,
+          "b": 1.0,
+          "difference": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "boot_sd": 0.0,
+          "share_positive": 0.0,
+          "share_negative": 0.0,
+          "share_tie": 1.0
+        }
+      },
+      "dataset": "D1",
+      "a_model": "Logistic Regression",
+      "b_model": "Linear SVM",
+      "subset": "random test"
+    },
+    {
+      "n_rows": 299,
+      "n_groups": 299,
+      "metrics": {
+        "macro_f1": {
+          "a": 0.9556445631211987,
+          "b": 0.9650046816479401,
+          "difference": -0.009360118526741346,
+          "ci_low": -0.03214315072560611,
+          "ci_high": 0.0,
+          "boot_sd": 0.009502267456035777,
+          "share_positive": 0.0,
+          "share_negative": 0.6315,
+          "share_tie": 0.3685
+        },
+        "spam_recall": {
+          "a": 0.8529411764705882,
+          "b": 0.8823529411764706,
+          "difference": -0.02941176470588236,
+          "ci_low": -0.09756097560975607,
+          "ci_high": 0.0,
+          "boot_sd": 0.029198193970797804,
+          "share_positive": 0.0,
+          "share_negative": 0.6315,
+          "share_tie": 0.3685
+        },
+        "accuracy": {
+          "a": 0.9832775919732442,
+          "b": 0.9866220735785953,
+          "difference": -0.0033444816053511683,
+          "ci_low": -0.010033444816053505,
+          "ci_high": 0.0,
+          "boot_sd": 0.0032980424911102438,
+          "share_positive": 0.0,
+          "share_negative": 0.6315,
+          "share_tie": 0.3685
+        },
+        "spam_precision": {
+          "a": 1.0,
+          "b": 1.0,
+          "difference": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "boot_sd": 0.0,
+          "share_positive": 0.0,
+          "share_negative": 0.0,
+          "share_tie": 1.0
+        }
+      },
+      "dataset": "D1",
+      "a_model": "Logistic Regression",
+      "b_model": "MuRIL seed 42",
+      "subset": "random test"
+    },
+    {
+      "n_rows": 299,
+      "n_groups": 299,
+      "metrics": {
+        "macro_f1": {
+          "a": 0.9650046816479401,
+          "b": 0.9650046816479401,
+          "difference": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "boot_sd": 0.0,
+          "share_positive": 0.0,
+          "share_negative": 0.0,
+          "share_tie": 1.0
+        },
+        "spam_recall": {
+          "a": 0.8823529411764706,
+          "b": 0.8823529411764706,
+          "difference": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "boot_sd": 0.0,
+          "share_positive": 0.0,
+          "share_negative": 0.0,
+          "share_tie": 1.0
+        },
+        "accuracy": {
+          "a": 0.9866220735785953,
+          "b": 0.9866220735785953,
+          "difference": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "boot_sd": 0.0,
+          "share_positive": 0.0,
+          "share_negative": 0.0,
+          "share_tie": 1.0
+        },
+        "spam_precision": {
+          "a": 1.0,
+          "b": 1.0,
+          "difference": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "boot_sd": 0.0,
+          "share_positive": 0.0,
+          "share_negative": 0.0,
+          "share_tie": 1.0
+        }
+      },
+      "dataset": "D1",
+      "a_model": "Linear SVM",
+      "b_model": "MuRIL seed 42",
+      "subset": "random test"
+    },
+    {
+      "n_rows": 299,
+      "n_groups": 299,
+      "metrics": {
+        "macro_f1": {
+          "a": 0.9556445631211987,
+          "b": 0.9556445631211987,
+          "difference": 0.0,
+          "ci_low": -0.027628661357826205,
+          "ci_high": 0.02641697952813078,
+          "boot_sd": 0.013431849819997368,
+          "share_positive": 0.3375,
+          "share_negative": 0.3525,
+          "share_tie": 0.31
+        },
+        "spam_recall": {
+          "a": 0.8529411764705882,
+          "b": 0.8529411764705882,
+          "difference": 0.0,
+          "ci_low": -0.08333333333333337,
+          "ci_high": 0.08002702702702695,
+          "boot_sd": 0.04120640466189185,
+          "share_positive": 0.3375,
+          "share_negative": 0.3525,
+          "share_tie": 0.31
+        },
+        "accuracy": {
+          "a": 0.9832775919732442,
+          "b": 0.9832775919732442,
+          "difference": 0.0,
+          "ci_low": -0.010033444816053505,
+          "ci_high": 0.010033444816053505,
+          "boot_sd": 0.004638012619320614,
+          "share_positive": 0.3375,
+          "share_negative": 0.3525,
+          "share_tie": 0.31
+        },
+        "spam_precision": {
+          "a": 1.0,
+          "b": 1.0,
+          "difference": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "boot_sd": 0.0,
+          "share_positive": 0.0,
+          "share_negative": 0.0,
+          "share_tie": 1.0
+        }
+      },
+      "dataset": "D1",
+      "a_model": "Logistic Regression",
+      "b_model": "MuRIL seed 43",
+      "subset": "random test"
+    },
+    {
+      "n_rows": 299,
+      "n_groups": 299,
+      "metrics": {
+        "macro_f1": {
+          "a": 0.9650046816479401,
+          "b": 0.9556445631211987,
+          "difference": 0.009360118526741346,
+          "ci_low": 0.0,
+          "ci_high": 0.03030054554709207,
+          "boot_sd": 0.009157782174979671,
+          "share_positive": 0.6245,
+          "share_negative": 0.0,
+          "share_tie": 0.3755
+        },
+        "spam_recall": {
+          "a": 0.8823529411764706,
+          "b": 0.8529411764705882,
+          "difference": 0.02941176470588236,
+          "ci_low": 0.0,
+          "ci_high": 0.09090909090909094,
+          "boot_sd": 0.028046741621328322,
+          "share_positive": 0.6245,
+          "share_negative": 0.0,
+          "share_tie": 0.3755
+        },
+        "accuracy": {
+          "a": 0.9866220735785953,
+          "b": 0.9832775919732442,
+          "difference": 0.0033444816053511683,
+          "ci_low": 0.0,
+          "ci_high": 0.010033444816053505,
+          "boot_sd": 0.0032326882451713473,
+          "share_positive": 0.6245,
+          "share_negative": 0.0,
+          "share_tie": 0.3755
+        },
+        "spam_precision": {
+          "a": 1.0,
+          "b": 1.0,
+          "difference": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "boot_sd": 0.0,
+          "share_positive": 0.0,
+          "share_negative": 0.0,
+          "share_tie": 1.0
+        }
+      },
+      "dataset": "D1",
+      "a_model": "Linear SVM",
+      "b_model": "MuRIL seed 43",
+      "subset": "random test"
+    },
+    {
+      "n_rows": 299,
+      "n_groups": 299,
+      "metrics": {
+        "macro_f1": {
+          "a": 0.9556445631211987,
+          "b": 0.9650046816479401,
+          "difference": -0.009360118526741346,
+          "ci_low": -0.03214315072560611,
+          "ci_high": 0.0,
+          "boot_sd": 0.009502267456035777,
+          "share_positive": 0.0,
+          "share_negative": 0.6315,
+          "share_tie": 0.3685
+        },
+        "spam_recall": {
+          "a": 0.8529411764705882,
+          "b": 0.8823529411764706,
+          "difference": -0.02941176470588236,
+          "ci_low": -0.09756097560975607,
+          "ci_high": 0.0,
+          "boot_sd": 0.029198193970797804,
+          "share_positive": 0.0,
+          "share_negative": 0.6315,
+          "share_tie": 0.3685
+        },
+        "accuracy": {
+          "a": 0.9832775919732442,
+          "b": 0.9866220735785953,
+          "difference": -0.0033444816053511683,
+          "ci_low": -0.010033444816053505,
+          "ci_high": 0.0,
+          "boot_sd": 0.0032980424911102438,
+          "share_positive": 0.0,
+          "share_negative": 0.6315,
+          "share_tie": 0.3685
+        },
+        "spam_precision": {
+          "a": 1.0,
+          "b": 1.0,
+          "difference": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "boot_sd": 0.0,
+          "share_positive": 0.0,
+          "share_negative": 0.0,
+          "share_tie": 1.0
+        }
+      },
+      "dataset": "D1",
+      "a_model": "Logistic Regression",
+      "b_model": "MuRIL seed 44",
+      "subset": "random test"
+    },
+    {
+      "n_rows": 299,
+      "n_groups": 299,
+      "metrics": {
+        "macro_f1": {
+          "a": 0.9650046816479401,
+          "b": 0.9650046816479401,
+          "difference": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "boot_sd": 0.0,
+          "share_positive": 0.0,
+          "share_negative": 0.0,
+          "share_tie": 1.0
+        },
+        "spam_recall": {
+          "a": 0.8823529411764706,
+          "b": 0.8823529411764706,
+          "difference": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "boot_sd": 0.0,
+          "share_positive": 0.0,
+          "share_negative": 0.0,
+          "share_tie": 1.0
+        },
+        "accuracy": {
+          "a": 0.9866220735785953,
+          "b": 0.9866220735785953,
+          "difference": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "boot_sd": 0.0,
+          "share_positive": 0.0,
+          "share_negative": 0.0,
+          "share_tie": 1.0
+        },
+        "spam_precision": {
+          "a": 1.0,
+          "b": 1.0,
+          "difference": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "boot_sd": 0.0,
+          "share_positive": 0.0,
+          "share_negative": 0.0,
+          "share_tie": 1.0
+        }
+      },
+      "dataset": "D1",
+      "a_model": "Linear SVM",
+      "b_model": "MuRIL seed 44",
+      "subset": "random test"
+    },
+    {
+      "n_rows": 883,
+      "n_groups": 883,
+      "metrics": {
+        "macro_f1": {
+          "a": 0.8877423096432983,
+          "b": 0.882502980802467,
+          "difference": 0.0052393288408312255,
+          "ci_low": -0.012057195914150965,
+          "ci_high": 0.024416469688406814,
+          "boot_sd": 0.009369079326716925,
+          "share_positive": 0.717,
+          "share_negative": 0.283,
+          "share_tie": 0.0
+        },
+        "spam_recall": {
+          "a": 0.8208955223880597,
+          "b": 0.7761194029850746,
+          "difference": 0.04477611940298509,
+          "ci_low": 0.0,
+          "ci_high": 0.10003164556962006,
+          "boot_sd": 0.02513671473449408,
+          "share_positive": 0.948,
+          "share_negative": 0.0,
+          "share_tie": 0.052
+        },
+        "accuracy": {
+          "a": 0.9637599093997735,
+          "b": 0.9637599093997735,
+          "difference": 0.0,
+          "ci_low": -0.006795016987542371,
+          "ci_high": 0.005662514156285381,
+          "boot_sd": 0.003202912480147377,
+          "share_positive": 0.422,
+          "share_negative": 0.432,
+          "share_tie": 0.146
+        },
+        "spam_precision": {
+          "a": 0.7857142857142857,
+          "b": 0.7761194029850746,
+          "difference": 0.009594882729211052,
+          "ci_low": -0.023877162177307867,
+          "ci_high": 0.04488636363636362,
+          "boot_sd": 0.017540368601050398,
+          "share_positive": 0.714,
+          "share_negative": 0.2675,
+          "share_tie": 0.0185
+        }
+      },
+      "dataset": "D2",
+      "a_model": "Logistic Regression",
+      "b_model": "Linear SVM",
+      "subset": "random test"
+    }
+  ],
+  "block_paired": [
+    {
+      "n_rows": 1992,
+      "n_groups": 1824,
+      "metrics": {
+        "macro_f1": {
+          "a": 0.5447952856859739,
+          "b": 0.5378449758089207,
+          "difference": 0.006950309877053251,
+          "ci_low": -0.004253451579075929,
+          "ci_high": 0.02169977055339436,
+          "boot_sd": 0.006649461036977626,
+          "share_positive": 0.8655,
+          "share_negative": 0.1345,
+          "share_tie": 0.0
+        },
+        "spam_recall": {
+          "a": 0.08888888888888889,
+          "b": 0.07555555555555556,
+          "difference": 0.013333333333333336,
+          "ci_low": 0.0,
+          "ci_high": 0.031111111111111103,
+          "boot_sd": 0.007845635482856878,
+          "share_positive": 0.952,
+          "share_negative": 0.0,
+          "share_tie": 0.048
+        },
+        "accuracy": {
+          "a": 0.8865461847389559,
+          "b": 0.8900602409638554,
+          "difference": -0.003514056224899531,
+          "ci_low": -0.007556675062972307,
+          "ci_high": 0.0005002626501032919,
+          "boot_sd": 0.0019877488673235044,
+          "share_positive": 0.0275,
+          "share_negative": 0.954,
+          "share_tie": 0.0185
+        },
+        "spam_precision": {
+          "a": 0.4878048780487805,
+          "b": 0.6071428571428571,
+          "difference": -0.11933797909407662,
+          "ci_low": -0.24494949494949492,
+          "ci_high": -0.004921376925403795,
+          "boot_sd": 0.06074232597553441,
+          "share_positive": 0.021,
+          "share_negative": 0.9775,
+          "share_tie": 0.0015
+        }
+      },
+      "a_model": "Logistic Regression",
+      "b_model": "Linear SVM",
+      "subset": "pooled",
+      "note": "pooled out-of-fold block predictions; three source blocks only"
+    },
+    {
+      "n_rows": 371,
+      "n_groups": 335,
+      "metrics": {
+        "macro_f1": {
+          "a": 0.3825067934782609,
+          "b": 0.368470125315427,
+          "difference": 0.014036668162833887,
+          "ci_low": 0.0,
+          "ci_high": 0.03208994838980095,
+          "boot_sd": 0.008058343290510589,
+          "share_positive": 0.9545,
+          "share_negative": 0.0,
+          "share_tie": 0.0455
+        },
+        "spam_recall": {
+          "a": 0.07981220657276995,
+          "b": 0.06572769953051644,
+          "difference": 0.014084507042253516,
+          "ci_low": 0.0,
+          "ci_high": 0.0324111757105943,
+          "boot_sd": 0.008190045909410984,
+          "share_positive": 0.9545,
+          "share_negative": 0.0,
+          "share_tie": 0.0455
+        },
+        "accuracy": {
+          "a": 0.4716981132075472,
+          "b": 0.4636118598382749,
+          "difference": 0.008086253369272267,
+          "ci_low": 0.0,
+          "ci_high": 0.018766756032171594,
+          "boot_sd": 0.0047142817305925264,
+          "share_positive": 0.9545,
+          "share_negative": 0.0,
+          "share_tie": 0.0455
+        },
+        "spam_precision": {
+          "a": 1.0,
+          "b": 1.0,
+          "difference": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "boot_sd": 0.0,
+          "share_positive": 0.0,
+          "share_negative": 0.0,
+          "share_tie": 1.0
+        }
+      },
+      "a_model": "Logistic Regression",
+      "b_model": "Linear SVM",
+      "subset": "6001-7000",
+      "note": "single held-out block; descriptive only"
+    },
+    {
+      "n_rows": 1992,
+      "n_groups": 1824,
+      "metrics": {
+        "macro_f1": {
+          "a": 0.5447952856859739,
+          "b": 0.4979398614885597,
+          "difference": 0.04685542419741423,
+          "ci_low": 0.011518049099984714,
+          "ci_high": 0.08390307815943095,
+          "boot_sd": 0.018213907966962997,
+          "share_positive": 0.995,
+          "share_negative": 0.005,
+          "share_tie": 0.0
+        },
+        "spam_recall": {
+          "a": 0.08888888888888889,
+          "b": 0.03111111111111111,
+          "difference": 0.05777777777777778,
+          "ci_low": 0.015319413157742734,
+          "ci_high": 0.10378588035410884,
+          "boot_sd": 0.021893163452253603,
+          "share_positive": 0.9975,
+          "share_negative": 0.001,
+          "share_tie": 0.0015
+        },
+        "accuracy": {
+          "a": 0.8865461847389559,
+          "b": 0.8845381526104418,
+          "difference": 0.002008032128514081,
+          "ci_low": -0.005422739122936357,
+          "ci_high": 0.009635803265184482,
+          "boot_sd": 0.0038436332400659983,
+          "share_positive": 0.6745,
+          "share_negative": 0.2685,
+          "share_tie": 0.057
+        },
+        "spam_precision": {
+          "a": 0.4878048780487805,
+          "b": 0.3684210526315789,
+          "difference": 0.11938382541720155,
+          "ci_low": -0.15838655327342752,
+          "ci_high": 0.38639685314685296,
+          "boot_sd": 0.13374536582059665,
+          "share_positive": 0.809,
+          "share_negative": 0.184,
+          "share_tie": 0.007
+        }
+      },
+      "a_model": "Logistic Regression",
+      "b_model": "MuRIL seed 42",
+      "subset": "pooled",
+      "note": "pooled out-of-fold block predictions; three source blocks only"
+    },
+    {
+      "n_rows": 371,
+      "n_groups": 335,
+      "metrics": {
+        "macro_f1": {
+          "a": 0.3825067934782609,
+          "b": 0.2986767485822306,
+          "difference": 0.0838300448960303,
+          "ci_low": 0.04729666760080507,
+          "ci_high": 0.12780225814026763,
+          "boot_sd": 0.020280060807239587,
+          "share_positive": 1.0,
+          "share_negative": 0.0,
+          "share_tie": 0.0
+        },
+        "spam_recall": {
+          "a": 0.07981220657276995,
+          "b": 0.0,
+          "difference": 0.07981220657276995,
+          "ci_low": 0.04368879043540934,
+          "ci_high": 0.12559606607259285,
+          "boot_sd": 0.020700566195413425,
+          "share_positive": 1.0,
+          "share_negative": 0.0,
+          "share_tie": 0.0
+        },
+        "accuracy": {
+          "a": 0.4716981132075472,
+          "b": 0.42587601078167114,
+          "difference": 0.04582210242587603,
+          "ci_low": 0.024588488855139118,
+          "ci_high": 0.07103861087144092,
+          "boot_sd": 0.011947225086285046,
+          "share_positive": 1.0,
+          "share_negative": 0.0,
+          "share_tie": 0.0
+        },
+        "spam_precision": {
+          "a": 1.0,
+          "b": 0.0,
+          "difference": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "boot_sd": 0.0,
+          "share_positive": 1.0,
+          "share_negative": 0.0,
+          "share_tie": 0.0
+        }
+      },
+      "a_model": "Logistic Regression",
+      "b_model": "MuRIL seed 42",
+      "subset": "6001-7000",
+      "note": "single held-out block; descriptive only"
+    },
+    {
+      "n_rows": 1992,
+      "n_groups": 1824,
+      "metrics": {
+        "macro_f1": {
+          "a": 0.5378449758089207,
+          "b": 0.4979398614885597,
+          "difference": 0.03990511432036098,
+          "ci_low": 0.005326009494032959,
+          "ci_high": 0.077439113384318,
+          "boot_sd": 0.01790656483792301,
+          "share_positive": 0.9895,
+          "share_negative": 0.009,
+          "share_tie": 0.0015
+        },
+        "spam_recall": {
+          "a": 0.07555555555555556,
+          "b": 0.03111111111111111,
+          "difference": 0.044444444444444446,
+          "ci_low": 0.00487745678427658,
+          "ci_high": 0.08898519522404445,
+          "boot_sd": 0.02064354336358607,
+          "share_positive": 0.984,
+          "share_negative": 0.0065,
+          "share_tie": 0.0095
+        },
+        "accuracy": {
+          "a": 0.8900602409638554,
+          "b": 0.8845381526104418,
+          "difference": 0.005522088353413612,
+          "ci_low": -0.0005058425312277542,
+          "ci_high": 0.012177489630171836,
+          "boot_sd": 0.0033578901982572913,
+          "share_positive": 0.943,
+          "share_negative": 0.038,
+          "share_tie": 0.019
+        },
+        "spam_precision": {
+          "a": 0.6071428571428571,
+          "b": 0.3684210526315789,
+          "difference": 0.23872180451127817,
+          "ci_low": -0.038541666666666634,
+          "ci_high": 0.512828947368421,
+          "boot_sd": 0.140129289944223,
+          "share_positive": 0.949,
+          "share_negative": 0.046,
+          "share_tie": 0.005
+        }
+      },
+      "a_model": "Linear SVM",
+      "b_model": "MuRIL seed 42",
+      "subset": "pooled",
+      "note": "pooled out-of-fold block predictions; three source blocks only"
+    },
+    {
+      "n_rows": 371,
+      "n_groups": 335,
+      "metrics": {
+        "macro_f1": {
+          "a": 0.368470125315427,
+          "b": 0.2986767485822306,
+          "difference": 0.06979337673319641,
+          "ci_low": 0.03564328182823495,
+          "ci_high": 0.10850583638012072,
+          "boot_sd": 0.019229691741597117,
+          "share_positive": 1.0,
+          "share_negative": 0.0,
+          "share_tie": 0.0
+        },
+        "spam_recall": {
+          "a": 0.06572769953051644,
+          "b": 0.0,
+          "difference": 0.06572769953051644,
+          "ci_low": 0.0326989749773892,
+          "ci_high": 0.10550516343183809,
+          "boot_sd": 0.019208051370312163,
+          "share_positive": 1.0,
+          "share_negative": 0.0,
+          "share_tie": 0.0
+        },
+        "accuracy": {
+          "a": 0.4636118598382749,
+          "b": 0.42587601078167114,
+          "difference": 0.037735849056603765,
+          "ci_low": 0.018817204301075308,
+          "ci_high": 0.06068820245193074,
+          "boot_sd": 0.011054134600077873,
+          "share_positive": 1.0,
+          "share_negative": 0.0,
+          "share_tie": 0.0
+        },
+        "spam_precision": {
+          "a": 1.0,
+          "b": 0.0,
+          "difference": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "boot_sd": 0.0,
+          "share_positive": 1.0,
+          "share_negative": 0.0,
+          "share_tie": 0.0
+        }
+      },
+      "a_model": "Linear SVM",
+      "b_model": "MuRIL seed 42",
+      "subset": "6001-7000",
+      "note": "single held-out block; descriptive only"
+    },
+    {
+      "n_rows": 1992,
+      "n_groups": 1824,
+      "metrics": {
+        "macro_f1": {
+          "a": 0.5378449758089207,
+          "b": 0.5005811965811966,
+          "difference": 0.03726377922772406,
+          "ci_low": 0.0023880409744833136,
+          "ci_high": 0.07458202773233877,
+          "boot_sd": 0.018177074292556262,
+          "share_positive": 0.983,
+          "share_negative": 0.017,
+          "share_tie": 0.0
+        },
+        "spam_recall": {
+          "a": 0.07555555555555556,
+          "b": 0.03111111111111111,
+          "difference": 0.044444444444444446,
+          "ci_low": 0.004851493121060137,
+          "ci_high": 0.0891089108910891,
+          "boot_sd": 0.020767553861092098,
+          "share_positive": 0.985,
+          "share_negative": 0.006,
+          "share_tie": 0.009
+        },
+        "accuracy": {
+          "a": 0.8900602409638554,
+          "b": 0.8895582329317269,
+          "difference": 0.0005020080321285203,
+          "ci_low": -0.005030181086519092,
+          "ci_high": 0.006467903382935782,
+          "boot_sd": 0.0029297548018538673,
+          "share_positive": 0.531,
+          "share_negative": 0.3945,
+          "share_tie": 0.0745
+        },
+        "spam_precision": {
+          "a": 0.6071428571428571,
+          "b": 0.7777777777777778,
+          "difference": -0.1706349206349207,
+          "ci_low": -0.4838709677419355,
+          "ci_high": 0.19050595238095225,
+          "boot_sd": 0.17450474513831937,
+          "share_positive": 0.149,
+          "share_negative": 0.84,
+          "share_tie": 0.011
+        }
+      },
+      "a_model": "Linear SVM",
+      "b_model": "MuRIL seed 43",
+      "subset": "pooled",
+      "note": "pooled out-of-fold block predictions; three source blocks only"
+    },
+    {
+      "n_rows": 371,
+      "n_groups": 335,
+      "metrics": {
+        "macro_f1": {
+          "a": 0.368470125315427,
+          "b": 0.2986767485822306,
+          "difference": 0.06979337673319641,
+          "ci_low": 0.03564328182823495,
+          "ci_high": 0.10850583638012072,
+          "boot_sd": 0.019229691741597117,
+          "share_positive": 1.0,
+          "share_negative": 0.0,
+          "share_tie": 0.0
+        },
+        "spam_recall": {
+          "a": 0.06572769953051644,
+          "b": 0.0,
+          "difference": 0.06572769953051644,
+          "ci_low": 0.0326989749773892,
+          "ci_high": 0.10550516343183809,
+          "boot_sd": 0.019208051370312163,
+          "share_positive": 1.0,
+          "share_negative": 0.0,
+          "share_tie": 0.0
+        },
+        "accuracy": {
+          "a": 0.4636118598382749,
+          "b": 0.42587601078167114,
+          "difference": 0.037735849056603765,
+          "ci_low": 0.018817204301075308,
+          "ci_high": 0.06068820245193074,
+          "boot_sd": 0.011054134600077873,
+          "share_positive": 1.0,
+          "share_negative": 0.0,
+          "share_tie": 0.0
+        },
+        "spam_precision": {
+          "a": 1.0,
+          "b": 0.0,
+          "difference": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "boot_sd": 0.0,
+          "share_positive": 1.0,
+          "share_negative": 0.0,
+          "share_tie": 0.0
+        }
+      },
+      "a_model": "Linear SVM",
+      "b_model": "MuRIL seed 43",
+      "subset": "6001-7000",
+      "note": "single held-out block; descriptive only"
+    },
+    {
+      "n_rows": 1992,
+      "n_groups": 1824,
+      "metrics": {
+        "macro_f1": {
+          "a": 0.5378449758089207,
+          "b": 0.5098086620156109,
+          "difference": 0.02803631379330973,
+          "ci_low": -0.009620932916148656,
+          "ci_high": 0.06765918107217368,
+          "boot_sd": 0.01958389169300761,
+          "share_positive": 0.922,
+          "share_negative": 0.074,
+          "share_tie": 0.004
+        },
+        "spam_recall": {
+          "a": 0.07555555555555556,
+          "b": 0.044444444444444446,
+          "difference": 0.03111111111111111,
+          "ci_low": -0.0124086652715213,
+          "ci_high": 0.07806262647779309,
+          "boot_sd": 0.02255184965255823,
+          "share_positive": 0.906,
+          "share_negative": 0.066,
+          "share_tie": 0.028
+        },
+        "accuracy": {
+          "a": 0.8900602409638554,
+          "b": 0.8855421686746988,
+          "difference": 0.004518072289156572,
+          "ci_low": -0.002485182236595365,
+          "ci_high": 0.012042298647676596,
+          "boot_sd": 0.003628464022085074,
+          "share_positive": 0.881,
+          "share_negative": 0.086,
+          "share_tie": 0.033
+        },
+        "spam_precision": {
+          "a": 0.6071428571428571,
+          "b": 0.43478260869565216,
+          "difference": 0.17236024844720493,
+          "ci_low": -0.12227225672877837,
+          "ci_high": 0.44565217391304346,
+          "boot_sd": 0.1425900061414352,
+          "share_positive": 0.8785,
+          "share_negative": 0.1125,
+          "share_tie": 0.009
+        }
+      },
+      "a_model": "Linear SVM",
+      "b_model": "MuRIL seed 44",
+      "subset": "pooled",
+      "note": "pooled out-of-fold block predictions; three source blocks only"
+    },
+    {
+      "n_rows": 371,
+      "n_groups": 335,
+      "metrics": {
+        "macro_f1": {
+          "a": 0.368470125315427,
+          "b": 0.2986767485822306,
+          "difference": 0.06979337673319641,
+          "ci_low": 0.03564328182823495,
+          "ci_high": 0.10850583638012072,
+          "boot_sd": 0.019229691741597117,
+          "share_positive": 1.0,
+          "share_negative": 0.0,
+          "share_tie": 0.0
+        },
+        "spam_recall": {
+          "a": 0.06572769953051644,
+          "b": 0.0,
+          "difference": 0.06572769953051644,
+          "ci_low": 0.0326989749773892,
+          "ci_high": 0.10550516343183809,
+          "boot_sd": 0.019208051370312163,
+          "share_positive": 1.0,
+          "share_negative": 0.0,
+          "share_tie": 0.0
+        },
+        "accuracy": {
+          "a": 0.4636118598382749,
+          "b": 0.42587601078167114,
+          "difference": 0.037735849056603765,
+          "ci_low": 0.018817204301075308,
+          "ci_high": 0.06068820245193074,
+          "boot_sd": 0.011054134600077873,
+          "share_positive": 1.0,
+          "share_negative": 0.0,
+          "share_tie": 0.0
+        },
+        "spam_precision": {
+          "a": 1.0,
+          "b": 0.0,
+          "difference": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "boot_sd": 0.0,
+          "share_positive": 1.0,
+          "share_negative": 0.0,
+          "share_tie": 0.0
+        }
+      },
+      "a_model": "Linear SVM",
+      "b_model": "MuRIL seed 44",
+      "subset": "6001-7000",
+      "note": "single held-out block; descriptive only"
+    }
+  ],
+  "block_held_out": {
+    "folds": [
+      {
+        "model": "linear_svm",
+        "fold": "4001-5000",
+        "n": 630,
+        "ham": 618,
+        "spam": 12,
+        "accuracy": 0.9857142857142858,
+        "macro_f1": 0.6963855421686747,
+        "spam_precision": 1.0,
+        "spam_recall": 0.25,
+        "spam_f1": 0.4,
+        "evaluable_for_spam": true
+      },
+      {
+        "model": "linear_svm",
+        "fold": "5001-6000",
+        "n": 991,
+        "ham": 991,
+        "spam": 0,
+        "accuracy": 0.9889001009081736,
+        "macro_f1": 0.49720953830542874,
+        "spam_precision": null,
+        "spam_recall": null,
+        "spam_f1": null,
+        "evaluable_for_spam": false
+      },
+      {
+        "model": "linear_svm",
+        "fold": "6001-7000",
+        "n": 371,
+        "ham": 158,
+        "spam": 213,
+        "accuracy": 0.4636118598382749,
+        "macro_f1": 0.368470125315427,
+        "spam_precision": 1.0,
+        "spam_recall": 0.06572769953051644,
+        "spam_f1": 0.12334801762114538,
+        "evaluable_for_spam": true
+      },
+      {
+        "model": "logreg",
+        "fold": "4001-5000",
+        "n": 630,
+        "ham": 618,
+        "spam": 12,
+        "accuracy": 0.9857142857142858,
+        "macro_f1": 0.6963855421686747,
+        "spam_precision": 1.0,
+        "spam_recall": 0.25,
+        "spam_f1": 0.4,
+        "evaluable_for_spam": true
+      },
+      {
+        "model": "logreg",
+        "fold": "5001-6000",
+        "n": 991,
+        "ham": 991,
+        "spam": 0,
+        "accuracy": 0.9788092835519677,
+        "macro_f1": 0.4946455889852116,
+        "spam_precision": null,
+        "spam_recall": null,
+        "spam_f1": null,
+        "evaluable_for_spam": false
+      },
+      {
+        "model": "logreg",
+        "fold": "6001-7000",
+        "n": 371,
+        "ham": 158,
+        "spam": 213,
+        "accuracy": 0.4716981132075472,
+        "macro_f1": 0.3825067934782609,
+        "spam_precision": 1.0,
+        "spam_recall": 0.07981220657276995,
+        "spam_f1": 0.14782608695652175,
+        "evaluable_for_spam": true
+      },
+      {
+        "model": "MuRIL seed 42",
+        "fold": "4001-5000",
+        "n": 630,
+        "ham": 618,
+        "spam": 12,
+        "accuracy": 0.9873015873015873,
+        "macro_f1": 0.8149508004112205,
+        "spam_precision": 0.7,
+        "spam_recall": 0.5833333333333334,
+        "spam_f1": 0.6363636363636365,
+        "evaluable_for_spam": true
+      },
+      {
+        "model": "MuRIL seed 42",
+        "fold": "5001-6000",
+        "n": 991,
+        "ham": 991,
+        "spam": 0,
+        "accuracy": 0.9909182643794148,
+        "macro_f1": 0.49771920932589964,
+        "spam_precision": null,
+        "spam_recall": null,
+        "spam_f1": null,
+        "evaluable_for_spam": false
+      },
+      {
+        "model": "MuRIL seed 42",
+        "fold": "6001-7000",
+        "n": 371,
+        "ham": 158,
+        "spam": 213,
+        "accuracy": 0.42587601078167114,
+        "macro_f1": 0.2986767485822306,
+        "spam_precision": 0.0,
+        "spam_recall": 0.0,
+        "spam_f1": 0.0,
+        "evaluable_for_spam": true
+      },
+      {
+        "model": "MuRIL seed 43",
+        "fold": "4001-5000",
+        "n": 630,
+        "ham": 618,
+        "spam": 12,
+        "accuracy": 0.9904761904761905,
+        "macro_f1": 0.8475806451612904,
+        "spam_precision": 0.875,
+        "spam_recall": 0.5833333333333334,
+        "spam_f1": 0.7000000000000001,
+        "evaluable_for_spam": true
+      },
+      {
+        "model": "MuRIL seed 43",
+        "fold": "5001-6000",
+        "n": 991,
+        "ham": 991,
+        "spam": 0,
+        "accuracy": 0.9989909182643795,
+        "macro_f1": 0.4997476022211005,
+        "spam_precision": null,
+        "spam_recall": null,
+        "spam_f1": null,
+        "evaluable_for_spam": false
+      },
+      {
+        "model": "MuRIL seed 43",
+        "fold": "6001-7000",
+        "n": 371,
+        "ham": 158,
+        "spam": 213,
+        "accuracy": 0.42587601078167114,
+        "macro_f1": 0.2986767485822306,
+        "spam_precision": 0.0,
+        "spam_recall": 0.0,
+        "spam_f1": 0.0,
+        "evaluable_for_spam": true
+      },
+      {
+        "model": "MuRIL seed 44",
+        "fold": "4001-5000",
+        "n": 630,
+        "ham": 618,
+        "spam": 12,
+        "accuracy": 0.9841269841269841,
+        "macro_f1": 0.8292682926829269,
+        "spam_precision": 0.5555555555555556,
+        "spam_recall": 0.8333333333333334,
+        "spam_f1": 0.6666666666666667,
+        "evaluable_for_spam": true
+      },
+      {
+        "model": "MuRIL seed 44",
+        "fold": "5001-6000",
+        "n": 991,
+        "ham": 991,
+        "spam": 0,
+        "accuracy": 0.9949545913218971,
+        "macro_f1": 0.49873545776428935,
+        "spam_precision": null,
+        "spam_recall": null,
+        "spam_f1": null,
+        "evaluable_for_spam": false
+      },
+      {
+        "model": "MuRIL seed 44",
+        "fold": "6001-7000",
+        "n": 371,
+        "ham": 158,
+        "spam": 213,
+        "accuracy": 0.42587601078167114,
+        "macro_f1": 0.2986767485822306,
+        "spam_precision": 0.0,
+        "spam_recall": 0.0,
+        "spam_f1": 0.0,
+        "evaluable_for_spam": true
+      }
+    ],
+    "note": "Three source blocks only; 5001-6000 has no Spam. No conventional confidence interval is reported for these descriptive folds."
+  }
+}

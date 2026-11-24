@@ -1,0 +1,129 @@
+{
+  "model_family": "logreg",
+  "n_test": 883,
+  "n_errors": 32,
+  "false_positives": null,
+  "false_negatives": null,
+  "examples": [
+    {
+      "record_id": "D2-04565",
+      "source_row": 4567,
+      "true": "smishing",
+      "pred": "spam",
+      "margin": 0.925,
+      "message": "Txt: CALL to No: 86888 & claim your reward of 3 hours talk time to use from your phone now! Subscribe6GBP/mnth inc 3hrs 16 stop?txtStop www.gamb.tv"
+    },
+    {
+      "record_id": "D2-00768",
+      "source_row": 770,
+      "true": "spam",
+      "pred": "ham",
+      "margin": 0.9216,
+      "message": "Do you ever notice that when you're driving, anyone going slower than you is an idiot and everyone driving faster than you is a maniac?"
+    },
+    {
+      "record_id": "D2-04483",
+      "source_row": 4485,
+      "true": "smishing",
+      "pred": "spam",
+      "margin": 0.9059,
+      "message": "U are subscribed to the best Mobile Content Service in the UK for £3 per ten days until you send STOP to 83435. Helpline 08706091795."
+    },
+    {
+      "record_id": "D2-05181",
+      "source_row": 5183,
+      "true": "smishing",
+      "pred": "spam",
+      "margin": 0.8286,
+      "message": "\tFreeMsg Today's the day if you are ready! I'm  & live in your town. I love sex fun & games! Netcollex Ltd 08700621170150p per msg reply Stop to end"
+    },
+    {
+      "record_id": "D2-03809",
+      "source_row": 3811,
+      "true": "smishing",
+      "pred": "spam",
+      "margin": 0.8082,
+      "message": "For ur chance to win a £250 wkly shopping spree TXT: SHOP to 80878. T's&C's  custcare 08715705022, 1x150p/wk"
+    },
+    {
+      "record_id": "D2-03623",
+      "source_row": 3625,
+      "true": "spam",
+      "pred": "ham",
+      "margin": 0.7924,
+      "message": "How come it takes so little time for a child who is afraid of the dark to become a teenager who wants to stay out all night?"
+    },
+    {
+      "record_id": "D2-02728",
+      "source_row": 2730,
+      "true": "smishing",
+      "pred": "spam",
+      "margin": 0.7821,
+      "message": "Text & meet someone sexy today. U can find a date or even flirt its up to U. Join 4 just 10p. REPLY with NAME & AGE eg Sam 25. 18 -msg recd@thirtyeight pence"
+    },
+    {
+      "record_id": "D2-04011",
+      "source_row": 4013,
+      "true": "spam",
+      "pred": "ham",
+      "margin": 0.726,
+      "message": "Would you like to see my XXX pics ...they were nearly banned in the uk!"
+    },
+    {
+      "record_id": "D2-01314",
+      "source_row": 1316,
+      "true": "smishing",
+      "pred": "spam",
+      "margin": 0.7192,
+      "message": "500 New Mobiles from 2004, MUST GO! Txt: NOKIA to No: 89545 & collect yours today!From ONLY £1 www.4-tc.biz 2optout 087187262701.50gbp/mtmsg18"
+    },
+    {
+      "record_id": "D2-02362",
+      "source_row": 2364,
+      "true": "spam",
+      "pred": "ham",
+      "margin": 0.7121,
+      "message": "This message is brought to you by GMW Ltd. and is not connected to the"
+    },
+    {
+      "record_id": "D2-04596",
+      "source_row": 4598,
+      "true": "smishing",
+      "pred": "spam",
+      "margin": 0.702,
+      "message": "BangBabes Ur order is on the way. U SHOULD receive a Service Msg 2 download UR content. If U do not, GoTo wap. bangb. tv on UR mobile internet/service menu"
+    },
+    {
+      "record_id": "D2-03261",
+      "source_row": 3263,
+      "true": "smishing",
+      "pred": "spam",
+      "margin": 0.6754,
+      "message": "Natalja (25/F) is inviting you to be her friend.  See her: www.SMS.ac/u/nat27081980 STOP? Send STOP FRND to 62468"
+    },
+    {
+      "record_id": "D2-05863",
+      "source_row": 5865,
+      "true": "smishing",
+      "pred": "spam",
+      "margin": 0.6046,
+      "message": "U have won a nokia 6230 plus a free digital camera. This is what u get when u win our FREE auction. To take part send NOKIA to 83383 now. POBOX114/14TCR/W1 16"
+    },
+    {
+      "record_id": "D2-05248",
+      "source_row": 5250,
+      "true": "spam",
+      "pred": "smishing",
+      "margin": 0.6027,
+      "message": "3. You have received your mobile content. Enjoy"
+    },
+    {
+      "record_id": "D2-01336",
+      "source_row": 1338,
+      "true": "spam",
+      "pred": "ham",
+      "margin": 0.5493,
+      "message": "(Bank of Granite issues Strong-Buy) EXPLOSIVE PICK FOR OUR MEMBERS *****UP OVER 300% *********** Nasdaq Symbol CDGT That is a $5.00 per.."
+    }
+  ]
+}

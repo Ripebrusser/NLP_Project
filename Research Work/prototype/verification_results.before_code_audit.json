@@ -1,0 +1,72 @@
+{
+  "status": "PASS",
+  "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+  "models": {
+    "d1": {
+      "model": "d1_malayalam_linear_svm.joblib",
+      "sha256": "9ba1dcd62655bf501f4b0297d543bd232ad1348ab476c2efca9b07e0b97225cd",
+      "hash_matches_manifest": true,
+      "test_rows": 299,
+      "prediction_parity": 299,
+      "cleaning_parity": 299,
+      "classes_observed": [
+        "Ham",
+        "Spam"
+      ]
+    },
+    "d2": {
+      "model": "d2_logreg.joblib",
+      "sha256": "6f8cd0e5498f672bd71ddeaf494284f3c7aad6315bc39dbfb449f0cf388dc856",
+      "hash_matches_manifest": true,
+      "test_rows": 883,
+      "prediction_parity": 883,
+      "cleaning_parity": 883,
+      "classes_observed": [
+        "ham",
+        "smishing",
+        "spam"
+      ]
+    }
+  },
+  "split_hashes_match_manifest": {
+    "d1_malayalam_train.csv": true,
+    "d1_malayalam_val.csv": true,
+    "d1_malayalam_test.csv": true,
+    "d2_train.csv": true,
+    "d2_val.csv": true,
+    "d2_test.csv": true
+  },
+  "unicode_checks": {
+    "malayalam_detected": true,
+    "latin_detected": true,
+    "malayalam_preserved_after_clean": true,
+    "empty_input_rejected": true
+  },
+  "class_coverage": {
+    "d1": {
+      "Ham": {
+        "record_id": "D1-04388",
+        "display_label": "Ham"
+      },
+      "Spam": {
+        "record_id": "D1-04369",
+        "display_label": "Spam"
+      }
+    },
+    "d2": {
+      "ham": {
+        "record_id": "D2-00016",
+        "display_label": "Ham"
+      },
+      "smishing": {
+        "record_id": "D2-00169",
+        "display_label": "Smishing"
+      },
+      "spam": {
+        "record_id": "D2-00083",
+        "display_label": "Spam"
+      }
+    }
+  },
+  "note": "No model was fitted or modified. All predictions reproduce the frozen test files."
+}

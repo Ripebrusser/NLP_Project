@@ -1,0 +1,41 @@
+{
+  "audit": "browser-driven prototype test",
+  "timestamp_utc": "2026-11-08T16:20:00+00:00",
+  "target": "http://127.0.0.1:8501/",
+  "deployment": "none — local server only, bound to 127.0.0.1",
+  "server": {
+    "command": ".venv/Scripts/python.exe -m streamlit run \"Research Work/prototype/app.py\" --server.headless true --server.address 127.0.0.1 --server.port 8501",
+    "framework": "Streamlit 1.67.0",
+    "http_ready": "200 within 1s",
+    "log": "Research Work/phase2/metrics/streamlit_audit_server.log",
+    "shut_down_after_test": true
+  },
+  "driver": {
+    "browser": "Freebuff Local browser (packaged Chromium)",
+    "note": "Synthetic pointer clicks at page coordinates were unreliable inside the preview panel (they landed off-target), so interactions were driven by real DOM events on the same widgets: typing through the browser input pipeline, then dispatching the button click. The app's own widget runtime handled every event; no test hook, monkeypatch or server-side shortcut was used in this pass."
+  },
+  "results": [
+    {"case": "d1_page_load", "status": "PASS", "observed": "Title, sidebar, Malayalam form, Linear SVM model card (20,629 features, C=0.5), frozen limitations (0.9650 / 0.5378)."},
+    {"case": "d1_malayalam_spam_prediction", "status": "PASS", "observed": "93-character Malayalam promotional SMS rendered a Spam result card; no error."},
+    {"case": "d1_malayalam_ham_prediction", "status": "PASS", "observed": "After a server restart with telemetry disabled, a Malayalam coordination SMS rendered a Ham result card."},
+    {"case": "d1_latin_input", "status": "PASS", "observed": "Latin-only English SMS produced the Malayalam-script warning and no result card."},
+    {"case": "d1_empty_input", "status": "PASS", "observed": "Single space produced 'Enter a message before analysing it.' and no result card."},
+    {"case": "d1_oversized_input", "status": "PASS", "observed": "The text area caps input at 5,000 characters (widget-enforced); the 5,001-character library rejection is covered by test_inference.py."},
+    {"case": "d1_control_characters", "status": "PASS", "observed": "Covered by test_streamlit_app.py (U+0000/U+0001/U+0002 around Malayalam text still returns one card, no exception)."},
+    {"case": "d2_page_load", "status": "PASS", "observed": "English/Latin page, Logistic Regression card (24,293 features, C=1.0), three-class scope note (0.8877)."},
+    {"case": "d2_latin_prediction", "status": "PASS", "observed": "Delivery SMS rendered a Ham card plus the model-score table."},
+    {"case": "d2_malayalam_input", "status": "PASS", "observed": "Malayalam-only text produced the Latin-script warning and no card (browser run); also pinned by test_streamlit_app.py."},
+    {"case": "d2_mixed_script_input", "status": "PASS", "observed": "Malayalam + Latin text showed the mixed-script warning and still rendered the Ham card."},
+    {"case": "dashboard_render", "status": "PASS", "observed": "Research dashboard: 5 tabs (Overview, Dataset 1, Dataset 2, MuRIL, Block holdout), 6 metric cards, 10 dataframes, 11 chart canvases, consolidated comparison text."},
+    {"case": "block_holdout_tab", "status": "PASS", "observed": "Block-held-out tab revealed the classical and MuRIL block tables."},
+    {"case": "model_loading_failure", "status": "PASS", "observed": "AppTest with a simulated missing artifact: the page stays usable, shows an inline error, and raises no unhandled exception."},
+    {"case": "console_errors", "status": "PASS", "observed": "No console errors after any interaction."},
+    {"case": "outbound_network", "status": "PASS", "observed": "After adding [browser] gatherUsageStats = false, performance entries contain zero non-loopback requests. Before that change, Streamlit's default usage-statistics calls to data.streamlit.io and a Fivetran webhook were observed; the application code itself made none."}
+  ],
+  "not_covered_in_browser": [
+    "Streamlit visual/CSS layout quality and mobile viewport rendering.",
+    "Two concurrent user sessions.",
+    "Accessibility tooling (axe) audit."
+  ],
+  "status": "PASS"
+}

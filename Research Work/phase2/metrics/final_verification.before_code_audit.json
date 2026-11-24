@@ -1,0 +1,1388 @@
+{
+  "audit": "Frozen-prediction verification; no model was trained or modified.",
+  "bootstrap": {
+    "n_boot": 2000,
+    "seed": 42,
+    "unit": "duplicate group",
+    "method": "percentile bootstrap, 2.5/97.5 percentiles",
+    "d1_groups": 299,
+    "d1_max_group_size": 1,
+    "d2_groups": 883,
+    "d2_max_group_size": 1,
+    "replicates_missing_d1_spam": 0,
+    "replicates_missing_d2_spam": 0
+  },
+  "d1_test": {
+    "rows": 299,
+    "labels": {
+      "Ham": 265,
+      "Spam": 34
+    },
+    "block_composition": {
+      "5": {
+        "Ham": 86,
+        "Spam": 3
+      },
+      "6": {
+        "Ham": 159,
+        "Spam": 0
+      },
+      "7": {
+        "Ham": 20,
+        "Spam": 31
+      }
+    }
+  },
+  "d2_test": {
+    "rows": 883,
+    "labels": {
+      "ham": 726,
+      "smishing": 90,
+      "spam": 67
+    }
+  },
+  "d1_models": {
+    "Logistic Regression": {
+      "file": "d1_malayalam_logreg_test_predictions.csv",
+      "sha256": "c977e1e0c65e2fb09afc900bfcc3ada6693f22bc48f056e3a451e51f1a28a7ff",
+      "rows": 299,
+      "metrics": {
+        "n": 299,
+        "accuracy": 0.9832775919732442,
+        "macro_f1": 0.9556445631211987,
+        "spam_precision": 1.0,
+        "spam_recall": 0.8529411764705882,
+        "spam_f1": 0.9206349206349206,
+        "confusion_matrix": [
+          [
+            265,
+            0
+          ],
+          [
+            5,
+            29
+          ]
+        ],
+        "support": {
+          "Ham": 265,
+          "Spam": 34
+        },
+        "predicted": {
+          "Ham": 270,
+          "Spam": 29
+        },
+        "per_class": {
+          "Ham": {
+            "precision": 0.9814814814814815,
+            "recall": 1.0,
+            "f1": 0.9906542056074767,
+            "support": 265
+          },
+          "Spam": {
+            "precision": 1.0,
+            "recall": 0.8529411764705882,
+            "f1": 0.9206349206349206,
+            "support": 34
+          }
+        },
+        "f1_Ham": 0.9906542056074767,
+        "f1_Spam": 0.9206349206349206
+      },
+      "exact": {
+        "tp": 29,
+        "fp": 0,
+        "fn": 5,
+        "tn": 265,
+        "predicted_spam": 29,
+        "spam_support": 34,
+        "precision_denominator": 29,
+        "precision_copper_pearson_95": [
+          0.8805551309304973,
+          1.0
+        ],
+        "precision_wilson_95": [
+          0.8830302015002593,
+          1.0
+        ],
+        "recall_copper_pearson_95": [
+          0.6894342696048746,
+          0.9504715447438226
+        ],
+        "recall_wilson_95": [
+          0.6987194350454783,
+          0.9355055855521753
+        ],
+        "false_positive_rate_copper_pearson_95": [
+          0.0,
+          0.013823860460125674
+        ],
+        "false_positive_rate_wilson_95": [
+          0.0,
+          0.014288937567684516
+        ],
+        "note": "Exact/Wilson intervals are descriptive binomial intervals for exchangeable errors. Precision is conditional on the predicted positive count; it is not an estimate for a new source."
+      }
+    },
+    "Linear SVM": {
+      "file": "d1_malayalam_linear_svm_test_predictions.csv",
+      "sha256": "bd88b3c4519bf1c6808bc90e7527cf9f185f8aa772e661d8bda6f9d6404e821b",
+      "rows": 299,
+      "metrics": {
+        "n": 299,
+        "accuracy": 0.9866220735785953,
+        "macro_f1": 0.9650046816479401,
+        "spam_precision": 1.0,
+        "spam_recall": 0.8823529411764706,
+        "spam_f1": 0.9375,
+        "confusion_matrix": [
+          [
+            265,
+            0
+          ],
+          [
+            4,
+            30
+          ]
+        ],
+        "support": {
+          "Ham": 265,
+          "Spam": 34
+        },
+        "predicted": {
+          "Ham": 269,
+          "Spam": 30
+        },
+        "per_class": {
+          "Ham": {
+            "precision": 0.9851301115241635,
+            "recall": 1.0,
+            "f1": 0.9925093632958801,
+            "support": 265
+          },
+          "Spam": {
+            "precision": 1.0,
+            "recall": 0.8823529411764706,
+            "f1": 0.9375,
+            "support": 34
+          }
+        },
+        "f1_Ham": 0.9925093632958801,
+        "f1_Spam": 0.9375
+      },
+      "exact": {
+        "tp": 30,
+        "fp": 0,
+        "fn": 4,
+        "tn": 265,
+        "predicted_spam": 30,
+        "spam_support": 34,
+        "precision_denominator": 30,
+        "precision_copper_pearson_95": [
+          0.8842966917779722,
+          1.0
+        ],
+        "precision_wilson_95": [
+          0.8864866068260312,
+          0.9999999999999999
+        ],
+        "recall_copper_pearson_95": [
+          0.7254965128576445,
+          0.9669983196635304
+        ],
+        "recall_wilson_95": [
+          0.7337915722962817,
+          0.9532855333511766
+        ],
+        "false_positive_rate_copper_pearson_95": [
+          0.0,
+          0.013823860460125674
+        ],
+        "false_positive_rate_wilson_95": [
+          0.0,
+          0.014288937567684516
+        ],
+        "note": "Exact/Wilson intervals are descriptive binomial intervals for exchangeable errors. Precision is conditional on the predicted positive count; it is not an estimate for a new source."
+      }
+    },
+    "MuRIL seed 42": {
+      "file": "muril_random_seed42_predictions.csv",
+      "sha256": "e0fbdf4267418dc78139ffddd9f0486fe935e4603b821484fd211db24c20acde",
+      "rows": 299,
+      "metrics": {
+        "n": 299,
+        "accuracy": 0.9866220735785953,
+        "macro_f1": 0.9650046816479401,
+        "spam_precision": 1.0,
+        "spam_recall": 0.8823529411764706,
+        "spam_f1": 0.9375,
+        "confusion_matrix": [
+          [
+            265,
+            0
+          ],
+          [
+            4,
+            30
+          ]
+        ],
+        "support": {
+          "Ham": 265,
+          "Spam": 34
+        },
+        "predicted": {
+          "Ham": 269,
+          "Spam": 30
+        },
+        "per_class": {
+          "Ham": {
+            "precision": 0.9851301115241635,
+            "recall": 1.0,
+            "f1": 0.9925093632958801,
+            "support": 265
+          },
+          "Spam": {
+            "precision": 1.0,
+            "recall": 0.8823529411764706,
+            "f1": 0.9375,
+            "support": 34
+          }
+        },
+        "f1_Ham": 0.9925093632958801,
+        "f1_Spam": 0.9375
+      },
+      "exact": {
+        "tp": 30,
+        "fp": 0,
+        "fn": 4,
+        "tn": 265,
+        "predicted_spam": 30,
+        "spam_support": 34,
+        "precision_denominator": 30,
+        "precision_copper_pearson_95": [
+          0.8842966917779722,
+          1.0
+        ],
+        "precision_wilson_95": [
+          0.8864866068260312,
+          0.9999999999999999
+        ],
+        "recall_copper_pearson_95": [
+          0.7254965128576445,
+          0.9669983196635304
+        ],
+        "recall_wilson_95": [
+          0.7337915722962817,
+          0.9532855333511766
+        ],
+        "false_positive_rate_copper_pearson_95": [
+          0.0,
+          0.013823860460125674
+        ],
+        "false_positive_rate_wilson_95": [
+          0.0,
+          0.014288937567684516
+        ],
+        "note": "Exact/Wilson intervals are descriptive binomial intervals for exchangeable errors. Precision is conditional on the predicted positive count; it is not an estimate for a new source."
+      }
+    },
+    "MuRIL seed 43": {
+      "file": "muril_random_seed43_predictions.csv",
+      "sha256": "e8d8161016995493c950d8a258b2a5a07471cf3942181630a9464e47673b1c36",
+      "rows": 299,
+      "metrics": {
+        "n": 299,
+        "accuracy": 0.9832775919732442,
+        "macro_f1": 0.9556445631211987,
+        "spam_precision": 1.0,
+        "spam_recall": 0.8529411764705882,
+        "spam_f1": 0.9206349206349206,
+        "confusion_matrix": [
+          [
+            265,
+            0
+          ],
+          [
+            5,
+            29
+          ]
+        ],
+        "support": {
+          "Ham": 265,
+          "Spam": 34
+        },
+        "predicted": {
+          "Ham": 270,
+          "Spam": 29
+        },
+        "per_class": {
+          "Ham": {
+            "precision": 0.9814814814814815,
+            "recall": 1.0,
+            "f1": 0.9906542056074767,
+            "support": 265
+          },
+          "Spam": {
+            "precision": 1.0,
+            "recall": 0.8529411764705882,
+            "f1": 0.9206349206349206,
+            "support": 34
+          }
+        },
+        "f1_Ham": 0.9906542056074767,
+        "f1_Spam": 0.9206349206349206
+      },
+      "exact": {
+        "tp": 29,
+        "fp": 0,
+        "fn": 5,
+        "tn": 265,
+        "predicted_spam": 29,
+        "spam_support": 34,
+        "precision_denominator": 29,
+        "precision_copper_pearson_95": [
+          0.8805551309304973,
+          1.0
+        ],
+        "precision_wilson_95": [
+          0.8830302015002593,
+          1.0
+        ],
+        "recall_copper_pearson_95": [
+          0.6894342696048746,
+          0.9504715447438226
+        ],
+        "recall_wilson_95": [
+          0.6987194350454783,
+          0.9355055855521753
+        ],
+        "false_positive_rate_copper_pearson_95": [
+          0.0,
+          0.013823860460125674
+        ],
+        "false_positive_rate_wilson_95": [
+          0.0,
+          0.014288937567684516
+        ],
+        "note": "Exact/Wilson intervals are descriptive binomial intervals for exchangeable errors. Precision is conditional on the predicted positive count; it is not an estimate for a new source."
+      }
+    },
+    "MuRIL seed 44": {
+      "file": "muril_random_seed44_predictions.csv",
+      "sha256": "8e2f1dd539f98edeeef7bb040d977466b9cb9a1c1a0c57a696c2e993576aa12f",
+      "rows": 299,
+      "metrics": {
+        "n": 299,
+        "accuracy": 0.9866220735785953,
+        "macro_f1": 0.9650046816479401,
+        "spam_precision": 1.0,
+        "spam_recall": 0.8823529411764706,
+        "spam_f1": 0.9375,
+        "confusion_matrix": [
+          [
+            265,
+            0
+          ],
+          [
+            4,
+            30
+          ]
+        ],
+        "support": {
+          "Ham": 265,
+          "Spam": 34
+        },
+        "predicted": {
+          "Ham": 269,
+          "Spam": 30
+        },
+        "per_class": {
+          "Ham": {
+            "precision": 0.9851301115241635,
+            "recall": 1.0,
+            "f1": 0.9925093632958801,
+            "support": 265
+          },
+          "Spam": {
+            "precision": 1.0,
+            "recall": 0.8823529411764706,
+            "f1": 0.9375,
+            "support": 34
+          }
+        },
+        "f1_Ham": 0.9925093632958801,
+        "f1_Spam": 0.9375
+      },
+      "exact": {
+        "tp": 30,
+        "fp": 0,
+        "fn": 4,
+        "tn": 265,
+        "predicted_spam": 30,
+        "spam_support": 34,
+        "precision_denominator": 30,
+        "precision_copper_pearson_95": [
+          0.8842966917779722,
+          1.0
+        ],
+        "precision_wilson_95": [
+          0.8864866068260312,
+          0.9999999999999999
+        ],
+        "recall_copper_pearson_95": [
+          0.7254965128576445,
+          0.9669983196635304
+        ],
+        "recall_wilson_95": [
+          0.7337915722962817,
+          0.9532855333511766
+        ],
+        "false_positive_rate_copper_pearson_95": [
+          0.0,
+          0.013823860460125674
+        ],
+        "false_positive_rate_wilson_95": [
+          0.0,
+          0.014288937567684516
+        ],
+        "note": "Exact/Wilson intervals are descriptive binomial intervals for exchangeable errors. Precision is conditional on the predicted positive count; it is not an estimate for a new source."
+      }
+    }
+  },
+  "d1_bootstrap": {
+    "Logistic Regression": {
+      "accuracy": {
+        "point": 0.9832775919732442,
+        "ci_low": 0.9665551839464883,
+        "ci_high": 0.9966555183946488,
+        "boot_mean": 0.9833377926421405,
+        "boot_sd": 0.007406443479714067
+      },
+      "macro_f1": {
+        "point": 0.9556445631211987,
+        "ci_low": 0.9120987786300345,
+        "ci_high": 0.9903038557576936,
+        "boot_mean": 0.9550423328849009,
+        "boot_sd": 0.020134192420328233
+      },
+      "spam_precision": {
+        "point": 1.0,
+        "ci_low": 1.0,
+        "ci_high": 1.0,
+        "boot_mean": 1.0,
+        "boot_sd": 0.0
+      },
+      "spam_recall": {
+        "point": 0.8529411764705882,
+        "ci_low": 0.7221899224806202,
+        "ci_high": 0.9655172413793104,
+        "boot_mean": 0.8529205219911985,
+        "boot_sd": 0.06174091752501332
+      },
+      "spam_f1": {
+        "point": 0.9206349206349206,
+        "ci_low": 0.8386878814298169,
+        "ci_high": 0.9824561403508771,
+        "boot_mean": 0.9194095349283211,
+        "boot_sd": 0.036469501880820036
+      }
+    },
+    "Linear SVM": {
+      "accuracy": {
+        "point": 0.9866220735785953,
+        "ci_low": 0.9732441471571907,
+        "ci_high": 0.9966555183946488,
+        "boot_mean": 0.9866555183946489,
+        "boot_sd": 0.006613161571306691
+      },
+      "macro_f1": {
+        "point": 0.9650046816479401,
+        "ci_low": 0.9249654608102603,
+        "ci_high": 0.992198303979126,
+        "boot_mean": 0.9645132188306637,
+        "boot_sd": 0.017755661100304156
+      },
+      "spam_precision": {
+        "point": 1.0,
+        "ci_low": 1.0,
+        "ci_high": 1.0,
+        "boot_mean": 1.0,
+        "boot_sd": 0.0
+      },
+      "spam_recall": {
+        "point": 0.8823529411764706,
+        "ci_low": 0.76,
+        "ci_high": 0.972972972972973,
+        "boot_mean": 0.8822835523931701,
+        "boot_sd": 0.05597031317313186
+      },
+      "spam_f1": {
+        "point": 0.9375,
+        "ci_low": 0.8636363636363636,
+        "ci_high": 0.9863013698630138,
+        "boot_mean": 0.936508852988566,
+        "boot_sd": 0.03205648816351013
+      }
+    },
+    "MuRIL seed 42": {
+      "accuracy": {
+        "point": 0.9866220735785953,
+        "ci_low": 0.9732441471571907,
+        "ci_high": 0.9966555183946488,
+        "boot_mean": 0.9866555183946489,
+        "boot_sd": 0.006613161571306691
+      },
+      "macro_f1": {
+        "point": 0.9650046816479401,
+        "ci_low": 0.9249654608102603,
+        "ci_high": 0.992198303979126,
+        "boot_mean": 0.9645132188306637,
+        "boot_sd": 0.017755661100304156
+      },
+      "spam_precision": {
+        "point": 1.0,
+        "ci_low": 1.0,
+        "ci_high": 1.0,
+        "boot_mean": 1.0,
+        "boot_sd": 0.0
+      },
+      "spam_recall": {
+        "point": 0.8823529411764706,
+        "ci_low": 0.76,
+        "ci_high": 0.972972972972973,
+        "boot_mean": 0.8822835523931701,
+        "boot_sd": 0.05597031317313186
+      },
+      "spam_f1": {
+        "point": 0.9375,
+        "ci_low": 0.8636363636363636,
+        "ci_high": 0.9863013698630138,
+        "boot_mean": 0.936508852988566,
+        "boot_sd": 0.03205648816351013
+      }
+    },
+    "MuRIL seed 43": {
+      "accuracy": {
+        "point": 0.9832775919732442,
+        "ci_low": 0.9665551839464883,
+        "ci_high": 0.9966555183946488,
+        "boot_mean": 0.9833996655518394,
+        "boot_sd": 0.007463259658249226
+      },
+      "macro_f1": {
+        "point": 0.9556445631211987,
+        "ci_low": 0.9098945253641386,
+        "ci_high": 0.9903038557576936,
+        "boot_mean": 0.9552836500873632,
+        "boot_sd": 0.020203447578074567
+      },
+      "spam_precision": {
+        "point": 1.0,
+        "ci_low": 1.0,
+        "ci_high": 1.0,
+        "boot_mean": 1.0,
+        "boot_sd": 0.0
+      },
+      "spam_recall": {
+        "point": 0.8529411764705882,
+        "ci_low": 0.71875,
+        "ci_high": 0.9655172413793104,
+        "boot_mean": 0.8537024498528519,
+        "boot_sd": 0.061879811662823386
+      },
+      "spam_f1": {
+        "point": 0.9206349206349206,
+        "ci_low": 0.8363636363636363,
+        "ci_high": 0.9824561403508771,
+        "boot_mean": 0.9198593059984823,
+        "boot_sd": 0.03656752868594806
+      }
+    },
+    "MuRIL seed 44": {
+      "accuracy": {
+        "point": 0.9866220735785953,
+        "ci_low": 0.9732441471571907,
+        "ci_high": 0.9966555183946488,
+        "boot_mean": 0.9866555183946489,
+        "boot_sd": 0.006613161571306691
+      },
+      "macro_f1": {
+        "point": 0.9650046816479401,
+        "ci_low": 0.9249654608102603,
+        "ci_high": 0.992198303979126,
+        "boot_mean": 0.9645132188306637,
+        "boot_sd": 0.017755661100304156
+      },
+      "spam_precision": {
+        "point": 1.0,
+        "ci_low": 1.0,
+        "ci_high": 1.0,
+        "boot_mean": 1.0,
+        "boot_sd": 0.0
+      },
+      "spam_recall": {
+        "point": 0.8823529411764706,
+        "ci_low": 0.76,
+        "ci_high": 0.972972972972973,
+        "boot_mean": 0.8822835523931701,
+        "boot_sd": 0.05597031317313186
+      },
+      "spam_f1": {
+        "point": 0.9375,
+        "ci_low": 0.8636363636363636,
+        "ci_high": 0.9863013698630138,
+        "boot_mean": 0.936508852988566,
+        "boot_sd": 0.03205648816351013
+      }
+    },
+    "MuRIL 3-seed mean": {
+      "accuracy": {
+        "point": 0.9855072463768115,
+        "ci_low": 0.9710144927536232,
+        "ci_high": 0.9966555183946489,
+        "boot_mean": 0.9855702341137124,
+        "boot_sd": 0.006737982086711938
+      },
+      "macro_f1": {
+        "point": 0.9618846421390262,
+        "ci_low": 0.9211320633721539,
+        "ci_high": 0.9908721799920629,
+        "boot_mean": 0.9614366959162302,
+        "boot_sd": 0.018099689807177462
+      },
+      "spam_precision": {
+        "point": 1.0,
+        "ci_low": 1.0,
+        "ci_high": 1.0,
+        "boot_mean": 1.0,
+        "boot_sd": 0.0
+      },
+      "spam_recall": {
+        "point": 0.8725490196078431,
+        "ci_low": 0.75,
+        "ci_high": 0.9677547363031234,
+        "boot_mean": 0.8727565182130641,
+        "boot_sd": 0.05648023212035548
+      },
+      "spam_f1": {
+        "point": 0.9318783068783069,
+        "ci_low": 0.8571310214226535,
+        "ci_high": 0.983612338197251,
+        "boot_mean": 0.9309590039918713,
+        "boot_sd": 0.03270705136389008
+      }
+    }
+  },
+  "muril_across_seed": {
+    "accuracy": {
+      "mean": 0.9855072463768115,
+      "sd": 0.0019309373551492487,
+      "min": 0.9832775919732442,
+      "max": 0.9866220735785953,
+      "values": [
+        0.9866220735785953,
+        0.9832775919732442,
+        0.9866220735785953
+      ]
+    },
+    "macro_f1": {
+      "mean": 0.9618846421390262,
+      "sd": 0.005404066951060919,
+      "min": 0.9556445631211987,
+      "max": 0.9650046816479401,
+      "values": [
+        0.9650046816479401,
+        0.9556445631211987,
+        0.9650046816479401
+      ]
+    },
+    "spam_precision": {
+      "mean": 1.0,
+      "sd": 0.0,
+      "min": 1.0,
+      "max": 1.0,
+      "values": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "spam_recall": {
+      "mean": 0.8725490196078431,
+      "sd": 0.016980890270283114,
+      "min": 0.8529411764705882,
+      "max": 0.8823529411764706,
+      "values": [
+        0.8823529411764706,
+        0.8529411764705882,
+        0.8823529411764706
+      ]
+    },
+    "spam_f1": {
+      "mean": 0.9318783068783069,
+      "sd": 0.009737058111333003,
+      "min": 0.9206349206349206,
+      "max": 0.9375,
+      "values": [
+        0.9375,
+        0.9206349206349206,
+        0.9375
+      ]
+    }
+  },
+  "muril_three_seed_mean_bootstrap": {
+    "accuracy": {
+      "point": 0.9855072463768115,
+      "ci_low": 0.9710144927536232,
+      "ci_high": 0.9966555183946489,
+      "boot_mean": 0.9855702341137124,
+      "boot_sd": 0.006737982086711938
+    },
+    "macro_f1": {
+      "point": 0.9618846421390262,
+      "ci_low": 0.9211320633721539,
+      "ci_high": 0.9908721799920629,
+      "boot_mean": 0.9614366959162302,
+      "boot_sd": 0.018099689807177462
+    },
+    "spam_precision": {
+      "point": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "boot_mean": 1.0,
+      "boot_sd": 0.0
+    },
+    "spam_recall": {
+      "point": 0.8725490196078431,
+      "ci_low": 0.75,
+      "ci_high": 0.9677547363031234,
+      "boot_mean": 0.8727565182130641,
+      "boot_sd": 0.05648023212035548
+    },
+    "spam_f1": {
+      "point": 0.9318783068783069,
+      "ci_low": 0.8571310214226535,
+      "ci_high": 0.983612338197251,
+      "boot_mean": 0.9309590039918713,
+      "boot_sd": 0.03270705136389008
+    }
+  },
+  "svm_vs_muril_mean": {
+    "accuracy": {
+      "svm": 0.9866220735785953,
+      "muril_mean": 0.9855072463768115,
+      "difference": 0.0011148272017837968,
+      "ci_low": -1.1102230246251565e-16,
+      "ci_high": 0.0033444816053512794,
+      "share_positive": 0.7215,
+      "share_tie": 0.1945,
+      "share_negative": 0.084
+    },
+    "macro_f1": {
+      "svm": 0.9650046816479401,
+      "muril_mean": 0.9618846421390262,
+      "difference": 0.003120039508913819,
+      "ci_low": -1.1102230246251565e-16,
+      "ci_high": 0.010100181849030618,
+      "share_positive": 0.6945,
+      "share_tie": 0.238,
+      "share_negative": 0.0675
+    },
+    "spam_recall": {
+      "svm": 0.8823529411764706,
+      "muril_mean": 0.8725490196078431,
+      "difference": 0.009803921568627416,
+      "ci_low": -1.1102230246251565e-16,
+      "ci_high": 0.030303030303030276,
+      "share_positive": 0.664,
+      "share_tie": 0.3085,
+      "share_negative": 0.0275
+    }
+  },
+  "svm_vs_muril_seed": {
+    "42": {
+      "a": 0.9650046816479401,
+      "b": 0.9650046816479401,
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "boot_sd": 0.0,
+      "share_positive": 0.0,
+      "share_tie": 1.0,
+      "share_negative": 0.0
+    },
+    "43": {
+      "a": 0.9650046816479401,
+      "b": 0.9556445631211987,
+      "difference": 0.009360118526741346,
+      "ci_low": 0.0,
+      "ci_high": 0.03030054554709207,
+      "boot_sd": 0.009157782174979671,
+      "share_positive": 0.6245,
+      "share_tie": 0.3755,
+      "share_negative": 0.0
+    },
+    "44": {
+      "a": 0.9650046816479401,
+      "b": 0.9650046816479401,
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "boot_sd": 0.0,
+      "share_positive": 0.0,
+      "share_tie": 1.0,
+      "share_negative": 0.0
+    }
+  },
+  "d2_models": {
+    "Logistic Regression": {
+      "file": "d2_logreg_test_predictions.csv",
+      "sha256": "01d37c607cab4eacadd1e50ec2ef98f7fdef2382482edda8bbf1a6e39c6931b7",
+      "rows": 883,
+      "metrics": {
+        "n": 883,
+        "accuracy": 0.9637599093997735,
+        "macro_f1": 0.8877423096432983,
+        "spam_precision": 0.7857142857142857,
+        "spam_recall": 0.8208955223880597,
+        "spam_f1": 0.8029197080291971,
+        "confusion_matrix": [
+          [
+            722,
+            0,
+            4
+          ],
+          [
+            10,
+            55,
+            2
+          ],
+          [
+            1,
+            15,
+            74
+          ]
+        ],
+        "support": {
+          "ham": 726,
+          "spam": 67,
+          "smishing": 90
+        },
+        "predicted": {
+          "ham": 733,
+          "spam": 70,
+          "smishing": 80
+        },
+        "per_class": {
+          "ham": {
+            "precision": 0.984993178717599,
+            "recall": 0.9944903581267218,
+            "f1": 0.98971898560658,
+            "support": 726
+          },
+          "spam": {
+            "precision": 0.7857142857142857,
+            "recall": 0.8208955223880597,
+            "f1": 0.8029197080291971,
+            "support": 67
+          },
+          "smishing": {
+            "precision": 0.925,
+            "recall": 0.8222222222222222,
+            "f1": 0.8705882352941177,
+            "support": 90
+          }
+        },
+        "f1_ham": 0.98971898560658,
+        "f1_spam": 0.8029197080291971,
+        "f1_smishing": 0.8705882352941177
+      },
+      "exact": {
+        "tp": 55,
+        "fp": 15,
+        "fn": 12,
+        "tn": 801,
+        "predicted_spam": 70,
+        "spam_support": 67,
+        "precision_denominator": 70,
+        "precision_copper_pearson_95": [
+          0.6713148547210506,
+          0.8748164285077529
+        ],
+        "precision_wilson_95": [
+          0.676088137365211,
+          0.8656129698289221
+        ],
+        "recall_copper_pearson_95": [
+          0.7080365718274182,
+          0.903880600409147
+        ],
+        "recall_wilson_95": [
+          0.7125251075208199,
+          0.8944640866011804
+        ],
+        "false_positive_rate_copper_pearson_95": [
+          0.010324048943547446,
+          0.030137886229138513
+        ],
+        "false_positive_rate_wilson_95": [
+          0.01117108958113157,
+          0.030106962969874543
+        ],
+        "note": "Exact/Wilson intervals are descriptive binomial intervals for exchangeable errors. Precision is conditional on the predicted positive count; it is not an estimate for a new source."
+      }
+    },
+    "Linear SVM": {
+      "file": "d2_linear_svm_test_predictions.csv",
+      "sha256": "72034359e8d726322ea00e973dfc989226447f337347a57206a7784f42557528",
+      "rows": 883,
+      "metrics": {
+        "n": 883,
+        "accuracy": 0.9637599093997735,
+        "macro_f1": 0.882502980802467,
+        "spam_precision": 0.7761194029850746,
+        "spam_recall": 0.7761194029850746,
+        "spam_f1": 0.7761194029850746,
+        "confusion_matrix": [
+          [
+            725,
+            0,
+            1
+          ],
+          [
+            12,
+            52,
+            3
+          ],
+          [
+            1,
+            15,
+            74
+          ]
+        ],
+        "support": {
+          "ham": 726,
+          "spam": 67,
+          "smishing": 90
+        },
+        "predicted": {
+          "ham": 738,
+          "spam": 67,
+          "smishing": 78
+        },
+        "per_class": {
+          "ham": {
+            "precision": 0.9823848238482384,
+            "recall": 0.9986225895316805,
+            "f1": 0.9904371584699454,
+            "support": 726
+          },
+          "spam": {
+            "precision": 0.7761194029850746,
+            "recall": 0.7761194029850746,
+            "f1": 0.7761194029850746,
+            "support": 67
+          },
+          "smishing": {
+            "precision": 0.9487179487179487,
+            "recall": 0.8222222222222222,
+            "f1": 0.8809523809523809,
+            "support": 90
+          }
+        },
+        "f1_ham": 0.9904371584699454,
+        "f1_spam": 0.7761194029850746,
+        "f1_smishing": 0.8809523809523809
+      },
+      "exact": {
+        "tp": 52,
+        "fp": 15,
+        "fn": 15,
+        "tn": 801,
+        "predicted_spam": 67,
+        "spam_support": 67,
+        "precision_denominator": 67,
+        "precision_copper_pearson_95": [
+          0.6577671534556663,
+          0.8689406541464092
+        ],
+        "precision_wilson_95": [
+          0.6629303387922625,
+          0.8593626887080634
+        ],
+        "recall_copper_pearson_95": [
+          0.6577671534556663,
+          0.8689406541464092
+        ],
+        "recall_wilson_95": [
+          0.6629303387922625,
+          0.8593626887080634
+        ],
+        "false_positive_rate_copper_pearson_95": [
+          0.010324048943547446,
+          0.030137886229138513
+        ],
+        "false_positive_rate_wilson_95": [
+          0.01117108958113157,
+          0.030106962969874543
+        ],
+        "note": "Exact/Wilson intervals are descriptive binomial intervals for exchangeable errors. Precision is conditional on the predicted positive count; it is not an estimate for a new source."
+      }
+    }
+  },
+  "d2_bootstrap": {
+    "Logistic Regression": {
+      "accuracy": {
+        "point": 0.9637599093997735,
+        "ci_low": 0.9513023782559457,
+        "ci_high": 0.9762174405436014,
+        "boot_mean": 0.9637836919592299,
+        "boot_sd": 0.006329482953807618
+      },
+      "macro_f1": {
+        "point": 0.8877423096432983,
+        "ci_low": 0.8482171221985192,
+        "ci_high": 0.9239080655617765,
+        "boot_mean": 0.8871678994952,
+        "boot_sd": 0.01913638436040913
+      },
+      "spam_precision": {
+        "point": 0.7857142857142857,
+        "ci_low": 0.6885245901639344,
+        "ci_high": 0.8783886158886158,
+        "boot_mean": 0.7855505915665897,
+        "boot_sd": 0.04822013775591
+      },
+      "spam_recall": {
+        "point": 0.8208955223880597,
+        "ci_low": 0.7222222222222222,
+        "ci_high": 0.9130434782608695,
+        "boot_mean": 0.8210889126605483,
+        "boot_sd": 0.04806524931363692
+      },
+      "spam_f1": {
+        "point": 0.8029197080291971,
+        "ci_low": 0.7244026608742873,
+        "ci_high": 0.8721804511278195,
+        "boot_mean": 0.8017998709143395,
+        "boot_sd": 0.03790348137447381
+      }
+    },
+    "Linear SVM": {
+      "accuracy": {
+        "point": 0.9637599093997735,
+        "ci_low": 0.9513023782559457,
+        "ci_high": 0.9762174405436014,
+        "boot_mean": 0.9638267270668177,
+        "boot_sd": 0.00633586182007323
+      },
+      "macro_f1": {
+        "point": 0.882502980802467,
+        "ci_low": 0.8408452224721867,
+        "ci_high": 0.9195792782897316,
+        "boot_mean": 0.8819567171599385,
+        "boot_sd": 0.019815353442252225
+      },
+      "spam_precision": {
+        "point": 0.7761194029850746,
+        "ci_low": 0.6734595761381476,
+        "ci_high": 0.870979262672811,
+        "boot_mean": 0.7760995208786978,
+        "boot_sd": 0.05009265546827255
+      },
+      "spam_recall": {
+        "point": 0.7761194029850746,
+        "ci_low": 0.6721311475409836,
+        "ci_high": 0.875,
+        "boot_mean": 0.7759273176877787,
+        "boot_sd": 0.05127944854930863
+      },
+      "spam_f1": {
+        "point": 0.7761194029850746,
+        "ci_low": 0.6896551724137931,
+        "ci_high": 0.8493150684931506,
+        "boot_mean": 0.774776279659047,
+        "boot_sd": 0.04035197378924715
+      }
+    }
+  },
+  "d1_block_all_composition": {
+    "5": {
+      "Ham": 618,
+      "Spam": 12
+    },
+    "6": {
+      "Ham": 991,
+      "Spam": 0
+    },
+    "7": {
+      "Ham": 158,
+      "Spam": 213
+    }
+  },
+  "d1_block_folds": [
+    {
+      "model": "linear_svm",
+      "fold": "4001-5000",
+      "n": 630,
+      "ham": 618,
+      "spam": 12,
+      "accuracy": 0.9857142857142858,
+      "macro_f1": 0.6963855421686747,
+      "spam_precision": 1.0,
+      "spam_recall": 0.25
+    },
+    {
+      "model": "linear_svm",
+      "fold": "5001-6000",
+      "n": 991,
+      "ham": 991,
+      "spam": 0,
+      "accuracy": 0.9889001009081736,
+      "macro_f1": 0.49720953830542874,
+      "spam_precision": null,
+      "spam_recall": null
+    },
+    {
+      "model": "linear_svm",
+      "fold": "6001-7000",
+      "n": 371,
+      "ham": 158,
+      "spam": 213,
+      "accuracy": 0.4636118598382749,
+      "macro_f1": 0.368470125315427,
+      "spam_precision": 1.0,
+      "spam_recall": 0.06572769953051644
+    },
+    {
+      "model": "logreg",
+      "fold": "4001-5000",
+      "n": 630,
+      "ham": 618,
+      "spam": 12,
+      "accuracy": 0.9857142857142858,
+      "macro_f1": 0.6963855421686747,
+      "spam_precision": 1.0,
+      "spam_recall": 0.25
+    },
+    {
+      "model": "logreg",
+      "fold": "5001-6000",
+      "n": 991,
+      "ham": 991,
+      "spam": 0,
+      "accuracy": 0.9788092835519677,
+      "macro_f1": 0.4946455889852116,
+      "spam_precision": null,
+      "spam_recall": null
+    },
+    {
+      "model": "logreg",
+      "fold": "6001-7000",
+      "n": 371,
+      "ham": 158,
+      "spam": 213,
+      "accuracy": 0.4716981132075472,
+      "macro_f1": 0.3825067934782609,
+      "spam_precision": 1.0,
+      "spam_recall": 0.07981220657276995
+    },
+    {
+      "model": "MuRIL seed 42",
+      "fold": "4001-5000",
+      "n": 630,
+      "ham": 618,
+      "spam": 12,
+      "accuracy": 0.9873015873015873,
+      "macro_f1": 0.8149508004112205,
+      "spam_precision": 0.7,
+      "spam_recall": 0.5833333333333334
+    },
+    {
+      "model": "MuRIL seed 42",
+      "fold": "5001-6000",
+      "n": 991,
+      "ham": 991,
+      "spam": 0,
+      "accuracy": 0.9909182643794148,
+      "macro_f1": 0.49771920932589964,
+      "spam_precision": null,
+      "spam_recall": null
+    },
+    {
+      "model": "MuRIL seed 42",
+      "fold": "6001-7000",
+      "n": 371,
+      "ham": 158,
+      "spam": 213,
+      "accuracy": 0.42587601078167114,
+      "macro_f1": 0.2986767485822306,
+      "spam_precision": 0.0,
+      "spam_recall": 0.0
+    },
+    {
+      "model": "MuRIL seed 43",
+      "fold": "4001-5000",
+      "n": 630,
+      "ham": 618,
+      "spam": 12,
+      "accuracy": 0.9904761904761905,
+      "macro_f1": 0.8475806451612904,
+      "spam_precision": 0.875,
+      "spam_recall": 0.5833333333333334
+    },
+    {
+      "model": "MuRIL seed 43",
+      "fold": "5001-6000",
+      "n": 991,
+      "ham": 991,
+      "spam": 0,
+      "accuracy": 0.9989909182643795,
+      "macro_f1": 0.4997476022211005,
+      "spam_precision": null,
+      "spam_recall": null
+    },
+    {
+      "model": "MuRIL seed 43",
+      "fold": "6001-7000",
+      "n": 371,
+      "ham": 158,
+      "spam": 213,
+      "accuracy": 0.42587601078167114,
+      "macro_f1": 0.2986767485822306,
+      "spam_precision": 0.0,
+      "spam_recall": 0.0
+    },
+    {
+      "model": "MuRIL seed 44",
+      "fold": "4001-5000",
+      "n": 630,
+      "ham": 618,
+      "spam": 12,
+      "accuracy": 0.9841269841269841,
+      "macro_f1": 0.8292682926829269,
+      "spam_precision": 0.5555555555555556,
+      "spam_recall": 0.8333333333333334
+    },
+    {
+      "model": "MuRIL seed 44",
+      "fold": "5001-6000",
+      "n": 991,
+      "ham": 991,
+      "spam": 0,
+      "accuracy": 0.9949545913218971,
+      "macro_f1": 0.49873545776428935,
+      "spam_precision": null,
+      "spam_recall": null
+    },
+    {
+      "model": "MuRIL seed 44",
+      "fold": "6001-7000",
+      "n": 371,
+      "ham": 158,
+      "spam": 213,
+      "accuracy": 0.42587601078167114,
+      "macro_f1": 0.2986767485822306,
+      "spam_precision": 0.0,
+      "spam_recall": 0.0
+    }
+  ],
+  "d1_block_pooled": [
+    {
+      "model": "linear_svm",
+      "n": 1992,
+      "accuracy": 0.8900602409638554,
+      "macro_f1": 0.5378449758089207,
+      "spam_precision": 0.6071428571428571,
+      "spam_recall": 0.07555555555555556,
+      "confusion_matrix": [
+        [
+          1756,
+          11
+        ],
+        [
+          208,
+          17
+        ]
+      ]
+    },
+    {
+      "model": "logreg",
+      "n": 1992,
+      "accuracy": 0.8865461847389559,
+      "macro_f1": 0.5447952856859739,
+      "spam_precision": 0.4878048780487805,
+      "spam_recall": 0.08888888888888889,
+      "confusion_matrix": [
+        [
+          1746,
+          21
+        ],
+        [
+          205,
+          20
+        ]
+      ]
+    },
+    {
+      "model": "MuRIL seed 42",
+      "n": 1992,
+      "accuracy": 0.8845381526104418,
+      "macro_f1": 0.4979398614885597,
+      "spam_precision": 0.3684210526315789,
+      "spam_recall": 0.03111111111111111,
+      "confusion_matrix": [
+        [
+          1755,
+          12
+        ],
+        [
+          218,
+          7
+        ]
+      ]
+    },
+    {
+      "model": "MuRIL seed 43",
+      "n": 1992,
+      "accuracy": 0.8895582329317269,
+      "macro_f1": 0.5005811965811966,
+      "spam_precision": 0.7777777777777778,
+      "spam_recall": 0.03111111111111111,
+      "confusion_matrix": [
+        [
+          1765,
+          2
+        ],
+        [
+          218,
+          7
+        ]
+      ]
+    },
+    {
+      "model": "MuRIL seed 44",
+      "n": 1992,
+      "accuracy": 0.8855421686746988,
+      "macro_f1": 0.5098086620156109,
+      "spam_precision": 0.43478260869565216,
+      "spam_recall": 0.044444444444444446,
+      "confusion_matrix": [
+        [
+          1754,
+          13
+        ],
+        [
+          215,
+          10
+        ]
+      ]
+    }
+  ],
+  "notes": [
+    "D1 and D2 test duplicate groups are all singletons; the group bootstrap is therefore numerically a message bootstrap.",
+    "The three-seed mean interval is conditional on the three frozen MuRIL seeds and captures test-sample uncertainty only.",
+    "Across-seed SD is reported separately; it is not a confidence interval and three seeds do not estimate a training-run population.",
+    "Exact/Wilson precision intervals condition on the number of predicted positives; 30/30 and 29/29 do not mean zero future false positives.",
+    "Block folds are a leave-one-row-block-out stress test, not a source-population estimate."
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "model_dir": "models/muril_d1_seed42",
+  "tokenizer_class": "BertTokenizer",
+  "vocab_size": 197258,
+  "params": 237557762,
+  "malayalam_roundtrip": true,
+  "predictions_reproduced": true,
+  "max_abs_prob_diff": 0.0,
+  "n_checked": 299
+}

@@ -1,0 +1,217 @@
+{
+  "task": "multiclass",
+  "labels": [
+    "ham",
+    "spam",
+    "smishing"
+  ],
+  "tag": "d2",
+  "train_rows": 4127,
+  "val_rows": 885,
+  "test_rows": 883,
+  "train_class_counts": {
+    "ham": 3391,
+    "spam": 315,
+    "smishing": 421
+  },
+  "val_class_counts": {
+    "ham": 727,
+    "smishing": 90,
+    "spam": 68
+  },
+  "test_class_counts": {
+    "smishing": 90,
+    "ham": 726,
+    "spam": 67
+  },
+  "selection_metric": "validation macro-F1",
+  "overall_model_family": "logreg",
+  "models": {
+    "linear_svm": {
+      "selected_config": "char_2_4",
+      "C": 0.5,
+      "val": {
+        "val_accuracy": 0.9694915254237289,
+        "val_macro_f1": 0.9029760143268245,
+        "val_weighted_f1": 0.9689787233143756
+      },
+      "test": {
+        "n": 883,
+        "accuracy": 0.9637599093997735,
+        "macro_f1": 0.882502980802467,
+        "weighted_f1": 0.9630159584766643,
+        "per_class": {
+          "ham": {
+            "precision": 0.9823848238482384,
+            "recall": 0.9986225895316805,
+            "f1": 0.9904371584699454,
+            "support": 726
+          },
+          "spam": {
+            "precision": 0.7761194029850746,
+            "recall": 0.7761194029850746,
+            "f1": 0.7761194029850746,
+            "support": 67
+          },
+          "smishing": {
+            "precision": 0.9487179487179487,
+            "recall": 0.8222222222222222,
+            "f1": 0.8809523809523809,
+            "support": 90
+          }
+        },
+        "confusion_matrix": [
+          [
+            725,
+            0,
+            1
+          ],
+          [
+            12,
+            52,
+            3
+          ],
+          [
+            1,
+            15,
+            74
+          ]
+        ],
+        "labels": [
+          "ham",
+          "spam",
+          "smishing"
+        ]
+      },
+      "classification_report": {
+        "ham": {
+          "precision": 0.9823848238482384,
+          "recall": 0.9986225895316805,
+          "f1-score": 0.9904371584699454,
+          "support": 726.0
+        },
+        "spam": {
+          "precision": 0.7761194029850746,
+          "recall": 0.7761194029850746,
+          "f1-score": 0.7761194029850746,
+          "support": 67.0
+        },
+        "smishing": {
+          "precision": 0.9487179487179487,
+          "recall": 0.8222222222222222,
+          "f1-score": 0.8809523809523809,
+          "support": 90.0
+        },
+        "accuracy": 0.9637599093997735,
+        "macro avg": {
+          "precision": 0.9024073918504206,
+          "recall": 0.8656547382463259,
+          "f1-score": 0.882502980802467,
+          "support": 883.0
+        },
+        "weighted avg": {
+          "precision": 0.9633023754229179,
+          "recall": 0.9637599093997735,
+          "f1-score": 0.9630159584766643,
+          "support": 883.0
+        }
+      },
+      "model_file": "d2_linear_svm.joblib",
+      "predictions_file": "d2_linear_svm_test_predictions.csv",
+      "n_errors": 32
+    },
+    "logreg": {
+      "selected_config": "char_2_4",
+      "C": 1.0,
+      "val": {
+        "val_accuracy": 0.9706214689265537,
+        "val_macro_f1": 0.904799738946362,
+        "val_weighted_f1": 0.9702408434785287
+      },
+      "test": {
+        "n": 883,
+        "accuracy": 0.9637599093997735,
+        "macro_f1": 0.8877423096432983,
+        "weighted_f1": 0.9634026559057801,
+        "per_class": {
+          "ham": {
+            "precision": 0.984993178717599,
+            "recall": 0.9944903581267218,
+            "f1": 0.9897189856065799,
+            "support": 726
+          },
+          "spam": {
+            "precision": 0.7857142857142857,
+            "recall": 0.8208955223880597,
+            "f1": 0.8029197080291971,
+            "support": 67
+          },
+          "smishing": {
+            "precision": 0.925,
+            "recall": 0.8222222222222222,
+            "f1": 0.8705882352941177,
+            "support": 90
+          }
+        },
+        "confusion_matrix": [
+          [
+            722,
+            0,
+            4
+          ],
+          [
+            10,
+            55,
+            2
+          ],
+          [
+            1,
+            15,
+            74
+          ]
+        ],
+        "labels": [
+          "ham",
+          "spam",
+          "smishing"
+        ]
+      },
+      "classification_report": {
+        "ham": {
+          "precision": 0.984993178717599,
+          "recall": 0.9944903581267218,
+          "f1-score": 0.9897189856065799,
+          "support": 726.0
+        },
+        "spam": {
+          "precision": 0.7857142857142857,
+          "recall": 0.8208955223880597,
+          "f1-score": 0.8029197080291971,
+          "support": 67.0
+        },
+        "smishing": {
+          "precision": 0.925,
+          "recall": 0.8222222222222222,
+          "f1-score": 0.8705882352941177,
+          "support": 90.0
+        },
+        "accuracy": 0.9637599093997735,
+        "macro avg": {
+          "precision": 0.8985691548106282,
+          "recall": 0.8792027009123347,
+          "f1-score": 0.8877423096432983,
+          "support": 883.0
+        },
+        "weighted avg": {
+          "precision": 0.9637575366838437,
+          "recall": 0.9637599093997735,
+          "f1-score": 0.9634026559057801,
+          "support": 883.0
+        }
+      },
+      "model_file": "d2_logreg.joblib",
+      "predictions_file": "d2_logreg_test_predictions.csv",
+      "n_errors": 32
+    }
+  }
+}

@@ -1,0 +1,9 @@
+# Verification-only dependency pins for the code audit.
+# Installed and tested on Python 3.14.3 (Windows 11).
+# MuRIL training dependencies are separate; see Research Work/phase2/README.md.
+numpy==2.5.4
+pandas==3.1.1
+scikit-learn==1.9.1
+scipy==1.18.1
+joblib==1.6.0
+openpyxl==3.1.5
